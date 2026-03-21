@@ -22,3 +22,6 @@ Thumbs.db
 # Python cache files sometimes created by local helper scripts
 __pycache__/
 *.pyc
+
+# Local reference materials are not part of the versioned manuscript
+ref/

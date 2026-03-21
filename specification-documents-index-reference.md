@@ -90,6 +90,7 @@
 - `historical-course-github-organizations-analysis-reference.md`
 - `student-project-capability-assessment-reference.md`
 - `historical-three-practices-fit-analysis-reference.md`
+- `historical-250622-course-materials-fit-analysis-reference.md`
 
 这些文档的作用是：
 

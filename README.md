@@ -17,6 +17,7 @@ Additional document:
 - `historical-course-github-organizations-analysis-reference.md`: analysis of the course’s public GitHub organizations from 2022-2025 and implications for future course design; not part of the textbook chapter sequence.
 - `student-project-capability-assessment-reference.md`: assessment of the actual open source project completion ability reflected in representative student repositories from 2022-2025; not part of the textbook chapter sequence.
 - `historical-three-practices-fit-analysis-reference.md`: analysis of how the course’s three historical practice assignments fit the current course design, and how they should be upgraded and mapped into the new material layers; not part of the textbook chapter sequence.
+- `historical-250622-course-materials-fit-analysis-reference.md`: analysis of the 250622 historical teaching materials package, including recent PPT lecture decks, GitHub training material, and the practice guide, and how these assets should be absorbed into the new course system; not part of the textbook chapter sequence.
 - `chapter-specification-reference.md`: chapter development specification for building each chapter as a complete unit with main text, appendix interfaces, experiment interfaces, terms, cases, and assessment evidence; not part of the textbook chapter sequence.
 - `chapter-baseline-and-stretch-blueprint-reference.md`: chapter-level blueprint that maps the course into baseline content for ordinary undergraduate programs and stretch content for stronger teams or top universities; not part of the textbook chapter sequence.
 - `experiment-baseline-and-stretch-blueprint-reference.md`: experiment-system blueprint that maps the team project into required baseline tasks and optional stretch tasks; not part of the textbook chapter sequence.
@@ -35,3 +36,4 @@ Notes:
 - The original source files remain unchanged.
 - The duplicate file `《开源软件开发技术》教材（第二章）_李宁_200805(1).md` is not used separately because it is currently identical to `《开源软件开发技术》教材（第二章）_乔文豹.md`.
 - Appendix content is not merged into Chapters 1-5 because it is outside the chapter scope defined by the outline.
+- Local files under `ref/` are reference inputs for analysis and migration work; they are not part of the maintained manuscript set and should normally remain untracked.

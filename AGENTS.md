@@ -13,9 +13,11 @@ The current material system is multi-layered rather than “book only”:
 - `chapter-baseline-and-stretch-blueprint-reference.md`, `experiment-baseline-and-stretch-blueprint-reference.md`: structural blueprints
 - `chapter-checklist-template.md`: per-chapter execution template
 - `README.md`: repository overview and chapter mapping
-- `ref/`: historical practice materials and other legacy reference inputs
+- `ref/`: local historical practice materials and other legacy reference inputs; this directory is reference-only and should normally remain untracked
 
 There is no `src/`, `tests/`, or asset pipeline. Keep new contributor-facing docs in the root unless a clear subdirectory is introduced for templates or references.
+
+Only version the materials being authored for the new course system. Treat `ref/` as a local evidence and reference workspace rather than part of the maintained manuscript.
 
 ## Build, Test, and Development Commands
 
