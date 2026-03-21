@@ -93,6 +93,7 @@
 - `historical-250622-course-materials-fit-analysis-reference.md`
 - `legacy-content-to-new-course-structure-migration-matrix-reference.md`
 - `chapter-01-targeted-research-reference.md`
+- `chapter-02-targeted-research-reference.md`
 
 这些文档的作用是：
 
@@ -108,6 +109,8 @@
 
 - `chapter-01-internal-package-draft.md`
 - `chapter-01-manuscript-outline-draft.md`
+- `chapter-02-internal-package-draft.md`
+- `chapter-02-manuscript-outline-draft.md`
 
 这类文档的特点是：
 

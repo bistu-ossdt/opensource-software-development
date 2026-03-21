@@ -2,14 +2,14 @@
 
 This repository is in transition from legacy course materials to a newly structured book manuscript.
 
-- Chapter 1 has already been rewritten as a new manuscript draft aligned with the current course design.
-- Chapters 2-5 still mainly preserve legacy source content in reorganized chapter positions and are waiting for systematic migration and rewriting.
+- Chapters 1-2 have already been rewritten as new manuscript drafts aligned with the current course design.
+- Chapters 3-5 still mainly preserve legacy source content in reorganized chapter positions and are waiting for systematic migration and rewriting.
 - Chapter 0 and the various `*-reference.md` files define the design system, migration logic, and chapter-development workflow behind that rewrite process.
 
 - Chapter 0: `00-preface.md` (currently the overall course-design and editorial-principles document; later, student-facing parts may be rewritten as the textbook preface)
 
 - Chapter 1: `01-overview.md` is now a rewritten manuscript draft for `Origins and Evolution of Open Source`, based on legacy materials plus new research and chapter-level restructuring
-- Chapter 2: from `《开源软件开发技术》教材（第二章）_乔文豹.md` (`## 开源软件的发展` to before `## 开源软件开发的模式和特点`)
+- Chapter 2: `02-development-of-open-source-software.md` is now a rewritten manuscript draft for `Free Software, Open Source, and Licensing`, based on legacy materials plus official licensing references and chapter-level restructuring
 - Chapter 3: from `《开源软件开发技术》第三章_焦健_20200906.md` (`## 开源软件开发的模式和特点` to before `## 参与和组织开源软件项目`)
 - Chapter 4: full content of `《开源软件开发技术》教材（第四章）_杨大利.md`
 - Chapter 5: from `《开源软件开发技术》教材大纲 第五章（草稿） 曾铮.md` (`## 利用好开源软件资源` to before `## 附录1 GuHub的使用`)
@@ -26,6 +26,9 @@ Additional document:
 - `chapter-01-internal-package-draft.md`: working draft of the internal chapter package for Chapter 1, defining scope, structure, migration decisions, and mappings before manuscript writing.
 - `chapter-01-targeted-research-reference.md`: targeted research notes for Chapter 1, focused on validating the key historical timeline, organizations, and representative cases before drafting the chapter manuscript.
 - `chapter-01-manuscript-outline-draft.md`: manuscript outline draft for Chapter 1, including the opening paragraph, main narrative flow, and chapter-level writing constraints before full prose drafting.
+- `chapter-02-internal-package-draft.md`: working draft of the internal chapter package for Chapter 2, defining the licensing chapter’s scope, concept boundaries, migration decisions, and next research questions before manuscript writing.
+- `chapter-02-targeted-research-reference.md`: targeted research notes for Chapter 2, focused on validating the stable definitions and minimum distinctions needed for the licensing chapter before full manuscript drafting.
+- `chapter-02-manuscript-outline-draft.md`: manuscript outline draft for Chapter 2, including the opening paragraph, main narrative flow, and chapter-level writing constraints before full prose drafting.
 - `chapter-specification-reference.md`: chapter development specification for building each chapter as a complete unit with main text, appendix interfaces, experiment interfaces, terms, cases, and assessment evidence; not part of the textbook chapter sequence.
 - `chapter-baseline-and-stretch-blueprint-reference.md`: chapter-level blueprint that maps the course into baseline content for ordinary undergraduate programs and stretch content for stronger teams or top universities; not part of the textbook chapter sequence.
 - `experiment-baseline-and-stretch-blueprint-reference.md`: experiment-system blueprint that maps the team project into required baseline tasks and optional stretch tasks; not part of the textbook chapter sequence.

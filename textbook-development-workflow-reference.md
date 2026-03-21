@@ -12,6 +12,8 @@ At the same time, do not postpone “real book writing” until after every inte
 
 More specifically, they should be written in a practical technical-book style rather than as temporary teaching notes. The target is closer to a durable O'Reilly-like engineering book than to a lecture handout, while still serving undergraduate teaching needs.
 
+At the language level, the technical book layer should default to a general reader interested in open source software development, not explicitly to students or teachers. Explicit teaching language belongs in the study guide, instructor guide, syllabus, labs, and other course-support layers.
+
 The recommended workflow is:
 
 1. Design the course as a whole.
@@ -52,7 +54,7 @@ This means Chapter 1 should be designed as a full unit before moving to Chapter 
 It also means each chapter should produce multiple synchronized outputs:
 
 - an internal chapter package for course design and editing control
-- a student-facing chapter manuscript suitable for eventual publication as a technical book chapter
+- a general-reader technical-book manuscript suitable for eventual publication as a book chapter
 - a student study guide unit derived from the chapter package and main manuscript
 - an instructor guide unit derived from the chapter package and main manuscript
 
@@ -126,3 +128,5 @@ This three-round strategy means that "produce all seven layers per chapter" rema
 This repository is producing a course system, not just a book. The seven material layers (defined in 00-preface §课程材料体系) must be designed together but carried in different layers.
 
 This workflow keeps the book stable while preserving a strong practical orientation. It reduces rewrite cost by writing book-quality chapters from the start, and improves manuscript quality by keeping learning support and teaching support out of the main manuscript.
+
+In other words, the book layer should explain the discipline, methods, cases, and practice of open source software development itself; the teaching layers should explain how students learn it and how teachers teach it.
