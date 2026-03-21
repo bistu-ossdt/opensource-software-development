@@ -94,6 +94,7 @@
 - `legacy-content-to-new-course-structure-migration-matrix-reference.md`
 - `chapter-01-targeted-research-reference.md`
 - `chapter-02-targeted-research-reference.md`
+- `linux-and-openclaw-case-positioning-reference.md`
 
 这些文档的作用是：
 
