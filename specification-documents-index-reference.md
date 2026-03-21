@@ -91,6 +91,8 @@
 - `student-project-capability-assessment-reference.md`
 - `historical-three-practices-fit-analysis-reference.md`
 - `historical-250622-course-materials-fit-analysis-reference.md`
+- `legacy-content-to-new-course-structure-migration-matrix-reference.md`
+- `chapter-01-targeted-research-reference.md`
 
 这些文档的作用是：
 
@@ -99,6 +101,20 @@
 - 解释为什么形成当前规范
 
 但若与一级或二级规范冲突，它们应被视为待更新的依据文档，而不是新的规则来源。
+
+## 章节级工作文档
+
+以下文档属于当前编写过程中的章节级工作文档，用于具体章节的设计、迁移与起稿控制：
+
+- `chapter-01-internal-package-draft.md`
+- `chapter-01-manuscript-outline-draft.md`
+
+这类文档的特点是：
+
+- 服务于某一章的具体开发
+- 会随着章节推进持续修改
+- 不属于一级、二级或三级规范
+- 也不等同于通用研究依据文档
 
 ## 使用顺序建议
 
