@@ -60,7 +60,7 @@ class LabStage:
 SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
-    Section("manuscript", "书稿", "manuscript.html", "各章正文与全书参考文献阅读入口。"),
+    Section("manuscript", "书稿", "manuscript.html", "各章正文、全书术语表与全书参考文献阅读入口。"),
     Section("teaching", "教学支持", "teaching-support.html", "学习指南、教学指南与书稿配套入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
     Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
@@ -90,6 +90,12 @@ MANUSCRIPT_PAGES = [
         source=ROOT / "04-participating-in-and-organizing-open-source-projects.md",
         output="chapter-04.html",
         description="变更控制、PR、Review、CI、安全与发布基线。",
+    ),
+    ManuscriptPage(
+        label="全书术语表",
+        source=ROOT / "98-glossary.md",
+        output="glossary.html",
+        description="整本书统一使用的核心术语、英文原词与简要定义。",
     ),
     ManuscriptPage(
         label="全书参考文献",
@@ -1279,7 +1285,7 @@ def build_home() -> None:
     section_html = section_cards(
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
-            ("书稿", "manuscript.html", "第 1-4 章正文与全书参考文献。"),
+            ("书稿", "manuscript.html", "第 1-4 章正文、全书术语表与全书参考文献。"),
             ("教学支持", "teaching-support.html", "前四章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
@@ -1310,7 +1316,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、对应教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献，后续章节将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、全书术语表、对应教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献，后续章节将继续增补。
     </section>
 
     <section class="meta">
@@ -1410,7 +1416,7 @@ def build_manuscript_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>书稿目录</h1>
-      <p>这里集中展示各章正文与全书参考文献。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
+      <p>这里集中展示各章正文、全书术语表与全书参考文献。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
     </header>
 
     <section>
@@ -1427,7 +1433,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-4 章与全书参考文献；对应的前四章教学支持也已接入。第 5-8 章将在后续章节重写完成后接入。
+      当前在线书稿范围：第 1-4 章、全书术语表与全书参考文献；对应的前四章教学支持也已接入。第 5-8 章将在后续章节重写完成后接入。
     </section>
     """
     sidebar = f"""

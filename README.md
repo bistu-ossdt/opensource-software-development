@@ -18,6 +18,7 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `02-development-of-open-source-software.md`: rewritten manuscript draft for `Free Software, Open Source, and Licensing`
 - `03-development-models-and-characteristics.md`: rewritten manuscript draft for `Open Source Communities and Governance`
 - `04-participating-in-and-organizing-open-source-projects.md`: rewritten manuscript draft for `Core Engineering Workflow of Open Source Development`
+- `98-glossary.md`: initial back-matter glossary draft for book-level terminology
 - `05-leveraging-open-source-software-resources.md`: legacy chapter content retained for later migration and rewriting
 
 ## Current Teaching Support State
