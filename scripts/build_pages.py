@@ -42,12 +42,6 @@ SECTIONS = [
 
 MANUSCRIPT_PAGES = [
     ManuscriptPage(
-        label="00 课程设计原则",
-        source=ROOT / "00-preface.md",
-        output="preface.html",
-        description="课程整体设计原则、材料体系和编写约束。",
-    ),
-    ManuscriptPage(
         label="第 1 章 开源的起源与发展",
         source=ROOT / "01-overview.md",
         output="chapter-01.html",
@@ -738,7 +732,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区与实验/案例入口。当前上线内容优先覆盖 00 与第 1-4 章，后续章节与实验材料将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区与实验/案例入口。当前上线内容优先覆盖第 1-4 章，后续章节与实验材料将继续增补。
     </section>
 
     <section class="meta">
@@ -832,7 +826,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：00 与第 1-4 章。第 5-8 章将在后续章节重写完成后接入。
+      当前在线书稿范围：第 1-4 章。第 5-8 章将在后续章节重写完成后接入。
     </section>
     """
     sidebar = f"""
