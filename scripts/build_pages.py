@@ -27,6 +27,17 @@ class ManuscriptPage:
 
 
 @dataclass(frozen=True)
+class TeachingPage:
+    label: str
+    source: Path
+    output: str
+    description: str
+    chapter_output: str
+    chapter_label: str
+    kind: str
+
+
+@dataclass(frozen=True)
 class Section:
     key: str
     label: str
@@ -38,6 +49,7 @@ SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
     Section("manuscript", "书稿", "manuscript.html", "各章正文与全书参考文献阅读入口。"),
+    Section("teaching", "教学支持", "teaching-support.html", "Study Guide、Instructor Guide 与书稿配套入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
     Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
 ]
@@ -75,7 +87,84 @@ MANUSCRIPT_PAGES = [
     ),
 ]
 
-LINK_MAP = {str(page.source.name): page.output for page in MANUSCRIPT_PAGES}
+TEACHING_PAGES = [
+    TeachingPage(
+        label="第 1 章 Student Study Guide",
+        source=ROOT / "chapter-01-study-guide.md",
+        output="chapter-01-study-guide.html",
+        description="帮助学生把第 1 章读成历史结构、关键问题与项目定位的认知地图。",
+        chapter_output="chapter-01.html",
+        chapter_label="第 1 章 开源的起源与发展",
+        kind="Student Study Guide",
+    ),
+    TeachingPage(
+        label="第 1 章 Instructor Guide",
+        source=ROOT / "chapter-01-instructor-guide.md",
+        output="chapter-01-instructor-guide.html",
+        description="帮助教师组织第 1 章的历史主线、讨论重点与项目启动定位。",
+        chapter_output="chapter-01.html",
+        chapter_label="第 1 章 开源的起源与发展",
+        kind="Instructor Guide",
+    ),
+    TeachingPage(
+        label="第 2 章 Student Study Guide",
+        source=ROOT / "chapter-02-study-guide.md",
+        output="chapter-02-study-guide.html",
+        description="帮助学生把第 2 章从许可证名词表读成制度边界与项目判断框架。",
+        chapter_output="chapter-02.html",
+        chapter_label="第 2 章 自由软件、开源软件与许可证",
+        kind="Student Study Guide",
+    ),
+    TeachingPage(
+        label="第 2 章 Instructor Guide",
+        source=ROOT / "chapter-02-instructor-guide.md",
+        output="chapter-02-instructor-guide.html",
+        description="帮助教师组织第 2 章的制度判断、边界讲解与项目许可证讨论。",
+        chapter_output="chapter-02.html",
+        chapter_label="第 2 章 自由软件、开源软件与许可证",
+        kind="Instructor Guide",
+    ),
+    TeachingPage(
+        label="第 3 章 Student Study Guide",
+        source=ROOT / "chapter-03-study-guide.md",
+        output="chapter-03-study-guide.html",
+        description="帮助学生把第 3 章读成治理基础设施、角色结构与社区进入路径。",
+        chapter_output="chapter-03.html",
+        chapter_label="第 3 章 开源社区与治理",
+        kind="Student Study Guide",
+    ),
+    TeachingPage(
+        label="第 3 章 Instructor Guide",
+        source=ROOT / "chapter-03-instructor-guide.md",
+        output="chapter-03-instructor-guide.html",
+        description="帮助教师组织第 3 章的角色梯度、治理对象与团队协作映射。",
+        chapter_output="chapter-03.html",
+        chapter_label="第 3 章 开源社区与治理",
+        kind="Instructor Guide",
+    ),
+    TeachingPage(
+        label="第 4 章 Student Study Guide",
+        source=ROOT / "chapter-04-study-guide.md",
+        output="chapter-04-study-guide.html",
+        description="帮助学生把第 4 章读成变更控制主链，而不是平台按钮教程。",
+        chapter_output="chapter-04.html",
+        chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="Student Study Guide",
+    ),
+    TeachingPage(
+        label="第 4 章 Instructor Guide",
+        source=ROOT / "chapter-04-instructor-guide.md",
+        output="chapter-04-instructor-guide.html",
+        description="帮助教师组织第 4 章的流程主链、门禁逻辑与项目工作流训练。",
+        chapter_output="chapter-04.html",
+        chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="Instructor Guide",
+    ),
+]
+
+LINK_MAP = {
+    str(page.source.name): page.output for page in [*MANUSCRIPT_PAGES, *TEACHING_PAGES]
+}
 
 CSS = """
 :root {
@@ -513,6 +602,19 @@ code {
   color: var(--muted);
 }
 
+.card p + p {
+  margin-top: 10px;
+}
+
+.card-links {
+  color: var(--text);
+  font-size: 0.96rem;
+}
+
+.card-links a + a {
+  margin-left: 12px;
+}
+
 .section-title {
   margin: 0 0 12px 0;
   font-size: 1.3rem;
@@ -662,6 +764,29 @@ def manuscript_nav_html(current_output: str) -> str:
     return "\n".join(items)
 
 
+def teaching_nav_html(current_output: str) -> str:
+    items = ['<li><a class="{cls}" href="teaching-support.html">教学支持目录</a></li>'.format(
+        cls="active" if current_output == "teaching-support.html" else ""
+    )]
+    for page in TEACHING_PAGES:
+        cls = "active" if page.output == current_output else ""
+        items.append(
+            f'<li><a class="{cls}" href="{page.output}">{html.escape(page.label)}</a></li>'
+        )
+    return "\n".join(items)
+
+
+def teaching_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
+    return [page for page in TEACHING_PAGES if page.chapter_output == chapter_output]
+
+
+def manuscript_page_for_output(chapter_output: str) -> ManuscriptPage | None:
+    for page in MANUSCRIPT_PAGES:
+        if page.output == chapter_output:
+            return page
+    return None
+
+
 def section_cards(cards: list[tuple[str, str, str]]) -> str:
     rendered = []
     for title, href, desc in cards:
@@ -670,6 +795,29 @@ def section_cards(cards: list[tuple[str, str, str]]) -> str:
             <article class="card">
               <h3><a href="{href}">{html.escape(title)}</a></h3>
               <p>{html.escape(desc)}</p>
+            </article>
+            """
+        )
+    return "\n".join(rendered)
+
+
+def teaching_chapter_cards() -> str:
+    rendered = []
+    for chapter in MANUSCRIPT_PAGES:
+        teaching_pages = teaching_pages_for_chapter(chapter.output)
+        if not teaching_pages:
+            continue
+        links = "".join(
+            f'<a href="{page.output}">{html.escape(page.kind)}</a>'
+            for page in teaching_pages
+        )
+        links = links.replace("</a><a ", "</a> <span>·</span> <a ")
+        rendered.append(
+            f"""
+            <article class="card">
+              <h3><a href="{chapter.output}">{html.escape(chapter.label)}</a></h3>
+              <p>{html.escape(chapter.description)}</p>
+              <p class="card-links"><strong>配套入口：</strong> {links}</p>
             </article>
             """
         )
@@ -745,6 +893,7 @@ def build_home() -> None:
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
             ("书稿", "manuscript.html", "第 1-4 章正文与全书参考文献。"),
+            ("教学支持", "teaching-support.html", "前四章 Study Guide 与 Instructor Guide 在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
         ]
@@ -761,7 +910,7 @@ def build_home() -> None:
 
     <section>
       <h2 class="section-title">核心入口</h2>
-      <div class="card-grid two">
+      <div class="card-grid three">
         {section_html}
       </div>
     </section>
@@ -774,7 +923,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区与实验/案例入口。当前上线内容优先覆盖第 1-4 章与全书参考文献，后续章节与实验材料将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、对应教学支持与全书参考文献，后续章节与实验材料将继续增补。
     </section>
 
     <section class="meta">
@@ -832,14 +981,21 @@ def build_course_page() -> None:
       <h2 class="section-title">材料体系</h2>
       <ul class="feature-list">
         <li>Technical Book Manuscript：稳定核心知识与书稿正文。</li>
-        <li>Student Study Guide / Instructor Guide：教学支持层。</li>
+        <li><a href="teaching-support.html">Student Study Guide / Instructor Guide</a>：教学支持层。</li>
         <li>Lab / Project Materials：实验与团队项目材料。</li>
         <li>Case Library：案例库与项目证据。</li>
       </ul>
     </section>
 
+    <section>
+      <h2 class="section-title">当前已上线的教学支持</h2>
+      <div class="card-grid two">
+        {teaching_chapter_cards()}
+      </div>
+    </section>
+
     <section class="status-note">
-      课程层页面用于说明整体结构和使用方式；真正的长文阅读，请进入“书稿”分区。
+      课程层页面用于说明整体结构和使用方式；真正的长文阅读可进入“书稿”与“教学支持”分区。
     </section>
     """
     write_page(
@@ -848,7 +1004,7 @@ def build_course_page() -> None:
             title="课程说明",
             current_section="course",
             hero_title="课程定位与整体结构",
-            hero_text="课程层页面负责说明课程目标、对象、结构和材料体系，帮助读者先看清课程系统，再进入具体书稿与实验。",
+            hero_text="课程层页面负责说明课程目标、对象、结构和材料体系，帮助读者先看清课程系统，再进入具体书稿、教学支持与实验。",
             inner=inner,
         ),
     )
@@ -867,8 +1023,15 @@ def build_manuscript_index() -> None:
       </div>
     </section>
 
+    <section>
+      <h2 class="section-title">配套教学支持</h2>
+      <div class="card-grid two">
+        {teaching_chapter_cards()}
+      </div>
+    </section>
+
     <section class="status-note">
-      当前在线书稿范围：第 1-4 章与全书参考文献。第 5-8 章将在后续章节重写完成后接入。
+      当前在线书稿范围：第 1-4 章与全书参考文献；对应的前四章教学支持也已接入。第 5-8 章将在后续章节重写完成后接入。
     </section>
     """
     sidebar = f"""
@@ -886,6 +1049,54 @@ def build_manuscript_index() -> None:
             current_section="manuscript",
             hero_title="书稿阅读区",
             hero_text="书稿分区采用 docs-first 阅读结构。首页提供目录，章节页提供左侧章节导航与页内目录。",
+            inner=inner,
+            sidebar_html=sidebar,
+        ),
+    )
+
+
+def build_teaching_index() -> None:
+    inner = f"""
+    <header class="page-header">
+      <h1>教学支持目录</h1>
+      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线前四章的 Student Study Guide 与 Instructor Guide，可与对应书稿配套使用。</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">当前已上线</h2>
+      <div class="card-grid two">
+        {teaching_chapter_cards()}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">使用方式</h2>
+      <ul class="feature-list">
+        <li>Student Study Guide：帮助学生把书稿读成学习路径、阅读重点、误区提醒与项目连接。</li>
+        <li>Instructor Guide：帮助教师把书稿转化为课堂组织、案例使用、评价证据与项目推进。</li>
+        <li>教学支持页不替代书稿正文，而是与对应章节配套阅读。</li>
+      </ul>
+    </section>
+
+    <section class="status-note">
+      当前在线教学支持范围：第 1-4 章。第 5-8 章的教学支持将在对应章节稳定后继续接入。
+    </section>
+    """
+    sidebar = f"""
+    <div class="sidebar-block">
+      <h2>教学支持导航</h2>
+      <ul class="nav-list">
+        {teaching_nav_html("teaching-support.html")}
+      </ul>
+    </div>
+    """
+    write_page(
+        "teaching-support.html",
+        page_shell(
+            title="教学支持目录",
+            current_section="teaching",
+            hero_title="Study Guide 与 Instructor Guide",
+            hero_text="教学支持分区用于承接基于书稿的学习支架与教学支架，使课程层材料能够围绕书稿协同使用。",
             inner=inner,
             sidebar_html=sidebar,
         ),
@@ -1001,12 +1212,24 @@ def build_cases_page() -> None:
 
 def build_manuscript_page(page: ManuscriptPage) -> None:
     title, body, toc = render_markdown(page.source)
+    teaching_pages = teaching_pages_for_chapter(page.output)
     header = f"""
     <header class="page-header">
       <h1>{html.escape(title)}</h1>
       <p>{html.escape(page.description)}</p>
     </header>
     """
+    teaching_note = ""
+    if teaching_pages:
+        links = " · ".join(
+            f'<a href="{teaching_page.output}">{html.escape(teaching_page.kind)}</a>'
+            for teaching_page in teaching_pages
+        )
+        teaching_note = f"""
+        <section class="status-note">
+          <strong>配套教学支持：</strong> {links}
+        </section>
+        """
     meta = f"""
     <section class="meta">
       <p>源文件：<code>{html.escape(page.source.name)}</code></p>
@@ -1022,6 +1245,21 @@ def build_manuscript_page(page: ManuscriptPage) -> None:
         </div>
         """
     ]
+    if teaching_pages:
+        teaching_items = "".join(
+            f'<li><a href="{teaching_page.output}">{html.escape(teaching_page.kind)}</a></li>'
+            for teaching_page in teaching_pages
+        )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>配套教学支持</h3>
+              <ul class="nav-list">
+                {teaching_items}
+              </ul>
+            </div>
+            """
+        )
     if toc and "<li>" in toc:
         sidebar_parts.append(
             f"""
@@ -1038,7 +1276,93 @@ def build_manuscript_page(page: ManuscriptPage) -> None:
             current_section="manuscript",
             hero_title="书稿阅读页",
             hero_text="书稿分区用于稳定阅读正文。顶部是全站导航，左侧是书稿内部导航，页内目录用于长文定位。",
-            inner=header + body + meta,
+            inner=header + teaching_note + body + meta,
+            sidebar_html="".join(sidebar_parts),
+        ),
+    )
+
+
+def build_teaching_page(page: TeachingPage) -> None:
+    page_title, body, toc = render_markdown(page.source)
+    companion = manuscript_page_for_output(page.chapter_output)
+    sibling_pages = [
+        sibling
+        for sibling in teaching_pages_for_chapter(page.chapter_output)
+        if sibling.output != page.output
+    ]
+    companion_links = []
+    if companion:
+        companion_links.append(
+            f'<a href="{companion.output}">对应书稿：{html.escape(companion.label)}</a>'
+        )
+    for sibling in sibling_pages:
+        companion_links.append(
+            f'<a href="{sibling.output}">同章配套：{html.escape(sibling.kind)}</a>'
+        )
+    companion_note = ""
+    if companion_links:
+        companion_note = f"""
+        <section class="status-note">
+          <strong>配套入口：</strong> {' · '.join(companion_links)}
+        </section>
+        """
+    header = f"""
+    <header class="page-header">
+      <h1>{html.escape(page_title)}</h1>
+      <p>{html.escape(page.description)}</p>
+    </header>
+    """
+    meta = f"""
+    <section class="meta">
+      <p>源文件：<code>{html.escape(page.source.name)}</code></p>
+      <p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>
+    </section>
+    """
+    sidebar_parts = [
+        f"""
+        <div class="sidebar-block">
+          <h2>教学支持导航</h2>
+          <ul class="nav-list">
+            {teaching_nav_html(page.output)}
+          </ul>
+        </div>
+        """
+    ]
+    if companion:
+        related_items = [
+            f'<li><a href="{companion.output}">对应书稿</a></li>'
+        ]
+        for sibling in sibling_pages:
+            related_items.append(
+                f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+            )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>同章配套</h3>
+              <ul class="nav-list">
+                {''.join(related_items)}
+              </ul>
+            </div>
+            """
+        )
+    if toc and "<li>" in toc:
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block toc">
+              <h3>本页目录</h3>
+              {toc}
+            </div>
+            """
+        )
+    write_page(
+        page.output,
+        page_shell(
+            title=page.label,
+            current_section="teaching",
+            hero_title=page.kind,
+            hero_text="教学支持页用于承接与书稿配套的学习和教学支架，帮助课程层材料围绕同一章正文协同使用。",
+            inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
         ),
     )
@@ -1077,10 +1401,13 @@ def build_site() -> None:
     build_home()
     build_course_page()
     build_manuscript_index()
+    build_teaching_index()
     build_labs_page()
     build_cases_page()
     for page in MANUSCRIPT_PAGES:
         build_manuscript_page(page)
+    for page in TEACHING_PAGES:
+        build_teaching_page(page)
 
 
 if __name__ == "__main__":
