@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">治理基础设施示意图</title>
+  <desc id="desc">展示治理入口文件、公开记录和敏感通道如何共同构成现代开源项目的治理基础设施。</desc>
+  <!-- figure-id: ch03-fig-02-governance-infrastructure | status: final | source-trail: chapter 3 sections 3-4; governance entry files; public records; security boundary; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .core { fill: #eef4f1; stroke: #bfd1ca; stroke-width: 2; rx: 28; ry: 28; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .box-accent { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 18; ry: 18; }
+    .box-title { fill: #1f2825; font: 700 23px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .box-note { fill: #4f5d58; font: 500 17px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .arrow { stroke: #7fa99a; stroke-width: 4; fill: none; }
+    .edge { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1232" height="712" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">GOVERNANCE SURFACE</text>
+  <text class="title" x="80" y="136">治理基础设施不只是代码仓库</text>
+  <text class="subtitle" x="80" y="168">入口文件、公开记录和例外通道共同决定陌生人能否进入、理解并继续协作。</text>
+
+  <rect class="core" x="432" y="292" width="416" height="176" rx="28" />
+  <text class="box-title" x="640" y="352">公开协作核心</text>
+  <text class="box-note" x="640" y="392">仓库、Issue、Pull Request、发布计划</text>
+  <text class="box-note" x="640" y="420">让修改、讨论和决策留下公共记录</text>
+
+  <rect class="box" x="114" y="214" width="220" height="92" />
+  <text class="box-title" x="224" y="250">CONTRIBUTING.md</text>
+  <text class="box-note" x="224" y="280">进入路径与提交流程</text>
+
+  <rect class="box" x="114" y="340" width="220" height="92" />
+  <text class="box-title" x="224" y="376">CODE_OF_CONDUCT.md</text>
+  <text class="box-note" x="224" y="406">行为边界与处理责任</text>
+
+  <rect class="box" x="114" y="466" width="220" height="92" />
+  <text class="box-title" x="224" y="502">GOVERNANCE.md</text>
+  <text class="box-note" x="224" y="532">角色、决策与发布责任</text>
+
+  <rect class="box-accent" x="930" y="214" width="220" height="92" />
+  <text class="box-title" x="1040" y="250">公开记录</text>
+  <text class="box-note" x="1040" y="280">邮件列表、RFC、会议纪要</text>
+
+  <rect class="box-accent" x="930" y="340" width="220" height="92" />
+  <text class="box-title" x="1040" y="376">模板与分诊</text>
+  <text class="box-note" x="1040" y="406">Issue / PR 模板与工作项组织</text>
+
+  <rect class="box-accent" x="930" y="466" width="220" height="92" />
+  <text class="box-title" x="1040" y="502">例外通道</text>
+  <text class="box-note" x="1040" y="532">SECURITY.md 与受控报告路径</text>
+
+  <path class="arrow" d="M334 260 C390 260, 396 332, 432 332" />
+  <path class="arrow" d="M334 386 C390 386, 396 380, 432 380" />
+  <path class="arrow" d="M334 512 C390 512, 396 430, 432 430" />
+  <path class="arrow" d="M930 260 C886 260, 878 332, 848 332" />
+  <path class="arrow" d="M930 386 C886 386, 878 380, 848 380" />
+  <path class="arrow" d="M930 512 C886 512, 878 430, 848 430" />
+
+  <text class="edge" x="114" y="628">左侧解决“如何进入”</text>
+  <text class="edge" x="864" y="628">右侧解决“如何记录与例外处理”</text>
+</svg>

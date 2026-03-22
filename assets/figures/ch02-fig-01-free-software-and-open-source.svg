@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">自由软件与开源软件关系图</title>
+  <desc id="desc">展示自由软件与开源软件的共同历史土壤，以及在表达重心上的不同。</desc>
+  <!-- figure-id: ch02-fig-01-free-software-and-open-source | status: final | source-trail: chapter 2 section 1; FSF four freedoms; OSI OSD framing; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .chip { fill: #e3ece8; stroke: #b9ad99; stroke-width: 2; rx: 16; ry: 16; }
+    .chip-text { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .panel { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 24; ry: 24; }
+    .panel-accent { fill: #eef4f1; stroke: #c7d6d0; stroke-width: 2; rx: 24; ry: 24; }
+    .panel-title { fill: #1f2825; font: 700 28px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .line { fill: #4f5d58; font: 500 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .shared { fill: #1a5a4e; font: 700 24px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .shared-note { fill: #eef4f1; font: 500 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .footer { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1232" height="712" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">CONCEPT MAP</text>
+  <text class="title" x="80" y="136">自由软件与开源软件：连续性与表达重心</text>
+  <text class="subtitle" x="80" y="168">它们不是彼此割裂的两个世界，而是在同一历史问题上采用不同表达框架。</text>
+
+  <g>
+    <rect class="chip" x="124" y="210" width="300" height="70" />
+    <text class="chip-text" x="154" y="254">1985 · FSF · 四项自由</text>
+  </g>
+  <g>
+    <rect class="chip" x="856" y="210" width="308" height="70" />
+    <text class="chip-text" x="886" y="254">1998 · OSI · OSD 框架</text>
+  </g>
+
+  <g>
+    <rect class="panel" x="92" y="314" width="468" height="294" />
+    <text class="panel-title" x="132" y="366">自由软件</text>
+    <text class="line" x="132" y="414">• 核心语言：freedom / software freedom</text>
+    <text class="line" x="132" y="454">• 主要问题：使用者是否拥有运行、研究、</text>
+    <text class="line" x="158" y="484">修改和再分发软件的基本控制权</text>
+    <text class="line" x="132" y="524">• 典型表述：四项自由、反对重新封闭</text>
+    <text class="line" x="132" y="564">• 工程含义：自由不是免费，也不等于反商业</text>
+  </g>
+
+  <g>
+    <rect class="panel-accent" x="720" y="314" width="468" height="294" />
+    <text class="panel-title" x="760" y="366">开源软件</text>
+    <text class="line" x="760" y="414">• 核心语言：license / redistribution / collaboration</text>
+    <text class="line" x="760" y="454">• 主要问题：分发条件是否满足 OSD，</text>
+    <text class="line" x="786" y="484">能否支撑公开协作和广泛再分发</text>
+    <text class="line" x="760" y="524">• 典型表述：Open Source Definition</text>
+    <text class="line" x="760" y="564">• 工程含义：不是“代码可见”，而是制度可用</text>
+  </g>
+
+  <g>
+    <rect x="270" y="634" width="740" height="70" rx="18" fill="#1a5a4e" />
+    <text class="shared" x="308" y="676">共同历史土壤：都在回应软件封闭化问题，都依赖源码可得与可修改传播</text>
+  </g>
+
+  <text class="footer" x="80" y="724">最稳妥的判断：自由软件与开源软件有深刻连续性，但不应被压平成同一个词。</text>
+</svg>

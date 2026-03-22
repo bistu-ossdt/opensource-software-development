@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">开源变更控制主流程图</title>
+  <desc id="desc">展示从 Issue 到 Branch、Commit、Pull Request、Review、Checks、Merge 和 Release 的最小开源变更控制链。</desc>
+  <!-- figure-id: ch04-fig-01-change-control-flow | status: final | source-trail: chapter 4 sections 1-5; issue/branch/commit/pr/review/ci/release narrative; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 20; ry: 20; }
+    .gate { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 20; ry: 20; }
+    .box-title { fill: #1f2825; font: 700 24px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .box-note { fill: #4f5d58; font: 500 17px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+    .lane { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .footer { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1352" height="672" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">CHANGE CONTROL</text>
+  <text class="title" x="80" y="136">从工作项到发布的最小变更控制链</text>
+  <text class="subtitle" x="80" y="168">现代开源开发不是“直接改主线”，而是让每组修改先成为可解释、可审查、可验证的对象。</text>
+
+  <text class="lane" x="96" y="246">问题与实现</text>
+  <text class="lane" x="786" y="246">门禁与整合</text>
+
+  <rect class="box" x="70" y="292" width="170" height="116" />
+  <text class="box-title" x="155" y="338">Issue</text>
+  <text class="box-note" x="155" y="370">定义问题范围</text>
+  <text class="box-note" x="155" y="394">保留上下文</text>
+
+  <rect class="box" x="286" y="292" width="170" height="116" />
+  <text class="box-title" x="371" y="338">Branch</text>
+  <text class="box-note" x="371" y="370">隔离修改边界</text>
+  <text class="box-note" x="371" y="394">避免污染主线</text>
+
+  <rect class="box" x="502" y="292" width="170" height="116" />
+  <text class="box-title" x="587" y="338">Commit</text>
+  <text class="box-note" x="587" y="370">留下可回看的</text>
+  <text class="box-note" x="587" y="394">最小历史单元</text>
+
+  <rect class="box" x="718" y="292" width="190" height="116" />
+  <text class="box-title" x="813" y="338">Pull Request</text>
+  <text class="box-note" x="813" y="370">把变更打包成</text>
+  <text class="box-note" x="813" y="394">公共判断对象</text>
+
+  <rect class="gate" x="956" y="268" width="170" height="90" />
+  <text class="box-title" x="1041" y="318">Review</text>
+  <text class="box-note" x="1041" y="344">解释、质疑、修订</text>
+
+  <rect class="gate" x="956" y="370" width="170" height="90" />
+  <text class="box-title" x="1041" y="420">Checks</text>
+  <text class="box-note" x="1041" y="446">测试、构建、依赖检查</text>
+
+  <rect class="box" x="1174" y="292" width="156" height="116" />
+  <text class="box-title" x="1252" y="338">Merge</text>
+  <text class="box-note" x="1252" y="370">进入主线</text>
+  <text class="box-note" x="1252" y="394">形成公共历史</text>
+
+  <rect class="box" x="1088" y="518" width="242" height="104" />
+  <text class="box-title" x="1209" y="560">Release</text>
+  <text class="box-note" x="1209" y="590">版本边界、CHANGELOG、发布说明</text>
+
+  <path class="arrow" d="M240 350 H286" />
+  <path class="arrow" d="M456 350 H502" />
+  <path class="arrow" d="M672 350 H718" />
+  <path class="arrow" d="M908 350 H956" />
+  <path class="arrow" d="M1126 350 H1174" />
+  <path class="arrow" d="M1252 408 V474 Q1252 492 1234 492 H1209 Q1191 492 1191 510 V518" />
+
+  <polygon points="286,350 270,341 270,359" fill="#7fa99a" />
+  <polygon points="502,350 486,341 486,359" fill="#7fa99a" />
+  <polygon points="718,350 702,341 702,359" fill="#7fa99a" />
+  <polygon points="956,350 940,341 940,359" fill="#7fa99a" />
+  <polygon points="1174,350 1158,341 1158,359" fill="#7fa99a" />
+  <polygon points="1209,518 1200,500 1218,500" fill="#7fa99a" />
+
+  <text class="footer" x="80" y="654">核心逻辑：每一组修改都必须先被隔离、说明、审查、验证，然后才能安全进入主线与发布边界。</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">开源历史主线时间线</title>
+  <desc id="desc">从早期软件共享、软件商品化、GNU 与自由软件运动，到 Linux、Mozilla、Apache，再到 GitHub 平台化的历史主线。</desc>
+  <!-- figure-id: ch01-fig-01-open-source-timeline | status: final | source-trail: chapter 1 overall narrative; GNU/FSF history; Mozilla history; Apache history; GitHub milestone; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 38px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .axis { stroke: #7fa99a; stroke-width: 8; stroke-linecap: round; }
+    .node { fill: #1a5a4e; stroke: #ffffff; stroke-width: 6; }
+    .connector { stroke: #9db5ad; stroke-width: 3; }
+    .card { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .card-accent { fill: #e3ece8; stroke: #b9ad99; stroke-width: 2; rx: 18; ry: 18; }
+    .year { fill: #1a5a4e; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .label { fill: #1f2825; font: 700 24px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .note { fill: #4f5d58; font: 500 17px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .footer { fill: #5d6b66; font: 500 17px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1232" height="672" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">HISTORY LINE</text>
+  <text class="title" x="80" y="136">从共享实践到开源生态</text>
+  <text class="subtitle" x="80" y="168">关键不是项目名单，而是“问题如何被提出、扩展并制度化”。</text>
+
+  <line class="axis" x1="110" y1="392" x2="1170" y2="392" />
+
+  <g>
+    <rect class="card" x="54" y="214" width="198" height="118" />
+    <line class="connector" x1="153" y1="332" x2="153" y2="366" />
+    <circle class="node" cx="153" cy="392" r="18" />
+    <text class="year" x="78" y="248">1960s-1970s</text>
+    <text class="label" x="78" y="282">共享是技术现实</text>
+    <text class="note" x="78" y="312">软件随硬件交付，</text>
+    <text class="note" x="78" y="334">源代码常被研究和修改。</text>
+  </g>
+
+  <g>
+    <rect class="card-accent" x="274" y="450" width="210" height="122" />
+    <line class="connector" x1="379" y1="392" x2="379" y2="450" />
+    <circle class="node" cx="379" cy="392" r="18" />
+    <text class="year" x="300" y="486">1976-1983</text>
+    <text class="label" x="300" y="520">软件商品化加深</text>
+    <text class="note" x="300" y="548">Bill Gates 公开信、</text>
+    <text class="note" x="300" y="570">UNIX System V 强化边界。</text>
+  </g>
+
+  <g>
+    <rect class="card" x="506" y="204" width="216" height="128" />
+    <line class="connector" x1="614" y1="332" x2="614" y2="366" />
+    <circle class="node" cx="614" cy="392" r="18" />
+    <text class="year" x="532" y="240">1983-1985</text>
+    <text class="label" x="532" y="274">GNU 与 FSF</text>
+    <text class="note" x="532" y="304">自由软件运动把问题</text>
+    <text class="note" x="532" y="326">正式写成系统建设与制度表达。</text>
+  </g>
+
+  <g>
+    <rect class="card-accent" x="754" y="446" width="232" height="126" />
+    <line class="connector" x1="870" y1="392" x2="870" y2="446" />
+    <circle class="node" cx="870" cy="392" r="18" />
+    <text class="year" x="780" y="482">1991-1999</text>
+    <text class="label" x="780" y="516">可用系统、传播与组织</text>
+    <text class="note" x="780" y="544">Linux、Mozilla、Apache</text>
+    <text class="note" x="780" y="566">分别补上系统、传播与治理。</text>
+  </g>
+
+  <g>
+    <rect class="card" x="1016" y="214" width="202" height="118" />
+    <line class="connector" x1="1117" y1="332" x2="1117" y2="366" />
+    <circle class="node" cx="1117" cy="392" r="18" />
+    <text class="year" x="1042" y="248">2008-2018</text>
+    <text class="label" x="1042" y="282">平台化与基础设施化</text>
+    <text class="note" x="1042" y="312">GitHub 把仓库、协作、</text>
+    <text class="note" x="1042" y="334">评审与发布收束到同一平台。</text>
+  </g>
+
+  <text class="footer" x="80" y="640">主线压缩：共享实践 → 封闭化压力 → 自由软件运动 → 可用系统与稳定组织 → 平台化协作生态</text>
+</svg>

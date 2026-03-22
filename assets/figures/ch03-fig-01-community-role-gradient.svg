@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">开源社区角色梯度图</title>
+  <desc id="desc">展示从使用者到治理层的角色梯度，以及权限和责任如何同步上升。</desc>
+  <!-- figure-id: ch03-fig-01-community-role-gradient | status: final | source-trail: chapter 3 section 2; Linux, Apache, Python governance narrative; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .step-1 { fill: #f4ede0; stroke: #d9cfbe; stroke-width: 2; }
+    .step-2 { fill: #ecf3ef; stroke: #c9d8d1; stroke-width: 2; }
+    .step-3 { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; }
+    .step-4 { fill: #d7e5df; stroke: #afc4bb; stroke-width: 2; }
+    .step-5 { fill: #c9ddd5; stroke: #9fb6ad; stroke-width: 2; }
+    .step-title { fill: #1f2825; font: 700 26px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .step-note { fill: #4f5d58; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .arrow { stroke: #1a5a4e; stroke-width: 5; }
+    .arrow-label { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1232" height="712" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">ROLE GRADIENT</text>
+  <text class="title" x="80" y="136">开源社区的角色梯度</text>
+  <text class="subtitle" x="80" y="168">角色不是头衔集合，而是权限、判断与责任逐层对应的结构。</text>
+
+  <rect class="step-1" x="120" y="548" width="860" height="110" rx="22" />
+  <text class="step-title" x="550" y="596">使用者 / 报告者</text>
+  <text class="step-note" x="550" y="630">下载、运行、反馈问题，判断项目是否值得继续关注</text>
+
+  <rect class="step-2" x="210" y="454" width="680" height="94" rx="22" />
+  <text class="step-title" x="550" y="494">贡献者</text>
+  <text class="step-note" x="550" y="524">提交文档、测试、缺陷修复与功能修改</text>
+
+  <rect class="step-3" x="300" y="374" width="500" height="80" rx="22" />
+  <text class="step-title" x="550" y="410">评审者 / 维护者</text>
+  <text class="step-note" x="550" y="436">解释边界、分配责任、决定哪些修改可以进入主线</text>
+
+  <rect class="step-4" x="392" y="304" width="316" height="70" rx="22" />
+  <text class="step-title" x="550" y="344">核心团队</text>
+  <text class="step-note" x="550" y="366">承担方向、版本与长期稳定性</text>
+
+  <rect class="step-5" x="446" y="236" width="208" height="68" rx="22" />
+  <text class="step-title" x="550" y="276">治理层</text>
+  <text class="step-note" x="550" y="298">处理最终裁决、继任与权力约束</text>
+
+  <line class="arrow" x1="1058" y1="634" x2="1058" y2="260" />
+  <polygon points="1058,226 1044,256 1072,256" fill="#1a5a4e" />
+  <text class="arrow-label" x="1086" y="320">责任上升</text>
+  <text class="arrow-label" x="1086" y="354">权限上升</text>
+  <text class="arrow-label" x="1086" y="388">可见度上升</text>
+</svg>

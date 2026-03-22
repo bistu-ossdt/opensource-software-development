@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import html
 import re
+import shutil
 
 import markdown
 
@@ -14,6 +15,7 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
+PUBLIC_ASSETS_DIR = ROOT / "assets"
 
 
 @dataclass(frozen=True)
@@ -437,6 +439,40 @@ code {
 
 .content th {
   background: #f1ebde;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.book-figure {
+  margin: 1.5rem 0;
+  padding: 18px;
+  border: 1px solid #e7dece;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(250, 247, 239, 0.98));
+}
+
+.book-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.book-figure figcaption {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.book-table-caption {
+  margin: 1.4rem 0 0.45rem 0;
+  color: var(--accent-strong);
+  font-weight: 700;
 }
 
 .card-grid {
@@ -1020,8 +1056,22 @@ def reset_site_dir() -> None:
     ASSETS_DIR.mkdir()
 
 
+def copy_public_assets() -> None:
+    if not PUBLIC_ASSETS_DIR.exists():
+        return
+    for path in sorted(PUBLIC_ASSETS_DIR.rglob("*")):
+        relative = path.relative_to(PUBLIC_ASSETS_DIR)
+        destination = ASSETS_DIR / relative
+        if path.is_dir():
+            destination.mkdir(parents=True, exist_ok=True)
+        else:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, destination)
+
+
 def build_site() -> None:
     reset_site_dir()
+    copy_public_assets()
     (ASSETS_DIR / "style.css").write_text(CSS.strip() + "\n", encoding="utf-8")
     (SITE_DIR / ".nojekyll").write_text("", encoding="utf-8")
     build_home()

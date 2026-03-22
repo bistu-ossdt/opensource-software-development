@@ -57,6 +57,14 @@ fix(ci): fail pull requests when required tests break
 
 这一节最需要建立的判断是：`Issue`、Branch、Commit 不是彼此孤立的对象。它们共同把一个问题逐步收束为一组可处理、可说明、可回顾的工程修改。对共享仓库模型和 fork-and-pull 模型而言，这条逻辑都成立。不同之处只在于修改是先发生在同一仓库中的协作分支，还是先发生在贡献者自己的副本中；共同点则是，修改在进入主线前必须被隔离并清楚描述。
 
+把本章后面会反复出现的对象先压缩成一条最小链条，大致如下。
+
+<!-- figure-id: ch04-fig-01-change-control-flow | core | status: final | source-trail: chapter 4 sections 2-5 narrative; fully redrawn -->
+<figure class="book-figure">
+  <img src="assets/figures/ch04-fig-01-change-control-flow.svg" alt="开源变更控制主流程图，展示从 Issue、Branch、Commit 到 Pull Request、Review、Checks、Merge 和 Release 的链条。" />
+  <figcaption>图 4-1 从工作项到发布的最小变更控制链</figcaption>
+</figure>
+
 ## 3. Pull Request、Review 与 Merge：让修改变成可判断对象
 
 如果说分支让修改被隔离出来，那么 Pull Request 则让它成为一个可判断对象。它的意义不只是“把代码交给维护者”，更是把一组修改、相关工作项、提交历史、讨论记录和后续修订汇总在同一个公共空间里。一个成熟项目之所以越来越依赖 Pull Request，并不是因为平台把它设计得显眼，而是因为它很好地承载了变更提案的核心需求：修改必须先被看见、被理解、被质疑、被修正，然后才进入主线。
@@ -129,6 +137,21 @@ GitHub 等平台把这一点表达得很清楚：workflow 是 configurable autom
 CI 之所以应被视为仓库政策，而不是附属脚本，还因为它明确规定了项目愿意为主线承担什么样的最低质量门槛。有的项目要求每次修改都必须通过构建和测试；有的还会加入格式检查、静态分析、许可证检查、依赖风险检查或文档生成验证。具体组合可以不同，但共同点很稳定：项目把“什么叫做最低可接受修改”部分交给自动化持续执行，而不是每次都靠人工从头记忆。
 
 这也意味着自动化质量本身是工程流程的一部分。一个经常失败、速度极慢、结果不稳定的 CI 系统，不只是“工具不好用”，而是在削弱 review 和合并门禁的可信度。维护者会逐渐习惯性忽略失败，贡献者会把检查视为噪声，主线质量也会因此变得更难保障。成熟项目之所以重视 CI，不只是因为它能发现问题，还因为它能把共同规则以一致方式施加到每一次变更上。
+
+如果把前面出现过的关键对象放到同一张表里，它们在流程中的分工会更清楚。
+
+<!-- figure-id: ch04-tab-01-change-control-objects | core | status: final | source-trail: chapter 4 sections 2-4; change-control object mapping; fully rewritten -->
+<p class="book-table-caption">表 4-1 开源变更控制中的关键对象与分工</p>
+
+| 对象 | 在流程中的作用 | 主要回答的问题 | 进入下一步前要满足什么 |
+| --- | --- | --- | --- |
+| `Issue` | 把模糊问题变成可追踪工作项 | 这次修改为什么存在、范围是否成立 | 问题背景、范围和优先级至少基本清楚 |
+| Branch | 为一组修改建立隔离边界 | 这组工作是否能与主线和其他工作分开推进 | 修改边界清楚，不与无关工作混杂 |
+| Commit | 留下最小历史单元 | 具体改了什么、为什么这样改 | 标题和历史边界可读，可支持 review 与回滚 |
+| Pull Request | 把变更包装成公共判断对象 | 这组修改是否值得进入主线 | 描述、diff、关联上下文和风险说明基本完整 |
+| Review | 提供人工判断与责任分层 | 设计、边界和修改质量是否可接受 | 关键评审意见被处理，必要批准已获得 |
+| CI / Checks | 提供自动化验证 | 修改是否通过最低限度的可重复检查 | 必需测试、构建或依赖检查通过 |
+| Rules / Merge | 把约定变成可执行门禁 | 主线是否允许这组修改进入公共历史 | 评审、检查和分支保护条件全部满足 |
 
 ## 5. 安全与发布基线：依赖、密钥与可验证发布
 
