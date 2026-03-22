@@ -18,8 +18,12 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `02-development-of-open-source-software.md`: rewritten manuscript draft for `Free Software, Open Source, and Licensing`
 - `03-development-models-and-characteristics.md`: rewritten manuscript draft for `Open Source Communities and Governance`
 - `04-participating-in-and-organizing-open-source-projects.md`: rewritten manuscript draft for `Core Engineering Workflow of Open Source Development`
+- `05-leveraging-open-source-software-resources.md`: current chapter-5 skeleton draft for `Reading and Understanding Open Source Projects`
+- `06-participating-in-open-source-projects.md`: current chapter-6 skeleton draft for `Participating in Open Source Projects`
+- `07-ai-assisted-open-source-development-practice.md`: current chapter-7 skeleton draft for `AI-Assisted Open Source Development Practice`
+- `08-organizing-and-releasing-your-open-source-project.md`: current chapter-8 skeleton draft for `Organizing and Releasing Your Open Source Project`
 - `98-glossary.md`: initial back-matter glossary draft for book-level terminology
-- `05-leveraging-open-source-software-resources.md`: legacy chapter content retained for later migration and rewriting
+- `99-book-references.md`: initial back-matter references draft for book-level sources
 
 ## Current Teaching Support State
 

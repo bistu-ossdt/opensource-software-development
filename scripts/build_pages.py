@@ -92,6 +92,30 @@ MANUSCRIPT_PAGES = [
         description="变更控制、PR、Review、CI、安全与发布基线。",
     ),
     ManuscriptPage(
+        label="第 5 章 阅读与理解开源项目",
+        source=ROOT / "05-leveraging-open-source-software-resources.md",
+        output="chapter-05.html",
+        description="从仓库入口、治理信号与工程对象出发，建立面对陌生开源项目的整体阅读框架。当前为骨架稿。",
+    ),
+    ManuscriptPage(
+        label="第 6 章 参与开源项目",
+        source=ROOT / "06-participating-in-open-source-projects.md",
+        output="chapter-06.html",
+        description="从第一次贡献、贡献说明到 review 回复，建立参与真实项目的最小路径。当前为骨架稿。",
+    ),
+    ManuscriptPage(
+        label="第 7 章 AI 辅助的开源开发实践",
+        source=ROOT / "07-ai-assisted-open-source-development-practice.md",
+        output="chapter-07.html",
+        description="讨论 AI 如何进入开源流程，而不是绕开许可证、评审、测试与人工责任链。当前为骨架稿。",
+    ),
+    ManuscriptPage(
+        label="第 8 章 组织与发布你的开源项目",
+        source=ROOT / "08-organizing-and-releasing-your-open-source-project.md",
+        output="chapter-08.html",
+        description="从维护者视角组织公开仓库、版本发布、维护计划与最小安全基线。当前为骨架稿。",
+    ),
+    ManuscriptPage(
         label="全书术语表",
         source=ROOT / "98-glossary.md",
         output="glossary.html",
@@ -1285,7 +1309,7 @@ def build_home() -> None:
     section_html = section_cards(
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
-            ("书稿", "manuscript.html", "第 1-4 章正文、全书术语表与全书参考文献。"),
+            ("书稿", "manuscript.html", "第 1-8 章书稿、全书术语表与全书参考文献。"),
             ("教学支持", "teaching-support.html", "前四章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
@@ -1316,7 +1340,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、全书术语表、对应教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献，后续章节将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、全书术语表、对应前四章教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献。
     </section>
 
     <section class="meta">
@@ -1433,7 +1457,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-4 章、全书术语表与全书参考文献；对应的前四章教学支持也已接入。第 5-8 章将在后续章节重写完成后接入。
+      当前在线书稿范围：第 1-8 章、全书术语表与全书参考文献；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
     </section>
     """
     sidebar = f"""
