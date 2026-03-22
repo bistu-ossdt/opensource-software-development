@@ -44,6 +44,12 @@ Issue #2481
 
 角色梯度并不是为了制造抽象的等级感，而是为了让权限、判断和责任可以逐层对应。一个人能否直接合并修改、能否发布版本、能否代表项目解释范围边界、能否处理社区争议，这些都不是象征性头衔，而是对公共对象的真实控制权。成熟项目通常不会把这种控制权完全模糊化，而会逐渐把它与具体职责绑定起来。也正因为如此，治理文本往往不仅要说明“谁可以做什么”，还要说明这些权限如何获得、在什么条件下失效，以及谁有权对其进行监督。
 
+<div class="history-story">
+  <p class="history-story-label">历史片段 Historical Story</p>
+  <p>2018 年 7 月 12 日，围绕 PEP 572 的激烈争论刚刚落下，Guido van Rossum 向 <code>python-committers</code> 邮件列表发出一封标题为 “Transfer of power” 的邮件，宣布自己退出 BDFL 的最终决策角色，而且不会指定继任者。对外部旁观者来说，这像是一位长期核心人物的个人决定；但对 Python 社区来说，更尖锐的问题立刻浮现出来：如果项目不能再依赖单一人物做最后裁决，那么 PEP 由谁拍板，核心开发者由谁接纳，权力又该如何被约束？</p>
+  <p>接下来几个月里，Python 社区没有把这个问题重新交还给新的个人权威，而是把它写成了治理文本。2019 年形成的 <code>PEP 13</code> 以 steering council、core team、选举机制和利益冲突限制为核心，把“谁负责什么、谁能做最后判断、怎样避免单一组织主导”正式写进了项目制度。这个转折之所以具有代表性，不只是因为 Python 很有名，而是因为它清楚地说明：成熟开源社区迟早要把“依赖某个人”转化为“依赖可继承的公共治理结构”。</p>
+</div>
+
 先把这条从外围参与到治理责任的梯度压缩成一张图，后面的 Linux、Apache 和 Python 案例会更容易定位。
 
 <!-- figure-id: ch03-fig-01-community-role-gradient | core | status: final | source-trail: chapter 3 §2 narrative; fully redrawn -->
@@ -193,6 +199,7 @@ GOVERNANCE.md
 - Linux kernel documentation, “The kernel development process”
 - Linux kernel documentation, “How the development process works”
 - Apache Software Foundation, “How the ASF Works”
+- Guido van Rossum, “Transfer of power”
 - Python Enhancement Proposals, “PEP 13 – Python Language Governance”
 - GitHub Docs, “About community profiles for public repositories”
 - Open Source Guides, “Leadership and Governance”
