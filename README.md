@@ -2,16 +2,16 @@
 
 This repository is in transition from legacy course materials to a newly structured book manuscript.
 
-- Chapters 1-2 have already been rewritten as new manuscript drafts aligned with the current course design.
-- Chapters 3-5 still mainly preserve legacy source content in reorganized chapter positions and are waiting for systematic migration and rewriting.
+- Chapters 1-4 have already been rewritten as new manuscript drafts aligned with the current course design.
+- Chapter 5 still mainly preserves legacy source content in a reorganized chapter position and is waiting for systematic migration and rewriting.
 - Chapter 0 and the various `*-reference.md` files define the design system, migration logic, and chapter-development workflow behind that rewrite process.
 
 - Chapter 0: `00-preface.md` (currently the overall course-design and editorial-principles document; later, student-facing parts may be rewritten as the textbook preface)
 
 - Chapter 1: `01-overview.md` is now a rewritten manuscript draft for `Origins and Evolution of Open Source`, based on legacy materials plus new research and chapter-level restructuring
 - Chapter 2: `02-development-of-open-source-software.md` is now a rewritten manuscript draft for `Free Software, Open Source, and Licensing`, based on legacy materials plus official licensing references and chapter-level restructuring
-- Chapter 3: from `《开源软件开发技术》第三章_焦健_20200906.md` (`## 开源软件开发的模式和特点` to before `## 参与和组织开源软件项目`)
-- Chapter 4: full content of `《开源软件开发技术》教材（第四章）_杨大利.md`
+- Chapter 3: `03-development-models-and-characteristics.md` is now a rewritten manuscript draft for `Open Source Communities and Governance`, based on legacy materials plus official governance references and chapter-level restructuring
+- Chapter 4: `04-participating-in-and-organizing-open-source-projects.md` is now a rewritten manuscript draft for `Core Engineering Workflow of Open Source Development`, based on legacy materials plus official workflow, review, CI, and security references and chapter-level restructuring
 - Chapter 5: from `《开源软件开发技术》教材大纲 第五章（草稿） 曾铮.md` (`## 利用好开源软件资源` to before `## 附录1 GuHub的使用`)
 
 Additional document:
@@ -29,6 +29,12 @@ Additional document:
 - `chapter-02-internal-package-draft.md`: working draft of the internal chapter package for Chapter 2, defining the licensing chapter’s scope, concept boundaries, migration decisions, and next research questions before manuscript writing.
 - `chapter-02-targeted-research-reference.md`: targeted research notes for Chapter 2, focused on validating the stable definitions and minimum distinctions needed for the licensing chapter before full manuscript drafting.
 - `chapter-02-manuscript-outline-draft.md`: manuscript outline draft for Chapter 2, including the opening paragraph, main narrative flow, and chapter-level writing constraints before full prose drafting.
+- `chapter-03-internal-package-draft.md`: working draft of the internal chapter package for Chapter 3, defining the governance chapter’s scope, concept boundaries, migration decisions, and case constraints before manuscript writing.
+- `chapter-03-targeted-research-reference.md`: targeted research notes for Chapter 3, focused on validating stable governance concepts, classic governance cases, and modern repository governance entry points before full manuscript drafting.
+- `chapter-03-manuscript-outline-draft.md`: manuscript outline draft for Chapter 3, including the opening paragraph, main narrative flow, and chapter-level writing constraints before full prose drafting.
+- `chapter-04-internal-package-draft.md`: working draft of the internal chapter package for Chapter 4, defining the engineering workflow chapter’s scope, concept boundaries, migration decisions, and case constraints before manuscript writing.
+- `chapter-04-targeted-research-reference.md`: targeted research notes for Chapter 4, focused on validating stable workflow concepts, review gates, CI, repository security controls, and release-integrity baselines before full manuscript drafting.
+- `chapter-04-manuscript-outline-draft.md`: manuscript outline draft for Chapter 4, including the opening paragraph, main narrative flow, and chapter-level writing constraints before full prose drafting.
 - `chapter-specification-reference.md`: chapter development specification for building each chapter as a complete unit with main text, appendix interfaces, experiment interfaces, terms, cases, and assessment evidence; not part of the textbook chapter sequence.
 - `chapter-baseline-and-stretch-blueprint-reference.md`: chapter-level blueprint that maps the course into baseline content for ordinary undergraduate programs and stretch content for stronger teams or top universities; not part of the textbook chapter sequence.
 - `experiment-baseline-and-stretch-blueprint-reference.md`: experiment-system blueprint that maps the team project into required baseline tasks and optional stretch tasks; not part of the textbook chapter sequence.

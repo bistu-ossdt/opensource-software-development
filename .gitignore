@@ -23,5 +23,8 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Generated preview site
+site/
+
 # Local reference materials are not part of the versioned manuscript
 ref/
