@@ -776,6 +776,33 @@ code {
   font-weight: 700;
 }
 
+.history-story {
+  margin: 1.5rem 0;
+  padding: 18px 20px;
+  border: 1px solid #ddd1bd;
+  border-left: 5px solid var(--accent);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(248, 244, 235, 0.98), rgba(255, 253, 247, 0.96));
+}
+
+.history-story-label {
+  margin: 0 0 10px 0;
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.history-story p {
+  margin: 0;
+}
+
+.history-story p + p {
+  margin-top: 10px;
+}
+
 .card-grid {
   display: grid;
   gap: 14px;
