@@ -12,6 +12,8 @@ At the same time, do not postpone “real book writing” until after every inte
 
 More specifically, they should be written in a practical technical-book style rather than as temporary teaching notes. The target is closer to a durable O'Reilly-like engineering book than to a lecture handout, while still serving undergraduate teaching needs.
 
+The concrete manuscript-size and completion thresholds for that “publishable technical-book” target are defined in `chapter-specification-reference.md` under `出版级书稿体量与完成度标准`.
+
 At the language level, the technical book layer should default to a general reader interested in open source software development, not explicitly to students or teachers. Explicit teaching language belongs in the study guide, instructor guide, syllabus, labs, and other course-support layers.
 
 The recommended workflow is:
