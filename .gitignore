@@ -28,3 +28,6 @@ site/
 
 # Local reference materials are not part of the versioned manuscript
 ref/
+
+# Internal writing notes kept locally
+chapters-1-4-optimization-suggestions-reference.md
