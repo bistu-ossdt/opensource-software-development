@@ -1,4 +1,4 @@
-# Chapter 4 Instructor Guide
+# 第 4 章 教学指南
 
 ## 对应书稿与使用方式
 

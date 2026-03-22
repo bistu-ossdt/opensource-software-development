@@ -1,4 +1,4 @@
-# Chapter 1 Student Study Guide
+# 第 1 章 学习指南
 
 ## 对应书稿
 

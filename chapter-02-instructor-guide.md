@@ -1,4 +1,4 @@
-# Chapter 2 Instructor Guide
+# 第 2 章 教学指南
 
 ## 对应书稿与使用方式
 

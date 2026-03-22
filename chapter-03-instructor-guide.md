@@ -1,4 +1,4 @@
-# Chapter 3 Instructor Guide
+# 第 3 章 教学指南
 
 ## 对应书稿与使用方式
 

@@ -1,4 +1,4 @@
-# Chapter 2 Case Teaching Pack
+# 第 2 章 案例教学包
 
 ## 对应章节与用途
 

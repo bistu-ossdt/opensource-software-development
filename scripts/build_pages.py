@@ -61,7 +61,7 @@ SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
     Section("manuscript", "书稿", "manuscript.html", "各章正文与全书参考文献阅读入口。"),
-    Section("teaching", "教学支持", "teaching-support.html", "Study Guide、Instructor Guide 与书稿配套入口。"),
+    Section("teaching", "教学支持", "teaching-support.html", "学习指南、教学指南与书稿配套入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
     Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
 ]
@@ -101,193 +101,193 @@ MANUSCRIPT_PAGES = [
 
 TEACHING_PAGES = [
     TeachingPage(
-        label="第 1 章 Student Study Guide",
+        label="第 1 章 学习指南",
         source=ROOT / "chapter-01-study-guide.md",
         output="chapter-01-study-guide.html",
         description="帮助学生把第 1 章读成历史结构、关键问题与项目定位的认知地图。",
         chapter_output="chapter-01.html",
         chapter_label="第 1 章 开源的起源与发展",
-        kind="Student Study Guide",
+        kind="学习指南",
     ),
     TeachingPage(
-        label="第 1 章 Instructor Guide",
+        label="第 1 章 教学指南",
         source=ROOT / "chapter-01-instructor-guide.md",
         output="chapter-01-instructor-guide.html",
         description="帮助教师组织第 1 章的历史主线、讨论重点与项目启动定位。",
         chapter_output="chapter-01.html",
         chapter_label="第 1 章 开源的起源与发展",
-        kind="Instructor Guide",
+        kind="教学指南",
     ),
     TeachingPage(
-        label="第 2 章 Student Study Guide",
+        label="第 2 章 学习指南",
         source=ROOT / "chapter-02-study-guide.md",
         output="chapter-02-study-guide.html",
         description="帮助学生把第 2 章从许可证名词表读成制度边界与项目判断框架。",
         chapter_output="chapter-02.html",
         chapter_label="第 2 章 自由软件、开源软件与许可证",
-        kind="Student Study Guide",
+        kind="学习指南",
     ),
     TeachingPage(
-        label="第 2 章 Instructor Guide",
+        label="第 2 章 教学指南",
         source=ROOT / "chapter-02-instructor-guide.md",
         output="chapter-02-instructor-guide.html",
         description="帮助教师组织第 2 章的制度判断、边界讲解与项目许可证讨论。",
         chapter_output="chapter-02.html",
         chapter_label="第 2 章 自由软件、开源软件与许可证",
-        kind="Instructor Guide",
+        kind="教学指南",
     ),
     TeachingPage(
-        label="第 3 章 Student Study Guide",
+        label="第 3 章 学习指南",
         source=ROOT / "chapter-03-study-guide.md",
         output="chapter-03-study-guide.html",
         description="帮助学生把第 3 章读成治理基础设施、角色结构与社区进入路径。",
         chapter_output="chapter-03.html",
         chapter_label="第 3 章 开源社区与治理",
-        kind="Student Study Guide",
+        kind="学习指南",
     ),
     TeachingPage(
-        label="第 3 章 Instructor Guide",
+        label="第 3 章 教学指南",
         source=ROOT / "chapter-03-instructor-guide.md",
         output="chapter-03-instructor-guide.html",
         description="帮助教师组织第 3 章的角色梯度、治理对象与团队协作映射。",
         chapter_output="chapter-03.html",
         chapter_label="第 3 章 开源社区与治理",
-        kind="Instructor Guide",
+        kind="教学指南",
     ),
     TeachingPage(
-        label="第 4 章 Student Study Guide",
+        label="第 4 章 学习指南",
         source=ROOT / "chapter-04-study-guide.md",
         output="chapter-04-study-guide.html",
         description="帮助学生把第 4 章读成变更控制主链，而不是平台按钮教程。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
-        kind="Student Study Guide",
+        kind="学习指南",
     ),
     TeachingPage(
-        label="第 4 章 Instructor Guide",
+        label="第 4 章 教学指南",
         source=ROOT / "chapter-04-instructor-guide.md",
         output="chapter-04-instructor-guide.html",
         description="帮助教师组织第 4 章的流程主链、门禁逻辑与项目工作流训练。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
-        kind="Instructor Guide",
+        kind="教学指南",
     ),
 ]
 
 LAB_PAGES = [
     TeachingPage(
-        label="第 1 章 Lab / Project Materials",
+        label="第 1 章 实验与项目材料",
         source=ROOT / "chapter-01-lab-project-materials.md",
         output="chapter-01-lab-project-materials.html",
         description="第 1 章的章节级实验 / 项目材料，围绕项目观察、项目阅读与《项目公共性说明》展开。",
         chapter_output="chapter-01.html",
         chapter_label="第 1 章 开源的起源与发展",
-        kind="Lab / Project Materials",
+        kind="实验与项目材料",
     ),
     TeachingPage(
-        label="第 2 章 Lab / Project Materials",
+        label="第 2 章 实验与项目材料",
         source=ROOT / "chapter-02-lab-project-materials.md",
         output="chapter-02-lab-project-materials.html",
         description="第 2 章的章节级实验 / 项目材料，围绕许可证选择、来源清点与制度边界建立展开。",
         chapter_output="chapter-02.html",
         chapter_label="第 2 章 自由软件、开源软件与许可证",
-        kind="Lab / Project Materials",
+        kind="实验与项目材料",
     ),
     TeachingPage(
-        label="第 3 章 Lab / Project Materials",
+        label="第 3 章 实验与项目材料",
         source=ROOT / "chapter-03-lab-project-materials.md",
         output="chapter-03-lab-project-materials.html",
         description="第 3 章的章节级实验 / 项目材料，围绕角色分工、贡献入口与治理基线建立展开。",
         chapter_output="chapter-03.html",
         chapter_label="第 3 章 开源社区与治理",
-        kind="Lab / Project Materials",
+        kind="实验与项目材料",
     ),
     TeachingPage(
-        label="第 4 章 Lab / Project Materials",
+        label="第 4 章 实验与项目材料",
         source=ROOT / "chapter-04-lab-project-materials.md",
         output="chapter-04-lab-project-materials.html",
         description="第 4 章的章节级实验 / 项目材料，围绕工作流、评审、CI 与发布清单展开。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
-        kind="Lab / Project Materials",
+        kind="实验与项目材料",
     ),
 ]
 
 APPENDIX_PAGES = [
     TeachingPage(
-        label="第 1 章 Appendix Support",
+        label="第 1 章 附录支撑",
         source=ROOT / "chapter-01-appendix-support.md",
         output="chapter-01-appendix-support.html",
         description="第 1 章的附录支撑，提供项目观察记录模板、历史主线梳理卡和《项目公共性说明》模板。",
         chapter_output="chapter-01.html",
         chapter_label="第 1 章 开源的起源与发展",
-        kind="Appendix Support",
+        kind="附录支撑",
     ),
     TeachingPage(
-        label="第 2 章 Appendix Support",
+        label="第 2 章 附录支撑",
         source=ROOT / "chapter-02-appendix-support.md",
         output="chapter-02-appendix-support.html",
         description="第 2 章的附录支撑，提供许可证最小比较表、选择清单与《许可证与来源清点说明》模板。",
         chapter_output="chapter-02.html",
         chapter_label="第 2 章 自由软件、开源软件与许可证",
-        kind="Appendix Support",
+        kind="附录支撑",
     ),
     TeachingPage(
-        label="第 3 章 Appendix Support",
+        label="第 3 章 附录支撑",
         source=ROOT / "chapter-03-appendix-support.md",
         output="chapter-03-appendix-support.html",
         description="第 3 章的附录支撑，提供治理文件最小清单、角色分工表和《角色分工与贡献入口草案》模板。",
         chapter_output="chapter-03.html",
         chapter_label="第 3 章 开源社区与治理",
-        kind="Appendix Support",
+        kind="附录支撑",
     ),
     TeachingPage(
-        label="第 4 章 Appendix Support",
+        label="第 4 章 附录支撑",
         source=ROOT / "chapter-04-appendix-support.md",
         output="chapter-04-appendix-support.html",
         description="第 4 章的附录支撑，提供最小工作流检查单、PR 检查清单和《最小工作流与评审/发布清单》模板。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
-        kind="Appendix Support",
+        kind="附录支撑",
     ),
 ]
 
 CASE_PACK_PAGES = [
     TeachingPage(
-        label="第 1 章 Case Teaching Pack",
+        label="第 1 章 案例教学包",
         source=ROOT / "chapter-01-case-teaching-pack.md",
         output="chapter-01-case-teaching-pack.html",
         description="第 1 章的案例教学包，围绕 GNU、Linux、Mozilla、Apache 与 GitHub 的历史角色展开。",
         chapter_output="chapter-01.html",
         chapter_label="第 1 章 开源的起源与发展",
-        kind="Case Teaching Pack",
+        kind="案例教学包",
     ),
     TeachingPage(
-        label="第 2 章 Case Teaching Pack",
+        label="第 2 章 案例教学包",
         source=ROOT / "chapter-02-case-teaching-pack.md",
         output="chapter-02-case-teaching-pack.html",
         description="第 2 章的案例教学包，围绕 MIT、Apache-2.0、GPL 与“无许可证”反例展开。",
         chapter_output="chapter-02.html",
         chapter_label="第 2 章 自由软件、开源软件与许可证",
-        kind="Case Teaching Pack",
+        kind="案例教学包",
     ),
     TeachingPage(
-        label="第 3 章 Case Teaching Pack",
+        label="第 3 章 案例教学包",
         source=ROOT / "chapter-03-case-teaching-pack.md",
         output="chapter-03-case-teaching-pack.html",
         description="第 3 章的案例教学包，围绕 Linux、Apache、Python 与治理对象展开。",
         chapter_output="chapter-03.html",
         chapter_label="第 3 章 开源社区与治理",
-        kind="Case Teaching Pack",
+        kind="案例教学包",
     ),
     TeachingPage(
-        label="第 4 章 Case Teaching Pack",
+        label="第 4 章 案例教学包",
         source=ROOT / "chapter-04-case-teaching-pack.md",
         output="chapter-04-case-teaching-pack.html",
         description="第 4 章的案例教学包，围绕 CPython、Linux 与最小工作流对象展开。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
-        kind="Case Teaching Pack",
+        kind="案例教学包",
     ),
 ]
 
@@ -1032,22 +1032,22 @@ def hero_context_html(current_section: str) -> str:
         ],
         "manuscript": [
             ("分区", "书稿"),
-            ("类型", "Technical Book Manuscript"),
+            ("类型", "技术书稿"),
             ("发布", "GitHub Pages 自动构建"),
         ],
         "teaching": [
             ("分区", "教学支持"),
-            ("类型", "Course Support Layer"),
+            ("类型", "课程支持层"),
             ("发布", "GitHub Pages 自动构建"),
         ],
         "labs": [
             ("分区", "实验与项目"),
-            ("类型", "Lab / Project Materials"),
+            ("类型", "实验与项目材料"),
             ("发布", "GitHub Pages 自动构建"),
         ],
         "cases": [
             ("分区", "案例与参考"),
-            ("类型", "Case Library / Teaching Cases"),
+            ("类型", "案例库与教学案例"),
             ("发布", "GitHub Pages 自动构建"),
         ],
     }
@@ -1239,7 +1239,7 @@ def page_shell(
           <span class="brand-mark">OS</span>
           <span class="brand-copy">
             <strong>开源软件开发技术</strong>
-            <span>Course Site + Manuscript Preview</span>
+            <span>课程网站与书稿预览</span>
           </span>
         </a>
         <nav class="global-nav" aria-label="全站导航">
@@ -1249,7 +1249,7 @@ def page_shell(
     </header>
     <div class="shell">
       <section class="hero panel">
-        <div class="eyebrow">Open Source Software Development</div>
+        <div class="eyebrow">开源软件开发技术</div>
         <h1>{html.escape(hero_title)}</h1>
         <p>{html.escape(hero_text)}</p>
         <div class="hero-context">
@@ -1280,7 +1280,7 @@ def build_home() -> None:
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
             ("书稿", "manuscript.html", "第 1-4 章正文与全书参考文献。"),
-            ("教学支持", "teaching-support.html", "前四章 Study Guide 与 Instructor Guide 在线阅读入口。"),
+            ("教学支持", "teaching-support.html", "前四章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
         ]
@@ -1350,7 +1350,7 @@ def build_course_page() -> None:
       <ul class="feature-list">
         <li>面向具备正常计算机专业基础的本科生。</li>
         <li>默认前置条件：一门编程语言基础、基本命令行使用能力、基本程序阅读能力。</li>
-        <li>课程整体采用 baseline + stretch 结构，兼顾一般本科院校与能力更强的团队。</li>
+        <li>课程整体采用“基线层 + 扩展层”结构，兼顾一般本科院校与能力更强的团队。</li>
       </ul>
     </section>
 
@@ -1367,10 +1367,10 @@ def build_course_page() -> None:
     <section>
       <h2 class="section-title">材料体系</h2>
       <ul class="feature-list">
-        <li>Technical Book Manuscript：稳定核心知识与书稿正文。</li>
-        <li><a href="teaching-support.html">Student Study Guide / Instructor Guide</a>：教学支持层。</li>
-        <li><a href="labs-project.html">Lab / Project Materials</a>：实验与团队项目材料。</li>
-        <li><a href="cases-references.html">Case Library / Case Teaching Pack</a>：案例库、案例教学包与项目证据。</li>
+        <li>技术书稿：稳定核心知识与书稿正文。</li>
+        <li><a href="teaching-support.html">学习指南 / 教学指南</a>：教学支持层。</li>
+        <li><a href="labs-project.html">实验与项目材料</a>：实验与团队项目材料。</li>
+        <li><a href="cases-references.html">案例库 / 案例教学包</a>：案例库、案例教学包与项目证据。</li>
       </ul>
     </section>
 
@@ -1444,7 +1444,7 @@ def build_manuscript_index() -> None:
             title="书稿目录",
             current_section="manuscript",
             hero_title="书稿阅读区",
-            hero_text="书稿分区采用 docs-first 阅读结构。首页提供目录，章节页提供左侧章节导航与页内目录。",
+            hero_text="书稿分区采用文档优先的阅读结构。首页提供目录，章节页提供左侧章节导航与页内目录。",
             inner=inner,
             sidebar_html=sidebar,
         ),
@@ -1455,7 +1455,7 @@ def build_teaching_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>教学支持目录</h1>
-      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线前四章的 Student Study Guide 与 Instructor Guide，可与对应书稿配套使用。</p>
+      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线前四章的学习指南与教学指南，可与对应书稿配套使用。</p>
     </header>
 
     <section>
@@ -1475,9 +1475,9 @@ def build_teaching_index() -> None:
     <section>
       <h2 class="section-title">使用方式</h2>
       <ul class="feature-list">
-        <li>Student Study Guide：帮助学生把书稿读成学习路径、阅读重点、误区提醒与项目连接。</li>
-        <li>Instructor Guide：帮助教师把书稿转化为课堂组织、案例使用、评价证据与项目推进。</li>
-        <li>Appendix Support：提供模板、清单、比较表和最小操作支架，不替代书稿正文。</li>
+        <li>学习指南：帮助学生把书稿读成学习路径、阅读重点、误区提醒与项目连接。</li>
+        <li>教学指南：帮助教师把书稿转化为课堂组织、案例使用、评价证据与项目推进。</li>
+        <li>附录支撑：提供模板、清单、比较表和最小操作支架，不替代书稿正文。</li>
         <li>教学支持页不替代书稿正文，而是与对应章节配套阅读。</li>
       </ul>
     </section>
@@ -1499,7 +1499,7 @@ def build_teaching_index() -> None:
         page_shell(
             title="教学支持目录",
             current_section="teaching",
-            hero_title="Study Guide 与 Instructor Guide",
+            hero_title="学习指南与教学指南",
             hero_text="教学支持分区用于承接基于书稿的学习支架与教学支架，使课程层材料能够围绕书稿协同使用。",
             inner=inner,
             sidebar_html=sidebar,
@@ -1559,7 +1559,7 @@ def build_cases_page() -> None:
     inner = """
     <header class="page-header">
       <h1>案例与参考</h1>
-      <p>课程采用“经典主案例 + 后半部现代案例 + 辅助案例库”的结构。前四章以经典开源项目为主，后续章节再逐步引入 AI-native、GitHub-native 的现代项目。</p>
+      <p>课程采用“经典主案例 + 后半部现代案例 + 辅助案例库”的结构。前四章以经典开源项目为主，后续章节再逐步引入 AI 原生、GitHub 原生的现代项目。</p>
     </header>
 
     <section>
@@ -1571,7 +1571,7 @@ def build_cases_page() -> None:
         </article>
         <article class="card">
           <h3>OpenClaw / Peter</h3>
-          <p>后半部主锚点案例。用于讲现代 AI-native 开源项目、GitHub-native 仓库结构、安全与发布实践。</p>
+          <p>后半部主锚点案例。用于讲现代 AI 原生开源项目、GitHub 原生仓库结构、安全与发布实践。</p>
         </article>
       </div>
     </section>
@@ -1580,9 +1580,9 @@ def build_cases_page() -> None:
       <h2 class="section-title">经典案例池</h2>
       <ul class="feature-list">
         <li>GNU / FSF：自由软件传统与制度问题的提出。</li>
-        <li>Apache：社区化治理、PMC 结构与 meritocracy。</li>
+        <li>Apache：社区化治理、PMC 结构与基于贡献积累信任的协作逻辑。</li>
         <li>Python：正式治理结构与利益边界约束。</li>
-        <li>Git：branching model 与现代协作流程的技术基础。</li>
+        <li>Git：分支模型与现代协作流程的技术基础。</li>
       </ul>
     </section>
 
@@ -1596,9 +1596,9 @@ def build_cases_page() -> None:
     <section>
       <h2 class="section-title">核心外部参考</h2>
       <ul class="feature-list">
-        <li><a href="https://www.gnu.org/philosophy/free-sw.html">FSF Free Software Definition</a></li>
-        <li><a href="https://opensource.org/osd">OSI Open Source Definition</a></li>
-        <li><a href="https://opensource.guide/">Open Source Guides</a></li>
+        <li><a href="https://www.gnu.org/philosophy/free-sw.html">FSF 自由软件定义</a></li>
+        <li><a href="https://opensource.org/osd">OSI 开源定义</a></li>
+        <li><a href="https://opensource.guide/">开源协作指南（Open Source Guides）</a></li>
         <li><a href="https://docs.github.com/">GitHub Docs</a></li>
         <li><a href="https://baseline.openssf.org/">OpenSSF OSPS Baseline</a></li>
         <li><a href="https://chaoss.community/">CHAOSS</a></li>
@@ -1902,7 +1902,7 @@ def build_appendix_page(page: TeachingPage) -> None:
         page_shell(
             title=page.label,
             current_section="teaching",
-            hero_title="Appendix Support",
+            hero_title="附录支撑",
             hero_text="附录支撑页承接模板、清单、比较表和最小操作支架，帮助课程层材料真正可用而不挤占书稿正文。",
             inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
@@ -1982,7 +1982,7 @@ def build_lab_page(page: TeachingPage) -> None:
         page_shell(
             title=page.label,
             current_section="labs",
-            hero_title="Lab / Project Materials",
+            hero_title="实验与项目材料",
             hero_text="章节级实验材料页用于把书稿与教学支持真正转化为团队项目任务、交付物、检查点和可评价证据。",
             inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
@@ -2062,7 +2062,7 @@ def build_case_pack_page(page: TeachingPage) -> None:
         page_shell(
             title=page.label,
             current_section="cases",
-            hero_title="Case Teaching Pack",
+            hero_title="案例教学包",
             hero_text="案例教学包页用于固定每章高频主案例、讨论问题、课堂使用方式与教学边界，避免案例使用漂移。",
             inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
