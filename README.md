@@ -22,6 +22,9 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `06-participating-in-open-source-projects.md`: current chapter-6 skeleton draft for `Participating in Open Source Projects`
 - `07-ai-assisted-open-source-development-practice.md`: current chapter-7 skeleton draft for `AI-Assisted Open Source Development Practice`
 - `08-organizing-and-releasing-your-open-source-project.md`: current chapter-8 skeleton draft for `Organizing and Releasing Your Open Source Project`
+- `95-appendix-a-open-source-people-event-project-map.md`: book appendix A for the people-event-project map
+- `96-appendix-b-open-source-history-timeline.md`: book appendix B for the open source history timeline
+- `97-appendix-c-open-source-people.md`: book appendix C for the open source people guide
 - `98-glossary.md`: initial back-matter glossary draft for book-level terminology
 - `99-book-references.md`: initial back-matter references draft for book-level sources
 

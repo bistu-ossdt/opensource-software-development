@@ -5,6 +5,7 @@
 This repository is a documentation-first course and manuscript project. Track only course-facing materials:
 
 - `01-overview.md` through `08-organizing-and-releasing-your-open-source-project.md`: manuscript chapters
+- `95-appendix-a-open-source-people-event-project-map.md` through `97-appendix-c-open-source-people.md`: appendices
 - `98-glossary.md`: book-level glossary
 - `99-book-references.md`: book-level references
 - `course-design-summary-and-core-references.md`: outward-facing course summary

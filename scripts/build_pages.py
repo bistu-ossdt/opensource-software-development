@@ -60,7 +60,7 @@ class LabStage:
 SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
-    Section("manuscript", "书稿", "manuscript.html", "各章正文、全书术语表与全书参考文献阅读入口。"),
+    Section("manuscript", "书稿", "manuscript.html", "各章正文、书后附录、全书术语表与全书参考文献阅读入口。"),
     Section("teaching", "教学支持", "teaching-support.html", "学习指南、教学指南与书稿配套入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
     Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
@@ -114,6 +114,24 @@ MANUSCRIPT_PAGES = [
         source=ROOT / "08-organizing-and-releasing-your-open-source-project.md",
         output="chapter-08.html",
         description="从维护者视角组织公开仓库、版本发布、维护计划与最小安全基线。当前为骨架稿。",
+    ),
+    ManuscriptPage(
+        label="附录 A 开源人物-事件-项目对照表",
+        source=ROOT / "95-appendix-a-open-source-people-event-project-map.md",
+        output="appendix-a-map.html",
+        description="用一张导航表把关键人物、关键事件与代表项目放在一起理解。",
+    ),
+    ManuscriptPage(
+        label="附录 B 开源历史关键事件时间线",
+        source=ROOT / "96-appendix-b-open-source-history-timeline.md",
+        output="appendix-b-timeline.html",
+        description="按时间顺序压缩开源历史主线，帮助快速定位关键转折。",
+    ),
+    ManuscriptPage(
+        label="附录 C 开源人物谱",
+        source=ROOT / "97-appendix-c-open-source-people.md",
+        output="appendix-c-people.html",
+        description="从人物角度理解开源如何被提出、推动、组织和书写。",
     ),
     ManuscriptPage(
         label="全书术语表",
@@ -1309,7 +1327,7 @@ def build_home() -> None:
     section_html = section_cards(
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
-            ("书稿", "manuscript.html", "第 1-8 章书稿、全书术语表与全书参考文献。"),
+            ("书稿", "manuscript.html", "第 1-8 章书稿、3 个附录、全书术语表与全书参考文献。"),
             ("教学支持", "teaching-support.html", "前四章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
@@ -1340,7 +1358,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、全书术语表、对应前四章教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、3 个书后附录、全书术语表、对应前四章教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献。
     </section>
 
     <section class="meta">
@@ -1440,7 +1458,7 @@ def build_manuscript_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>书稿目录</h1>
-      <p>这里集中展示各章正文、全书术语表与全书参考文献。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
+      <p>这里集中展示各章正文、附录 A-C、全书术语表与全书参考文献。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
     </header>
 
     <section>
@@ -1457,7 +1475,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-8 章、全书术语表与全书参考文献；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
+      当前在线书稿范围：第 1-8 章、附录 A-C、全书术语表与全书参考文献；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
     </section>
     """
     sidebar = f"""
