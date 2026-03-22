@@ -35,7 +35,7 @@ class Section:
 SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
-    Section("manuscript", "书稿", "manuscript.html", "教材前言与各章书稿阅读入口。"),
+    Section("manuscript", "书稿", "manuscript.html", "各章正文与全书参考文献阅读入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
     Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
 ]
@@ -64,6 +64,12 @@ MANUSCRIPT_PAGES = [
         source=ROOT / "04-participating-in-and-organizing-open-source-projects.md",
         output="chapter-04.html",
         description="变更控制、PR、Review、CI、安全与发布基线。",
+    ),
+    ManuscriptPage(
+        label="全书参考文献",
+        source=ROOT / "99-book-references.md",
+        output="book-references.html",
+        description="整本书统一使用的核心参考资料与官方来源入口。",
     ),
 ]
 
@@ -702,7 +708,7 @@ def build_home() -> None:
     section_html = section_cards(
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
-            ("书稿", "manuscript.html", "前言与第 1-4 章正文阅读入口。"),
+            ("书稿", "manuscript.html", "第 1-4 章正文与全书参考文献。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
         ]
@@ -732,7 +738,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区与实验/案例入口。当前上线内容优先覆盖第 1-4 章，后续章节与实验材料将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区与实验/案例入口。当前上线内容优先覆盖第 1-4 章与全书参考文献，后续章节与实验材料将继续增补。
     </section>
 
     <section class="meta">
@@ -816,7 +822,7 @@ def build_manuscript_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>书稿目录</h1>
-      <p>这里集中展示教材前言与各章正文。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
+      <p>这里集中展示各章正文与全书参考文献。阅读页使用统一的章节导航与页内目录，便于连续阅读与横向比较。</p>
     </header>
 
     <section>
@@ -826,7 +832,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-4 章。第 5-8 章将在后续章节重写完成后接入。
+      当前在线书稿范围：第 1-4 章与全书参考文献。第 5-8 章将在后续章节重写完成后接入。
     </section>
     """
     sidebar = f"""
