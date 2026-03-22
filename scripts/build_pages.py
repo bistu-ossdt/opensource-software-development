@@ -447,23 +447,21 @@ code {
   font-size: 1.05rem;
 }
 
-.hero-meta {
+.hero-context {
   margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  border: 1px solid rgba(26, 90, 78, 0.14);
-  background: rgba(255, 253, 247, 0.78);
+.hero-context-item {
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+.hero-context-item strong {
   color: var(--accent-strong);
-  font-size: 0.92rem;
+  margin-right: 6px;
 }
 
 .layout {
@@ -871,6 +869,47 @@ def global_nav_html(current_section: str) -> str:
     return "\n".join(items)
 
 
+def hero_context_html(current_section: str) -> str:
+    context_map = {
+        "home": [
+            ("分区", "首页"),
+            ("类型", "课程入口"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+        "course": [
+            ("分区", "课程说明"),
+            ("类型", "课程级材料"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+        "manuscript": [
+            ("分区", "书稿"),
+            ("类型", "Technical Book Manuscript"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+        "teaching": [
+            ("分区", "教学支持"),
+            ("类型", "Course Support Layer"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+        "labs": [
+            ("分区", "实验与项目"),
+            ("类型", "Lab / Project Materials"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+        "cases": [
+            ("分区", "案例与参考"),
+            ("类型", "Case Library / Teaching Cases"),
+            ("发布", "GitHub Pages 自动构建"),
+        ],
+    }
+    items = []
+    for label, value in context_map.get(current_section, []):
+        items.append(
+            f'<span class="hero-context-item"><strong>{html.escape(label)}:</strong>{html.escape(value)}</span>'
+        )
+    return "\n".join(items)
+
+
 def manuscript_nav_html(current_output: str) -> str:
     items = ['<li><a class="{cls}" href="manuscript.html">书稿目录</a></li>'.format(
         cls="active" if current_output == "manuscript.html" else ""
@@ -1038,10 +1077,8 @@ def page_shell(
         <div class="eyebrow">Open Source Software Development</div>
         <h1>{html.escape(hero_title)}</h1>
         <p>{html.escape(hero_text)}</p>
-        <div class="hero-meta">
-          <span class="pill">课程网站</span>
-          <span class="pill">书稿阅读区</span>
-          <span class="pill">GitHub Pages 自动构建</span>
+        <div class="hero-context">
+          {hero_context_html(current_section)}
         </div>
       </section>
       <div class="{layout_class}">
