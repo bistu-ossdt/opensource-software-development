@@ -45,6 +45,18 @@ class Section:
     description: str
 
 
+@dataclass(frozen=True)
+class LabStage:
+    label: str
+    href: str | None
+    chapters: str
+    milestone: str
+    baseline: str
+    evidence: str
+    evaluation: str
+    availability: str
+
+
 SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
     Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
@@ -276,6 +288,89 @@ CASE_PACK_PAGES = [
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
         kind="Case Teaching Pack",
+    ),
+]
+
+LAB_STAGES = [
+    LabStage(
+        label="实验 1 开源观察与项目阅读",
+        href="chapter-01-lab-project-materials.html",
+        chapters="第 1 章",
+        milestone="完成真实项目观察，建立项目公共性与历史位置的基本判断。",
+        baseline="阅读 1-2 个真实项目，识别历史背景、用途、目标用户、仓库结构与许可证。",
+        evidence="项目阅读报告；课堂汇报或小组讲解。",
+        evaluation="是否超出 README 表层信息，能把项目放回开源历史与生态脉络中理解。",
+        availability="已提供章节级实验材料",
+    ),
+    LabStage(
+        label="实验 2 团队项目立项与许可证选择",
+        href="chapter-02-lab-project-materials.html",
+        chapters="第 2 章、第 8 章",
+        milestone="完成团队项目立项，并建立制度与仓库最小基线。",
+        baseline="确定项目主题、目标用户、MVP 范围，选择许可证并初始化公开仓库。",
+        evidence="公开仓库链接；项目立项说明；许可证选择说明。",
+        evaluation="项目范围是否合理，许可证是否有依据，仓库是否具备公开项目的最小形态。",
+        availability="已提供章节级实验材料",
+    ),
+    LabStage(
+        label="实验 3 治理基线与协作机制建立",
+        href="chapter-03-lab-project-materials.html",
+        chapters="第 3 章、第 4 章",
+        milestone="把团队合作转化为可执行的治理与协作规则。",
+        baseline="明确角色分工，建立 Issue 管理机制，补齐 CONTRIBUTING、模板与基本协作规则。",
+        evidence="治理文件；第一轮 Issue 拆分结果；团队协作规则说明。",
+        evaluation="是否从“一起写代码”转向“按规则协作”，分工是否真实可执行。",
+        availability="已提供章节级实验材料",
+    ),
+    LabStage(
+        label="实验 4 GitHub 协作流与最小 CI",
+        href="chapter-04-lab-project-materials.html",
+        chapters="第 4 章",
+        milestone="跑通第一次真实变更控制链路。",
+        baseline="使用 Issue、Branch、PR、Review 与最小 CI 完成至少一轮协作开发。",
+        evidence="PR 记录；Review 记录；CI 运行结果。",
+        evaluation="是否真正通过 PR 协作而非直接推送主分支，自动化检查是否进入日常流程。",
+        availability="已提供章节级实验材料",
+    ),
+    LabStage(
+        label="实验 5 外部项目理解或首次贡献",
+        href=None,
+        chapters="第 5 章、第 6 章",
+        milestone="从课程内项目转向课程外项目理解与外部参与准备。",
+        baseline="识别贡献入口，评估项目可参与性，并完成一次模拟贡献分析或跨团队贡献。",
+        evidence="贡献分析报告；提交记录或 PR / Issue 链接。",
+        evaluation="是否理解“参与外部项目”与“开发自己项目”的差异，并具备基本外部沟通意识。",
+        availability="待第 5-6 章稳定后细化",
+    ),
+    LabStage(
+        label="实验 6 团队项目 MVP 迭代",
+        href=None,
+        chapters="第 4 章、第 6 章、第 8 章",
+        milestone="围绕 MVP 完成第一次真正可演示的项目迭代。",
+        baseline="让功能、文档、测试、Issue、PR、Review 与版本记录一起推进。",
+        evidence="阶段版本；MVP 演示；迭代记录。",
+        evaluation="是否形成持续演进的项目，而不是临时拼接的功能集合。",
+        availability="待第 6-8 章稳定后细化",
+    ),
+    LabStage(
+        label="实验 7 AI 辅助开发与人工治理",
+        href=None,
+        chapters="第 7 章",
+        milestone="把 AI 使用正式纳入开源流程和人工责任链。",
+        baseline="选择真实任务使用 AI 辅助完成，并保留记录、人工审查、测试与验收证据。",
+        evidence="AI 辅助任务记录；修改前后对比；人工审查与测试证据；反思报告。",
+        evaluation="是否把 AI 放在开源流程之内，而不是绕过治理、审查与验证。",
+        availability="待第 7 章稳定后细化",
+    ),
+    LabStage(
+        label="实验 8 发布、归档与项目复盘",
+        href=None,
+        chapters="第 8 章",
+        milestone="完成从课程项目到公开项目的最后一次转换。",
+        baseline="完成正式版本发布，补齐 CHANGELOG、安装/使用说明，并形成复盘与维护计划。",
+        evidence="Release 页面或版本标签；变更记录；最终仓库链接；项目复盘文档。",
+        evaluation="是否完成从“课程提交”到“公开发布”的转换，并留下可继续维护的项目基础。",
+        availability="待第 8 章稳定后细化",
     ),
 ]
 
@@ -723,6 +818,33 @@ code {
   margin-top: 10px;
 }
 
+.card-meta {
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.stage-card ul {
+  margin: 12px 0 0 18px;
+  padding: 0;
+  color: var(--muted);
+}
+
+.stage-card li + li {
+  margin-top: 8px;
+}
+
+.stage-status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #ece5d6;
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
 .card-links {
   color: var(--text);
   font-size: 0.96rem;
@@ -1005,6 +1127,32 @@ def section_cards(cards: list[tuple[str, str, str]]) -> str:
             <article class="card">
               <h3><a href="{href}">{html.escape(title)}</a></h3>
               <p>{html.escape(desc)}</p>
+            </article>
+            """
+        )
+    return "\n".join(rendered)
+
+
+def lab_stage_cards(stages: list[LabStage]) -> str:
+    rendered = []
+    for stage in stages:
+        title = (
+            f'<a href="{stage.href}">{html.escape(stage.label)}</a>'
+            if stage.href
+            else html.escape(stage.label)
+        )
+        rendered.append(
+            f"""
+            <article class="card stage-card">
+              <h3>{title}</h3>
+              <p class="card-meta"><strong>对应章节：</strong> {html.escape(stage.chapters)}</p>
+              <p>{html.escape(stage.milestone)}</p>
+              <ul>
+                <li><strong>基础项：</strong> {html.escape(stage.baseline)}</li>
+                <li><strong>交付证据：</strong> {html.escape(stage.evidence)}</li>
+                <li><strong>评价重点：</strong> {html.escape(stage.evaluation)}</li>
+              </ul>
+              <p class="stage-status">{html.escape(stage.availability)}</p>
             </article>
             """
         )
@@ -1333,14 +1481,6 @@ def build_teaching_index() -> None:
 
 
 def build_labs_page() -> None:
-    stage_cards = section_cards(
-        [
-            ("实验 1-2", "manuscript.html", "开源观察与项目阅读；团队项目立项与许可证选择。"),
-            ("实验 3-4", "chapter-03.html", "治理基线与协作机制建立；GitHub 协作流与最小 CI。"),
-            ("实验 5-6", "chapter-04.html", "外部项目理解或首次贡献；团队项目 MVP 迭代。"),
-            ("实验 7-8", "manuscript.html", "AI 辅助开发与人工治理；最终发布、演示与复盘。"),
-        ]
-    )
     inner = f"""
     <header class="page-header">
       <h1>实验与项目</h1>
@@ -1358,21 +1498,22 @@ def build_labs_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">实验阶段</h2>
+      <h2 class="section-title">整体实验路线图</h2>
+      <p>实验体系按 8 个阶段组织，每个阶段都同时说明对应章节、最低基础项、交付证据与评价重点。前四个阶段已接入章节级任务单，后四个阶段先保留课程级路线图，待相关章节稳定后再细化。</p>
       <div class="card-grid two">
-        {stage_cards}
+        {lab_stage_cards(LAB_STAGES)}
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">第 1-4 章章节级实验材料</h2>
+      <h2 class="section-title">当前可用任务单</h2>
       <div class="card-grid two">
         {support_page_cards(LAB_PAGES)}
       </div>
     </section>
 
     <section class="status-note">
-      当前站点已接入前四章的章节级实验 / 项目材料；后续可继续扩展为跨章节实验总说明、rubric、阶段交付模板与样例。
+      当前站点已完成课程级实验路线图，并接入前四章的章节级实验 / 项目材料；后续将补充跨章节实验总说明、统一 rubric、阶段交付模板与样例。
     </section>
     """
     write_page(
