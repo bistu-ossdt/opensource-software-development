@@ -20,6 +20,13 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `04-participating-in-and-organizing-open-source-projects.md`: rewritten manuscript draft for `Core Engineering Workflow of Open Source Development`
 - `05-leveraging-open-source-software-resources.md`: legacy chapter content retained for later migration and rewriting
 
+## Current Teaching Support State
+
+- `chapter-01-study-guide.md` and `chapter-01-instructor-guide.md`: initial teaching-support drafts derived from chapter 1
+- `chapter-02-study-guide.md` and `chapter-02-instructor-guide.md`: initial teaching-support drafts derived from chapter 2
+- `chapter-03-study-guide.md` and `chapter-03-instructor-guide.md`: initial teaching-support drafts derived from chapter 3
+- `chapter-04-study-guide.md` and `chapter-04-instructor-guide.md`: initial teaching-support drafts derived from chapter 4
+
 ## Site
 
 The repository includes a generated course website deployed through GitHub Pages.
