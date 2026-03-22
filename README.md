@@ -27,6 +27,18 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `chapter-03-study-guide.md` and `chapter-03-instructor-guide.md`: initial teaching-support drafts derived from chapter 3
 - `chapter-04-study-guide.md` and `chapter-04-instructor-guide.md`: initial teaching-support drafts derived from chapter 4
 
+## Current Chapter-Level Lab / Project Materials State
+
+- `chapter-01-lab-project-materials.md` through `chapter-04-lab-project-materials.md`: initial chapter-level lab / project materials aligned with the team project mainline
+
+## Current Appendix Support State
+
+- `chapter-01-appendix-support.md` through `chapter-04-appendix-support.md`: initial appendix-support drafts for templates, checklists, and comparison tables
+
+## Current Case Teaching Pack State
+
+- `chapter-01-case-teaching-pack.md` through `chapter-04-case-teaching-pack.md`: initial chapter-level case teaching packs for the first four chapters
+
 ## Site
 
 The repository includes a generated course website deployed through GitHub Pages.

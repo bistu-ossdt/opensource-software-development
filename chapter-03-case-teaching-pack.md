@@ -1,0 +1,41 @@
+# Chapter 3 Case Teaching Pack
+
+## 对应章节与用途
+
+- 对应书稿：[03-development-models-and-characteristics.md](03-development-models-and-characteristics.md)
+- 配套学习指南：[chapter-03-study-guide.md](chapter-03-study-guide.md)
+- 配套教学指南：[chapter-03-instructor-guide.md](chapter-03-instructor-guide.md)
+- 本案例包用于帮助学生把“社区治理”看成协作基础设施，而不是代码之外的附属话题。
+
+## 主案例与辅助案例
+
+| 案例 | 本章主要说明什么 | 推荐观察对象 |
+| --- | --- | --- |
+| Linux | 维护者体系、公共记录与长期协作秩序 | 维护者结构、补丁流、长期维护语境 |
+| Apache | 社区化治理、PMC 和基金会化协作 | Apache Way、PMC、项目群组织方式 |
+| Python | 明确治理结构与决策路径 | PEP 流程、Steering Council、角色边界 |
+| 课堂选择的成熟 GitHub 仓库 | 贡献入口与治理文件的可见性 | `CONTRIBUTING.md`、Issue 模板、PR 模板、`SECURITY.md` |
+
+## 推荐课堂使用方式
+
+- 先用 Linux 讲“权限与责任如何逐层绑定”，再用 Apache 讲“组织如何维持公共性”。
+- 用 Python 说明现代项目如何把讨论、提案与决策路径公开化。
+- 最后用一个成熟 GitHub 仓库做对象级落地，帮助学生把抽象治理概念和仓库中的具体文件连接起来。
+
+## 推荐讨论问题
+
+- 为什么仓库公开并不自动等于协作公开。
+- Linux 的角色梯度为什么不等于公司式官僚层级。
+- Apache 的社区化治理给学生项目什么启发。
+- Python 的治理结构为什么能帮助读者理解“公开决策”。
+
+## 与团队项目主线的连接
+
+- 教师可要求团队从 Linux、Apache、Python 三个案例中分别借一条原则，而不是整体模仿某个成熟项目。
+- 团队项目的目标不是复制大项目治理，而是形成“最小可进入、最小可追踪、最小可交接”的治理基线。
+
+## 使用边界
+
+- 不要把本章讲成组织行为学或泛化管理学。
+- 不要让学生误以为小项目必须复制基金会级治理结构。
+- 不要把社区健康等同于热度、star 数或短期讨论活跃度。

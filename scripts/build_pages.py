@@ -162,8 +162,127 @@ TEACHING_PAGES = [
     ),
 ]
 
+LAB_PAGES = [
+    TeachingPage(
+        label="第 1 章 Lab / Project Materials",
+        source=ROOT / "chapter-01-lab-project-materials.md",
+        output="chapter-01-lab-project-materials.html",
+        description="第 1 章的章节级实验 / 项目材料，围绕项目观察、项目阅读与《项目公共性说明》展开。",
+        chapter_output="chapter-01.html",
+        chapter_label="第 1 章 开源的起源与发展",
+        kind="Lab / Project Materials",
+    ),
+    TeachingPage(
+        label="第 2 章 Lab / Project Materials",
+        source=ROOT / "chapter-02-lab-project-materials.md",
+        output="chapter-02-lab-project-materials.html",
+        description="第 2 章的章节级实验 / 项目材料，围绕许可证选择、来源清点与制度边界建立展开。",
+        chapter_output="chapter-02.html",
+        chapter_label="第 2 章 自由软件、开源软件与许可证",
+        kind="Lab / Project Materials",
+    ),
+    TeachingPage(
+        label="第 3 章 Lab / Project Materials",
+        source=ROOT / "chapter-03-lab-project-materials.md",
+        output="chapter-03-lab-project-materials.html",
+        description="第 3 章的章节级实验 / 项目材料，围绕角色分工、贡献入口与治理基线建立展开。",
+        chapter_output="chapter-03.html",
+        chapter_label="第 3 章 开源社区与治理",
+        kind="Lab / Project Materials",
+    ),
+    TeachingPage(
+        label="第 4 章 Lab / Project Materials",
+        source=ROOT / "chapter-04-lab-project-materials.md",
+        output="chapter-04-lab-project-materials.html",
+        description="第 4 章的章节级实验 / 项目材料，围绕工作流、评审、CI 与发布清单展开。",
+        chapter_output="chapter-04.html",
+        chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="Lab / Project Materials",
+    ),
+]
+
+APPENDIX_PAGES = [
+    TeachingPage(
+        label="第 1 章 Appendix Support",
+        source=ROOT / "chapter-01-appendix-support.md",
+        output="chapter-01-appendix-support.html",
+        description="第 1 章的附录支撑，提供项目观察记录模板、历史主线梳理卡和《项目公共性说明》模板。",
+        chapter_output="chapter-01.html",
+        chapter_label="第 1 章 开源的起源与发展",
+        kind="Appendix Support",
+    ),
+    TeachingPage(
+        label="第 2 章 Appendix Support",
+        source=ROOT / "chapter-02-appendix-support.md",
+        output="chapter-02-appendix-support.html",
+        description="第 2 章的附录支撑，提供许可证最小比较表、选择清单与《许可证与来源清点说明》模板。",
+        chapter_output="chapter-02.html",
+        chapter_label="第 2 章 自由软件、开源软件与许可证",
+        kind="Appendix Support",
+    ),
+    TeachingPage(
+        label="第 3 章 Appendix Support",
+        source=ROOT / "chapter-03-appendix-support.md",
+        output="chapter-03-appendix-support.html",
+        description="第 3 章的附录支撑，提供治理文件最小清单、角色分工表和《角色分工与贡献入口草案》模板。",
+        chapter_output="chapter-03.html",
+        chapter_label="第 3 章 开源社区与治理",
+        kind="Appendix Support",
+    ),
+    TeachingPage(
+        label="第 4 章 Appendix Support",
+        source=ROOT / "chapter-04-appendix-support.md",
+        output="chapter-04-appendix-support.html",
+        description="第 4 章的附录支撑，提供最小工作流检查单、PR 检查清单和《最小工作流与评审/发布清单》模板。",
+        chapter_output="chapter-04.html",
+        chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="Appendix Support",
+    ),
+]
+
+CASE_PACK_PAGES = [
+    TeachingPage(
+        label="第 1 章 Case Teaching Pack",
+        source=ROOT / "chapter-01-case-teaching-pack.md",
+        output="chapter-01-case-teaching-pack.html",
+        description="第 1 章的案例教学包，围绕 GNU、Linux、Mozilla、Apache 与 GitHub 的历史角色展开。",
+        chapter_output="chapter-01.html",
+        chapter_label="第 1 章 开源的起源与发展",
+        kind="Case Teaching Pack",
+    ),
+    TeachingPage(
+        label="第 2 章 Case Teaching Pack",
+        source=ROOT / "chapter-02-case-teaching-pack.md",
+        output="chapter-02-case-teaching-pack.html",
+        description="第 2 章的案例教学包，围绕 MIT、Apache-2.0、GPL 与“无许可证”反例展开。",
+        chapter_output="chapter-02.html",
+        chapter_label="第 2 章 自由软件、开源软件与许可证",
+        kind="Case Teaching Pack",
+    ),
+    TeachingPage(
+        label="第 3 章 Case Teaching Pack",
+        source=ROOT / "chapter-03-case-teaching-pack.md",
+        output="chapter-03-case-teaching-pack.html",
+        description="第 3 章的案例教学包，围绕 Linux、Apache、Python 与治理对象展开。",
+        chapter_output="chapter-03.html",
+        chapter_label="第 3 章 开源社区与治理",
+        kind="Case Teaching Pack",
+    ),
+    TeachingPage(
+        label="第 4 章 Case Teaching Pack",
+        source=ROOT / "chapter-04-case-teaching-pack.md",
+        output="chapter-04-case-teaching-pack.html",
+        description="第 4 章的案例教学包，围绕 CPython、Linux 与最小工作流对象展开。",
+        chapter_output="chapter-04.html",
+        chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="Case Teaching Pack",
+    ),
+]
+
+SUPPORT_PAGES = [*TEACHING_PAGES, *LAB_PAGES, *APPENDIX_PAGES, *CASE_PACK_PAGES]
+
 LINK_MAP = {
-    str(page.source.name): page.output for page in [*MANUSCRIPT_PAGES, *TEACHING_PAGES]
+    str(page.source.name): page.output for page in [*MANUSCRIPT_PAGES, *SUPPORT_PAGES]
 }
 
 CSS = """
@@ -776,8 +895,60 @@ def teaching_nav_html(current_output: str) -> str:
     return "\n".join(items)
 
 
+def appendix_nav_html(current_output: str) -> str:
+    items = ['<li><a class="{cls}" href="teaching-support.html">教学支持目录</a></li>'.format(
+        cls="active" if current_output == "teaching-support.html" else ""
+    )]
+    for page in APPENDIX_PAGES:
+        cls = "active" if page.output == current_output else ""
+        items.append(
+            f'<li><a class="{cls}" href="{page.output}">{html.escape(page.label)}</a></li>'
+        )
+    return "\n".join(items)
+
+
+def lab_nav_html(current_output: str) -> str:
+    items = ['<li><a class="{cls}" href="labs-project.html">实验与项目目录</a></li>'.format(
+        cls="active" if current_output == "labs-project.html" else ""
+    )]
+    for page in LAB_PAGES:
+        cls = "active" if page.output == current_output else ""
+        items.append(
+            f'<li><a class="{cls}" href="{page.output}">{html.escape(page.label)}</a></li>'
+        )
+    return "\n".join(items)
+
+
+def case_pack_nav_html(current_output: str) -> str:
+    items = ['<li><a class="{cls}" href="cases-references.html">案例与参考目录</a></li>'.format(
+        cls="active" if current_output == "cases-references.html" else ""
+    )]
+    for page in CASE_PACK_PAGES:
+        cls = "active" if page.output == current_output else ""
+        items.append(
+            f'<li><a class="{cls}" href="{page.output}">{html.escape(page.label)}</a></li>'
+        )
+    return "\n".join(items)
+
+
 def teaching_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
     return [page for page in TEACHING_PAGES if page.chapter_output == chapter_output]
+
+
+def lab_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
+    return [page for page in LAB_PAGES if page.chapter_output == chapter_output]
+
+
+def appendix_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
+    return [page for page in APPENDIX_PAGES if page.chapter_output == chapter_output]
+
+
+def case_pack_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
+    return [page for page in CASE_PACK_PAGES if page.chapter_output == chapter_output]
+
+
+def support_pages_for_chapter(chapter_output: str) -> list[TeachingPage]:
+    return [page for page in SUPPORT_PAGES if page.chapter_output == chapter_output]
 
 
 def manuscript_page_for_output(chapter_output: str) -> ManuscriptPage | None:
@@ -822,6 +993,10 @@ def teaching_chapter_cards() -> str:
             """
         )
     return "\n".join(rendered)
+
+
+def support_page_cards(pages: list[TeachingPage]) -> str:
+    return section_cards([(page.label, page.output, page.description) for page in pages])
 
 
 def page_shell(
@@ -923,7 +1098,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、对应教学支持与全书参考文献，后续章节与实验材料将继续增补。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容优先覆盖第 1-4 章书稿、对应教学支持、章节级实验材料、附录支撑、案例教学包与全书参考文献，后续章节将继续增补。
     </section>
 
     <section class="meta">
@@ -982,8 +1157,8 @@ def build_course_page() -> None:
       <ul class="feature-list">
         <li>Technical Book Manuscript：稳定核心知识与书稿正文。</li>
         <li><a href="teaching-support.html">Student Study Guide / Instructor Guide</a>：教学支持层。</li>
-        <li>Lab / Project Materials：实验与团队项目材料。</li>
-        <li>Case Library：案例库与项目证据。</li>
+        <li><a href="labs-project.html">Lab / Project Materials</a>：实验与团队项目材料。</li>
+        <li><a href="cases-references.html">Case Library / Case Teaching Pack</a>：案例库、案例教学包与项目证据。</li>
       </ul>
     </section>
 
@@ -991,6 +1166,15 @@ def build_course_page() -> None:
       <h2 class="section-title">当前已上线的教学支持</h2>
       <div class="card-grid two">
         {teaching_chapter_cards()}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">当前已上线的章节级支撑材料</h2>
+      <div class="card-grid two">
+        {support_page_cards(LAB_PAGES)}
+        {support_page_cards(APPENDIX_PAGES)}
+        {support_page_cards(CASE_PACK_PAGES)}
       </div>
     </section>
 
@@ -1070,10 +1254,18 @@ def build_teaching_index() -> None:
     </section>
 
     <section>
+      <h2 class="section-title">附录支撑</h2>
+      <div class="card-grid two">
+        {support_page_cards(APPENDIX_PAGES)}
+      </div>
+    </section>
+
+    <section>
       <h2 class="section-title">使用方式</h2>
       <ul class="feature-list">
         <li>Student Study Guide：帮助学生把书稿读成学习路径、阅读重点、误区提醒与项目连接。</li>
         <li>Instructor Guide：帮助教师把书稿转化为课堂组织、案例使用、评价证据与项目推进。</li>
+        <li>Appendix Support：提供模板、清单、比较表和最小操作支架，不替代书稿正文。</li>
         <li>教学支持页不替代书稿正文，而是与对应章节配套阅读。</li>
       </ul>
     </section>
@@ -1135,8 +1327,15 @@ def build_labs_page() -> None:
       </div>
     </section>
 
+    <section>
+      <h2 class="section-title">第 1-4 章章节级实验材料</h2>
+      <div class="card-grid two">
+        {support_page_cards(LAB_PAGES)}
+      </div>
+    </section>
+
     <section class="status-note">
-      当前站点先展示实验结构与入口说明；后续可继续扩展为详细实验页、rubric、阶段交付模板与样例。
+      当前站点已接入前四章的章节级实验 / 项目材料；后续可继续扩展为跨章节实验总说明、rubric、阶段交付模板与样例。
     </section>
     """
     write_page(
@@ -1183,6 +1382,13 @@ def build_cases_page() -> None:
     </section>
 
     <section>
+      <h2 class="section-title">前四章案例教学包</h2>
+      <div class="card-grid two">
+        {support_page_cards(CASE_PACK_PAGES)}
+      </div>
+    </section>
+
+    <section>
       <h2 class="section-title">核心外部参考</h2>
       <ul class="feature-list">
         <li><a href="https://www.gnu.org/philosophy/free-sw.html">FSF Free Software Definition</a></li>
@@ -1213,6 +1419,10 @@ def build_cases_page() -> None:
 def build_manuscript_page(page: ManuscriptPage) -> None:
     title, body, toc = render_markdown(page.source)
     teaching_pages = teaching_pages_for_chapter(page.output)
+    lab_pages = lab_pages_for_chapter(page.output)
+    appendix_pages = appendix_pages_for_chapter(page.output)
+    case_pages = case_pack_pages_for_chapter(page.output)
+    companion_pages = support_pages_for_chapter(page.output)
     header = f"""
     <header class="page-header">
       <h1>{html.escape(title)}</h1>
@@ -1220,14 +1430,14 @@ def build_manuscript_page(page: ManuscriptPage) -> None:
     </header>
     """
     teaching_note = ""
-    if teaching_pages:
+    if companion_pages:
         links = " · ".join(
-            f'<a href="{teaching_page.output}">{html.escape(teaching_page.kind)}</a>'
-            for teaching_page in teaching_pages
+            f'<a href="{companion_page.output}">{html.escape(companion_page.kind)}</a>'
+            for companion_page in companion_pages
         )
         teaching_note = f"""
         <section class="status-note">
-          <strong>配套教学支持：</strong> {links}
+          <strong>同章配套材料：</strong> {links}
         </section>
         """
     meta = f"""
@@ -1245,10 +1455,14 @@ def build_manuscript_page(page: ManuscriptPage) -> None:
         </div>
         """
     ]
-    if teaching_pages:
+    if teaching_pages or appendix_pages:
         teaching_items = "".join(
             f'<li><a href="{teaching_page.output}">{html.escape(teaching_page.kind)}</a></li>'
             for teaching_page in teaching_pages
+        )
+        teaching_items += "".join(
+            f'<li><a href="{appendix_page.output}">{html.escape(appendix_page.kind)}</a></li>'
+            for appendix_page in appendix_pages
         )
         sidebar_parts.append(
             f"""
@@ -1256,6 +1470,25 @@ def build_manuscript_page(page: ManuscriptPage) -> None:
               <h3>配套教学支持</h3>
               <ul class="nav-list">
                 {teaching_items}
+              </ul>
+            </div>
+            """
+        )
+    if lab_pages or case_pages:
+        related_items = "".join(
+            f'<li><a href="{lab_page.output}">{html.escape(lab_page.kind)}</a></li>'
+            for lab_page in lab_pages
+        )
+        related_items += "".join(
+            f'<li><a href="{case_page.output}">{html.escape(case_page.kind)}</a></li>'
+            for case_page in case_pages
+        )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>实验与案例</h3>
+              <ul class="nav-list">
+                {related_items}
               </ul>
             </div>
             """
@@ -1299,6 +1532,18 @@ def build_teaching_page(page: TeachingPage) -> None:
         companion_links.append(
             f'<a href="{sibling.output}">同章配套：{html.escape(sibling.kind)}</a>'
         )
+    for sibling in appendix_pages_for_chapter(page.chapter_output):
+        companion_links.append(
+            f'<a href="{sibling.output}">同章配套：{html.escape(sibling.kind)}</a>'
+        )
+    for sibling in lab_pages_for_chapter(page.chapter_output):
+        companion_links.append(
+            f'<a href="{sibling.output}">同章配套：{html.escape(sibling.kind)}</a>'
+        )
+    for sibling in case_pack_pages_for_chapter(page.chapter_output):
+        companion_links.append(
+            f'<a href="{sibling.output}">同章配套：{html.escape(sibling.kind)}</a>'
+        )
     companion_note = ""
     if companion_links:
         companion_note = f"""
@@ -1336,6 +1581,18 @@ def build_teaching_page(page: TeachingPage) -> None:
             related_items.append(
                 f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
             )
+        for sibling in appendix_pages_for_chapter(page.chapter_output):
+            related_items.append(
+                f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+            )
+        for sibling in lab_pages_for_chapter(page.chapter_output):
+            related_items.append(
+                f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+            )
+        for sibling in case_pack_pages_for_chapter(page.chapter_output):
+            related_items.append(
+                f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+            )
         sidebar_parts.append(
             f"""
             <div class="sidebar-block">
@@ -1362,6 +1619,246 @@ def build_teaching_page(page: TeachingPage) -> None:
             current_section="teaching",
             hero_title=page.kind,
             hero_text="教学支持页用于承接与书稿配套的学习和教学支架，帮助课程层材料围绕同一章正文协同使用。",
+            inner=header + companion_note + body + meta,
+            sidebar_html="".join(sidebar_parts),
+        ),
+    )
+
+
+def build_appendix_page(page: TeachingPage) -> None:
+    page_title, body, toc = render_markdown(page.source)
+    companion = manuscript_page_for_output(page.chapter_output)
+    related = support_pages_for_chapter(page.chapter_output)
+    header = f"""
+    <header class="page-header">
+      <h1>{html.escape(page_title)}</h1>
+      <p>{html.escape(page.description)}</p>
+    </header>
+    """
+    note_links = []
+    if companion:
+        note_links.append(f'<a href="{companion.output}">对应书稿</a>')
+    for sibling in related:
+        if sibling.output != page.output:
+            note_links.append(f'<a href="{sibling.output}">{html.escape(sibling.kind)}</a>')
+    companion_note = ""
+    if note_links:
+        companion_note = f"""
+        <section class="status-note">
+          <strong>同章配套：</strong> {' · '.join(note_links)}
+        </section>
+        """
+    meta = f"""
+    <section class="meta">
+      <p>源文件：<code>{html.escape(page.source.name)}</code></p>
+      <p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>
+    </section>
+    """
+    sidebar_parts = [
+        f"""
+        <div class="sidebar-block">
+          <h2>附录支撑导航</h2>
+          <ul class="nav-list">
+            {appendix_nav_html(page.output)}
+          </ul>
+        </div>
+        """
+    ]
+    if companion or related:
+        related_items = []
+        if companion:
+            related_items.append(f'<li><a href="{companion.output}">对应书稿</a></li>')
+        for sibling in related:
+            if sibling.output != page.output:
+                related_items.append(
+                    f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+                )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>同章配套</h3>
+              <ul class="nav-list">
+                {''.join(related_items)}
+              </ul>
+            </div>
+            """
+        )
+    if toc and "<li>" in toc:
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block toc">
+              <h3>本页目录</h3>
+              {toc}
+            </div>
+            """
+        )
+    write_page(
+        page.output,
+        page_shell(
+            title=page.label,
+            current_section="teaching",
+            hero_title="Appendix Support",
+            hero_text="附录支撑页承接模板、清单、比较表和最小操作支架，帮助课程层材料真正可用而不挤占书稿正文。",
+            inner=header + companion_note + body + meta,
+            sidebar_html="".join(sidebar_parts),
+        ),
+    )
+
+
+def build_lab_page(page: TeachingPage) -> None:
+    page_title, body, toc = render_markdown(page.source)
+    companion = manuscript_page_for_output(page.chapter_output)
+    related = support_pages_for_chapter(page.chapter_output)
+    header = f"""
+    <header class="page-header">
+      <h1>{html.escape(page_title)}</h1>
+      <p>{html.escape(page.description)}</p>
+    </header>
+    """
+    note_links = []
+    if companion:
+        note_links.append(f'<a href="{companion.output}">对应书稿</a>')
+    for sibling in related:
+        if sibling.output != page.output:
+            note_links.append(f'<a href="{sibling.output}">{html.escape(sibling.kind)}</a>')
+    companion_note = ""
+    if note_links:
+        companion_note = f"""
+        <section class="status-note">
+          <strong>同章配套：</strong> {' · '.join(note_links)}
+        </section>
+        """
+    meta = f"""
+    <section class="meta">
+      <p>源文件：<code>{html.escape(page.source.name)}</code></p>
+      <p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>
+    </section>
+    """
+    sidebar_parts = [
+        f"""
+        <div class="sidebar-block">
+          <h2>实验材料导航</h2>
+          <ul class="nav-list">
+            {lab_nav_html(page.output)}
+          </ul>
+        </div>
+        """
+    ]
+    if companion or related:
+        related_items = []
+        if companion:
+            related_items.append(f'<li><a href="{companion.output}">对应书稿</a></li>')
+        for sibling in related:
+            if sibling.output != page.output:
+                related_items.append(
+                    f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+                )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>同章配套</h3>
+              <ul class="nav-list">
+                {''.join(related_items)}
+              </ul>
+            </div>
+            """
+        )
+    if toc and "<li>" in toc:
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block toc">
+              <h3>本页目录</h3>
+              {toc}
+            </div>
+            """
+        )
+    write_page(
+        page.output,
+        page_shell(
+            title=page.label,
+            current_section="labs",
+            hero_title="Lab / Project Materials",
+            hero_text="章节级实验材料页用于把书稿与教学支持真正转化为团队项目任务、交付物、检查点和可评价证据。",
+            inner=header + companion_note + body + meta,
+            sidebar_html="".join(sidebar_parts),
+        ),
+    )
+
+
+def build_case_pack_page(page: TeachingPage) -> None:
+    page_title, body, toc = render_markdown(page.source)
+    companion = manuscript_page_for_output(page.chapter_output)
+    related = support_pages_for_chapter(page.chapter_output)
+    header = f"""
+    <header class="page-header">
+      <h1>{html.escape(page_title)}</h1>
+      <p>{html.escape(page.description)}</p>
+    </header>
+    """
+    note_links = []
+    if companion:
+        note_links.append(f'<a href="{companion.output}">对应书稿</a>')
+    for sibling in related:
+        if sibling.output != page.output:
+            note_links.append(f'<a href="{sibling.output}">{html.escape(sibling.kind)}</a>')
+    companion_note = ""
+    if note_links:
+        companion_note = f"""
+        <section class="status-note">
+          <strong>同章配套：</strong> {' · '.join(note_links)}
+        </section>
+        """
+    meta = f"""
+    <section class="meta">
+      <p>源文件：<code>{html.escape(page.source.name)}</code></p>
+      <p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>
+    </section>
+    """
+    sidebar_parts = [
+        f"""
+        <div class="sidebar-block">
+          <h2>案例教学包导航</h2>
+          <ul class="nav-list">
+            {case_pack_nav_html(page.output)}
+          </ul>
+        </div>
+        """
+    ]
+    if companion or related:
+        related_items = []
+        if companion:
+            related_items.append(f'<li><a href="{companion.output}">对应书稿</a></li>')
+        for sibling in related:
+            if sibling.output != page.output:
+                related_items.append(
+                    f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+                )
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block">
+              <h3>同章配套</h3>
+              <ul class="nav-list">
+                {''.join(related_items)}
+              </ul>
+            </div>
+            """
+        )
+    if toc and "<li>" in toc:
+        sidebar_parts.append(
+            f"""
+            <div class="sidebar-block toc">
+              <h3>本页目录</h3>
+              {toc}
+            </div>
+            """
+        )
+    write_page(
+        page.output,
+        page_shell(
+            title=page.label,
+            current_section="cases",
+            hero_title="Case Teaching Pack",
+            hero_text="案例教学包页用于固定每章高频主案例、讨论问题、课堂使用方式与教学边界，避免案例使用漂移。",
             inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
         ),
@@ -1408,6 +1905,12 @@ def build_site() -> None:
         build_manuscript_page(page)
     for page in TEACHING_PAGES:
         build_teaching_page(page)
+    for page in APPENDIX_PAGES:
+        build_appendix_page(page)
+    for page in LAB_PAGES:
+        build_lab_page(page)
+    for page in CASE_PACK_PAGES:
+        build_case_pack_page(page)
 
 
 if __name__ == "__main__":
