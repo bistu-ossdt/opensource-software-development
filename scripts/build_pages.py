@@ -1164,32 +1164,26 @@ def hero_context_html(current_section: str) -> str:
         "home": [
             ("分区", "首页"),
             ("类型", "课程入口"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
         "course": [
             ("分区", "课程说明"),
             ("类型", "课程级材料"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
         "manuscript": [
             ("分区", "书稿"),
             ("类型", "技术书稿"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
         "teaching": [
             ("分区", "教学支持"),
             ("类型", "课程支持层"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
         "labs": [
             ("分区", "实验与项目"),
             ("类型", "实验与项目材料"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
         "cases": [
             ("分区", "案例与参考"),
             ("类型", "案例库与教学案例"),
-            ("发布", "GitHub Pages 自动构建"),
         ],
     }
     items = []
@@ -1403,9 +1397,6 @@ def page_shell(
           {inner}
         </main>
       </div>
-      <footer class="site-footer">
-        站点由 <code>scripts/build_pages.py</code> 自动生成，并通过 GitHub Actions 自动部署到 GitHub Pages。
-      </footer>
     </div>
   </body>
 </html>
