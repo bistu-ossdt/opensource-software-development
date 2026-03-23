@@ -116,12 +116,6 @@ MANUSCRIPT_PAGES = [
         description="从维护者视角组织公开仓库、版本发布、维护计划与最小安全基线。当前为骨架稿。",
     ),
     ManuscriptPage(
-        label="附录 开源人物-事件-项目对照表",
-        source=ROOT / "appendix-open-source-people-event-project-map.md",
-        output="appendix-open-source-map.html",
-        description="用一张导航表把关键人物、关键事件与代表项目放在一起理解。",
-    ),
-    ManuscriptPage(
         label="附录 开源历史关键事件时间线",
         source=ROOT / "appendix-open-source-history-timeline.md",
         output="appendix-open-source-history-timeline.html",
@@ -132,6 +126,18 @@ MANUSCRIPT_PAGES = [
         source=ROOT / "appendix-open-source-people.md",
         output="appendix-open-source-people.html",
         description="从人物角度理解开源如何被提出、推动、组织和书写。",
+    ),
+    ManuscriptPage(
+        label="附录 开源人物-事件-项目对照表",
+        source=ROOT / "appendix-open-source-people-event-project-map.md",
+        output="appendix-open-source-map.html",
+        description="用一张导航表把关键人物、关键事件与代表项目放在一起理解。",
+    ),
+    ManuscriptPage(
+        label="附录 开源人工智能",
+        source=ROOT / "appendix-open-source-ai.md",
+        output="appendix-open-source-ai.html",
+        description="用代表事件、人物、组织与对象建立开源人工智能的整体图景，并保持与 OSI 定义边界对齐。",
     ),
     ManuscriptPage(
         label="全书术语表",
@@ -1373,7 +1379,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、3 个附录、2 项书后工具材料（全书术语表与全书参考文献）、对应前四章教学支持、章节级实验材料、附录支撑与案例教学包。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、4 个附录、2 项书后工具材料（全书术语表与全书参考文献）、对应前四章教学支持、章节级实验材料、附录支撑与案例教学包。
     </section>
 
     <section class="meta">
@@ -1514,7 +1520,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-8 章、3 个附录与 2 项书后工具材料；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
+      当前在线书稿范围：第 1-8 章、4 个附录与 2 项书后工具材料；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
     </section>
     """
     sidebar = f"""

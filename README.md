@@ -30,9 +30,10 @@ Internal planning, research, migration, and drafting-control documents are maint
 
 ## Current Appendices
 
-- `appendix-open-source-people-event-project-map.md`: appendix for the people-event-project map
 - `appendix-open-source-history-timeline.md`: appendix for the open source history timeline
 - `appendix-open-source-people.md`: appendix for the open source people guide
+- `appendix-open-source-people-event-project-map.md`: appendix for the people-event-project map
+- `appendix-open-source-ai.md`: appendix for the open source AI landscape
 
 ## Current Back-Matter Tools
 
