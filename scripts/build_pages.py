@@ -1471,7 +1471,7 @@ def build_home() -> None:
 
 
 def build_course_page() -> None:
-    inner = """
+    inner = f"""
     <header class="page-header">
       <h1>课程说明</h1>
       <p>本课程以“开源软件开发技术”为中心，而不是泛化的软件工程课或 AI 工具课。课程目标是帮助读者理解开源、进入开源，并开始按现代开源方式参与和开发项目。</p>
@@ -1721,7 +1721,7 @@ def build_labs_page() -> None:
 
 
 def build_cases_page() -> None:
-    inner = """
+    inner = f"""
     <header class="page-header">
       <h1>案例与参考</h1>
       <p>课程采用“经典主案例 + 后半部现代案例 + 辅助案例库”的结构。前四章以经典开源项目为主，后续章节再逐步引入 AI 原生、GitHub 原生的现代项目。</p>
