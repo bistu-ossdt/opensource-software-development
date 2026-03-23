@@ -59,11 +59,11 @@ class LabStage:
 
 SECTIONS = [
     Section("home", "首页", "index.html", "课程入口、核心分区和最近可读内容。"),
-    Section("course", "课程说明", "course.html", "课程定位、结构、对象与学习路径。"),
+    Section("course", "课程说明", "course.html", "课程定位、材料体系、当前公开进度与使用路径。"),
     Section("manuscript", "书稿", "manuscript.html", "各章正文、附录与书后工具材料的阅读入口。"),
     Section("teaching", "教学支持", "teaching-support.html", "学习指南、教学指南与书稿配套入口。"),
     Section("labs", "实验与项目", "labs-project.html", "实践主线、实验阶段与团队项目。"),
-    Section("cases", "案例与参考", "cases-references.html", "经典案例、现代案例与核心参考。"),
+    Section("cases", "案例与参考", "cases-references.html", "经典/现代案例、案例教学包、专题附录与核心参考。"),
 ]
 
 MANUSCRIPT_PAGES = [
@@ -1419,11 +1419,11 @@ def write_page(filename: str, content: str) -> None:
 def build_home() -> None:
     section_html = section_cards(
         [
-            ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
+            ("课程说明", "course.html", "课程定位、材料体系、当前公开进度与整体使用路径。"),
             ("书稿", "manuscript.html", "第 1-8 章书稿、附录与书后工具材料。"),
             ("教学支持", "teaching-support.html", "第 1-8 章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
-            ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
+            ("案例与参考", "cases-references.html", "经典/现代案例、案例教学包、专题附录与核心外部参考。"),
         ]
     )
     chapter_html = section_cards(
@@ -1474,7 +1474,7 @@ def build_course_page() -> None:
     inner = f"""
     <header class="page-header">
       <h1>课程说明</h1>
-      <p>本课程以“开源软件开发技术”为中心，而不是泛化的软件工程课或 AI 工具课。课程目标是帮助读者理解开源、进入开源，并开始按现代开源方式参与和开发项目。</p>
+      <p>本课程以“开源软件开发技术”为中心，而不是泛化的软件工程课或 AI 工具课。当前公开内容已经形成“课程说明 + 书稿 + 教学支持 + 实验与项目 + 案例与参考”的多层结构，目标是帮助读者理解开源、进入开源，并开始按现代开源方式参与和开发项目。</p>
     </header>
 
     <section>
@@ -1496,6 +1496,17 @@ def build_course_page() -> None:
     </section>
 
     <section>
+      <h2 class="section-title">材料体系</h2>
+      <ul class="feature-list">
+        <li>技术书稿：稳定核心知识与书稿正文。</li>
+        <li><a href="teaching-support.html">学习指南 / 教学指南</a>：教学支持层。</li>
+        <li><a href="labs-project.html">实验与项目材料</a>：实验与团队项目材料。</li>
+        <li><a href="cases-references.html">案例库 / 案例教学包</a>：经典案例、现代案例与课程级参考入口。</li>
+        <li>附录与书后工具材料：承担专题补充、术语检索与来源回查。</li>
+      </ul>
+    </section>
+
+    <section>
       <h2 class="section-title">8 章结构</h2>
       <div class="card-grid two">
         <article class="card"><h3>第 1-2 章</h3><p>开源的起源与发展；自由软件、开源软件与许可证。</p></article>
@@ -1506,12 +1517,12 @@ def build_course_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">材料体系</h2>
+      <h2 class="section-title">当前公开进度</h2>
       <ul class="feature-list">
-        <li>技术书稿：稳定核心知识与书稿正文。</li>
-        <li><a href="teaching-support.html">学习指南 / 教学指南</a>：教学支持层。</li>
-        <li><a href="labs-project.html">实验与项目材料</a>：实验与团队项目材料。</li>
-        <li><a href="cases-references.html">案例库 / 案例教学包</a>：案例库、案例教学包与项目证据。</li>
+        <li>书稿：第 1-4 章为扩写稿；第 5-8 章为骨架稿；已上线 4 个附录和 2 项书后工具材料。</li>
+        <li>教学支持：第 1-8 章学习指南与教学指南已上线；其中第 5-8 章当前为骨架稿。</li>
+        <li>章节级支撑材料：第 1-4 章已配套实验与项目材料、附录支撑与案例教学包。</li>
+        <li>课程网站：已形成“课程说明 / 书稿 / 教学支持 / 实验与项目 / 案例与参考”五个分区。</li>
       </ul>
     </section>
 
@@ -1523,16 +1534,28 @@ def build_course_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">当前已上线的章节级支撑材料</h2>
+      <h2 class="section-title">当前已上线的实验与项目材料（第 1-4 章）</h2>
       <div class="card-grid two">
         {support_page_cards(LAB_PAGES)}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">当前已上线的附录支撑（第 1-4 章）</h2>
+      <div class="card-grid two">
         {support_page_cards(APPENDIX_PAGES)}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章）</h2>
+      <div class="card-grid two">
         {support_page_cards(CASE_PACK_PAGES)}
       </div>
     </section>
 
     <section class="status-note">
-      课程层页面用于说明整体结构和使用方式；真正的长文阅读可进入“书稿”与“教学支持”分区。
+      课程层页面用于说明整体结构、材料分层与当前公开进度；真正的长文阅读可进入“书稿”与“教学支持”分区，具体案例入口可进入“案例与参考”分区。
     </section>
     """
     write_page(
@@ -1721,22 +1744,38 @@ def build_labs_page() -> None:
 
 
 def build_cases_page() -> None:
+    reference_cards = section_cards(
+        [
+            (page.label, page.output, page.description)
+            for page in [*appendix_manuscript_pages(), *back_matter_manuscript_pages()]
+        ]
+    )
     inner = f"""
     <header class="page-header">
       <h1>案例与参考</h1>
-      <p>课程采用“经典主案例 + 后半部现代案例 + 辅助案例库”的结构。前四章以经典开源项目为主，后续章节再逐步引入 AI 原生、GitHub 原生的现代项目。</p>
+      <p>案例与参考分区不是单一链接列表，而是把主锚点案例、章节案例教学包、专题附录与核心外部入口组织在一起的公共入口。当前已形成“前四章以稳定经典案例为主、后四章逐步引入现代案例”的整体结构。</p>
     </header>
 
     <section>
-      <h2 class="section-title">主案例</h2>
+      <h2 class="section-title">案例使用结构</h2>
+      <ul class="feature-list">
+        <li>前四章优先使用长期稳定、历史位置清楚的经典案例，用来承载历史、许可证、治理与基本工程机制。</li>
+        <li>后四章再逐步引入 GitHub 原生、AI 原生和现代协作更强的项目案例，用来承载项目阅读、参与、AI 辅助与项目发布。</li>
+        <li>案例必须承担解释功能，而不是只承担“点名功能”；不同案例在不同章节承担不同问题。</li>
+        <li>参考入口按层组织：章节案例教学包、专题附录与书后工具材料、核心外部参考，不混成单一列表。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">主锚点案例</h2>
       <div class="card-grid two">
         <article class="card">
           <h3>Linux / Linus</h3>
-          <p>前半部主锚点案例。用于讲历史、GPL 传统、维护者体系、补丁生命周期与长期治理。</p>
+          <p>前四章主锚点案例。用于讲历史、GPL 传统、维护者体系、补丁生命周期、长期治理与工程连续性。</p>
         </article>
         <article class="card">
           <h3>OpenClaw / Peter</h3>
-          <p>后半部主锚点案例。用于讲现代 AI 原生开源项目、GitHub 原生仓库结构、安全与发布实践。</p>
+          <p>后四章主锚点案例。用于讲现代 AI 原生开源项目、GitHub 原生仓库结构、AI 工作流、安全与发布实践。</p>
         </article>
       </div>
     </section>
@@ -1752,14 +1791,21 @@ def build_cases_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">前四章案例教学包</h2>
+      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章）</h2>
       <div class="card-grid two">
         {support_page_cards(CASE_PACK_PAGES)}
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">核心外部参考</h2>
+      <h2 class="section-title">专题附录与书后工具材料</h2>
+      <div class="card-grid two">
+        {reference_cards}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">核心外部参考入口</h2>
       <ul class="feature-list">
         <li><a href="https://www.gnu.org/philosophy/free-sw.html">FSF 自由软件定义</a></li>
         <li><a href="https://opensource.org/osd">OSI 开源定义</a></li>
@@ -1767,11 +1813,14 @@ def build_cases_page() -> None:
         <li><a href="https://docs.github.com/">GitHub Docs</a></li>
         <li><a href="https://baseline.openssf.org/">OpenSSF OSPS Baseline</a></li>
         <li><a href="https://chaoss.community/">CHAOSS</a></li>
+        <li><a href="https://openchainproject.org/">OpenChain</a></li>
+        <li><a href="https://reuse.software/specifications/">REUSE Specification</a></li>
+        <li><a href="https://spdx.dev/">SPDX</a></li>
       </ul>
     </section>
 
     <section class="status-note">
-      当前页先作为案例与参考入口页。后续可以继续扩展为独立案例页、对照阅读页与参考文献分层浏览。
+      当前页已能承担课程级案例与参考入口功能：前四章案例教学包已上线，专题附录与书后工具材料已接入；第 5-8 章案例教学包将在对应书稿与教学支持稳定后继续补充。
     </section>
     """
     write_page(

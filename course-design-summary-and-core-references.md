@@ -18,6 +18,24 @@ A central practice line runs through the whole course: **students work in teams 
 
 The course also takes two strong positions. First, **community governance is a foundational part of open source development technique**, not just an optional cultural topic. Second, **modern open source development is no longer only “public repository + pull requests,” but a governed, testable, review-based, security-aware, and supply-chain-conscious engineering system**.
 
+## Current Public Progress
+
+The public course workspace has now moved beyond planning and into an initial reader-facing release state:
+
+- **manuscript layer**: chapters 1-4 are expanded drafts; chapters 5-8 are skeleton drafts; 4 appendices, a whole-book glossary, and a whole-book references file are public
+- **teaching layer**: study guides and instructor guides for chapters 1-8 are public; chapters 5-8 are currently skeleton-level teaching materials
+- **chapter-level support layer**: lab/project materials, appendix support, and case teaching packs for chapters 1-4 are public
+- **course-site layer**: the GitHub Pages site now exposes five reader-facing sections: course, manuscript, teaching support, labs/projects, and cases/references
+
+## Case And Reference Architecture
+
+Cases and references are not treated as one flat list. At the current stage, they are organized in four distinct layers:
+
+1. **manuscript layer**: chapters 1-4 prioritize durable classic cases such as GNU, Linux, Mozilla, Apache, Python, and Git; later chapters reserve more room for modern GitHub-native and AI-native cases such as OpenClaw
+2. **teaching-layer case packs**: chapter 1-4 case teaching packs are already public; chapter 5-8 case packs will be added as those manuscript chapters stabilize
+3. **appendices and back-matter tools**: the history timeline, people guide, people-event-project map, open source AI appendix, glossary, and references provide long-range navigation rather than chapter-only examples
+4. **site-level reference entry layer**: the `Cases and References` section of the site aggregates public case-pack links, appendix links, and selected authoritative external resources
+
 ## Core References
 
 ### Open source foundations

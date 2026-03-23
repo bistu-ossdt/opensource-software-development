@@ -70,6 +70,25 @@ The repository includes a generated course website deployed through GitHub Pages
 - build script: `scripts/build_pages.py`
 - workflow: `.github/workflows/pages.yml`
 
+## Current Public Site Structure
+
+The public site is currently organized into five reader-facing sections:
+
+- `course.html`: course positioning, material layers, and current public progress
+- `manuscript.html`: chapter drafts, appendices, glossary, and references
+- `teaching-support.html`: study guides and instructor guides for chapters 1-8
+- `labs-project.html`: team-project mainline and chapter-level lab/project materials
+- `cases-references.html`: anchor cases, case teaching packs, appendices, and core external references
+
+## Current Public Progress Snapshot
+
+- manuscript: chapters 1-4 expanded; chapters 5-8 skeletons
+- appendices: history timeline, people guide, people-event-project map, and open source AI
+- back matter: whole-book glossary and whole-book references
+- teaching layer: chapter 1-8 study guides and instructor guides, with chapter 5-8 still at skeleton level
+- chapter-level support: lab/project materials, appendix support, and case teaching packs for chapters 1-4
+- site: GitHub Pages navigation now connects manuscript, teaching, labs, and case/reference entry points around the same public material set
+
 ## Local Reference Inputs
 
 Files under `ref/` are local reference inputs for historical analysis and drafting support. They are not part of the maintained public course-material set and should normally remain untracked.
