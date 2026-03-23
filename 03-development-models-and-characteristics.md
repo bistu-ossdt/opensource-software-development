@@ -44,8 +44,9 @@ Issue #2481
 
 <div class="history-story">
   <p class="history-story-label">历史片段</p>
-  <p>2018 年 7 月 12 日，围绕 PEP 572 的激烈争论刚刚落下，Guido van Rossum 向 <code>python-committers</code> 邮件列表发出一封标题为 “Transfer of power” 的邮件，宣布自己退出 BDFL 的最终决策角色，而且不会指定继任者。对外部旁观者来说，这像是一位长期核心人物的个人决定；但对 Python 社区来说，更尖锐的问题立刻浮现出来：如果项目不能再依赖单一人物做最后裁决，那么 PEP 由谁拍板，核心开发者由谁接纳，权力又该如何被约束？</p>
-  <p>接下来几个月里，Python 社区没有把这个问题重新交还给新的个人权威，而是把它写成了治理文本。2019 年形成的 <code>PEP 13</code> 以 steering council、core team、选举机制和利益冲突限制为核心，把“谁负责什么、谁能做最后判断、怎样避免单一组织主导”正式写进了项目制度。这个转折之所以具有代表性，不只是因为 Python 很有名，而是因为它清楚地说明：成熟开源社区迟早要把“依赖某个人”转化为“依赖可继承的公共治理结构”。</p>
+  <p>如果今天只把 Guido van Rossum 记成“Python 的作者”，就会低估他在开源治理史上的代表性。二十世纪九十年代初，他在荷兰 CWI 工作时开始设计 Python，把它作为 ABC 语言之后的一种新尝试。最初，Python 当然首先是一个语言项目，但随着版本演进、使用者增多、核心开发者逐步形成，它越来越不可能只靠“作者本人写得好”来维持。多年来，Guido 一直被称作 BDFL（Benevolent Dictator For Life），这个称呼既体现了他长期承担最终技术判断的现实，也隐含着一种早期开源项目常见的结构：项目足够公开，也足够成功，但最后的方向收束仍然高度依赖某一位被广泛信任的核心人物。</p>
+  <p>这套结构在 Python 早期并不奇怪。语言设计需要连续性，社区也需要一个能做最终裁决的人。随着时间推移，围绕 Python 的不再只是 Guido 一个人的代码，而是越来越完整的公共协作体系：核心开发者群体、PEP 提案机制、版本发布节奏、Python Software Foundation 以及更广泛的全球社区。也正因为如此，问题迟早会从“Guido 如何做判断”变成“如果没有 Guido，Python 还怎样继续判断”。2018 年 7 月 12 日，围绕 PEP 572 的激烈争论刚刚落下，Guido 向 <code>python-committers</code> 邮件列表发出那封标题为 “Transfer of power” 的邮件，宣布自己退出 BDFL 的最终决策角色，而且不会指定继任者。对外部旁观者来说，这像是一位长期核心人物的个人决定；但对 Python 社区来说，真正尖锐的问题立刻浮现出来：如果项目不能再依赖单一人物做最后裁决，那么 PEP 由谁拍板，核心开发者由谁接纳，权力又该如何被约束？</p>
+  <p>接下来几个月里，Python 社区没有把这个问题重新交还给新的个人权威，而是把它转化成一轮公开的治理设计。不同治理方案被系统提出、讨论和投票，最终在 2018 年底选择了 steering council 模型，并在后续形成正式的 <code>PEP 13</code>。从此，core team、steering council、选举机制、任期、利益冲突限制和罢免条件，都被写进了项目的公共制度。这样回头看，Guido 在这段历史里的意义就不只是“写出了 Python”，而是他的退出迫使社区正面回答了一个所有成熟开源项目终将面对的问题：一个项目如果真的属于公共世界，就不能永远只靠某一个人的历史地位来维持秩序。它必须把个人权威尽量转化为可继承、可解释、可约束的治理结构。</p>
 </div>
 
 先把这条从外围参与到治理责任的梯度压缩成一张图，后面的 Linux、Apache 和 Python 案例会更容易定位。
@@ -197,6 +198,7 @@ GOVERNANCE.md
 - Linux kernel documentation, “The kernel development process”
 - Linux kernel documentation, “How the development process works”
 - Apache Software Foundation, “How the ASF Works”
+- Python documentation, “History and License”
 - Guido van Rossum, “Transfer of power”
 - Python Enhancement Proposals, “PEP 13 – Python Language Governance”
 - GitHub Docs, “About community profiles for public repositories”
