@@ -2,6 +2,11 @@
 
 This repository publishes the course-facing materials for `Open Source Software Development`: book-manuscript chapters, outward-facing course documents, and the GitHub Pages site used to browse them.
 
+For public-facing book structure, this project distinguishes between:
+
+- appendices: supplementary reading units that still carry content
+- back-matter tools: lookup/support units such as the whole-book glossary and references
+
 ## Public Scope
 
 Tracked content in this repository should be limited to:
@@ -22,9 +27,15 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `06-participating-in-open-source-projects.md`: current chapter-6 skeleton draft for `Participating in Open Source Projects`
 - `07-ai-assisted-open-source-development-practice.md`: current chapter-7 skeleton draft for `AI-Assisted Open Source Development Practice`
 - `08-organizing-and-releasing-your-open-source-project.md`: current chapter-8 skeleton draft for `Organizing and Releasing Your Open Source Project`
-- `95-appendix-a-open-source-people-event-project-map.md`: book appendix A for the people-event-project map
-- `96-appendix-b-open-source-history-timeline.md`: book appendix B for the open source history timeline
-- `97-appendix-c-open-source-people.md`: book appendix C for the open source people guide
+
+## Current Appendices
+
+- `appendix-open-source-people-event-project-map.md`: appendix for the people-event-project map
+- `appendix-open-source-history-timeline.md`: appendix for the open source history timeline
+- `appendix-open-source-people.md`: appendix for the open source people guide
+
+## Current Back-Matter Tools
+
 - `98-glossary.md`: initial back-matter glossary draft for book-level terminology
 - `99-book-references.md`: initial back-matter references draft for book-level sources
 
