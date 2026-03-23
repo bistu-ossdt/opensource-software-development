@@ -241,6 +241,78 @@ TEACHING_PAGES = [
         chapter_label="第 4 章 开源开发的基本工程流程",
         kind="教学指南",
     ),
+    TeachingPage(
+        label="第 5 章 学习指南",
+        source=ROOT / "chapter-05-study-guide.md",
+        output="chapter-05-study-guide.html",
+        description="帮助学生把第 5 章读成面对陌生仓库时的整体判断方法。当前为骨架稿。",
+        chapter_output="chapter-05.html",
+        chapter_label="第 5 章 阅读与理解开源项目",
+        kind="学习指南",
+    ),
+    TeachingPage(
+        label="第 5 章 教学指南",
+        source=ROOT / "chapter-05-instructor-guide.md",
+        output="chapter-05-instructor-guide.html",
+        description="帮助教师组织第 5 章的项目阅读方法、健康度判断与行动选择。当前为骨架稿。",
+        chapter_output="chapter-05.html",
+        chapter_label="第 5 章 阅读与理解开源项目",
+        kind="教学指南",
+    ),
+    TeachingPage(
+        label="第 6 章 学习指南",
+        source=ROOT / "chapter-06-study-guide.md",
+        output="chapter-06-study-guide.html",
+        description="帮助学生把第 6 章读成第一次贡献的进入路径与贡献组织链。当前为骨架稿。",
+        chapter_output="chapter-06.html",
+        chapter_label="第 6 章 参与开源项目",
+        kind="学习指南",
+    ),
+    TeachingPage(
+        label="第 6 章 教学指南",
+        source=ROOT / "chapter-06-instructor-guide.md",
+        output="chapter-06-instructor-guide.html",
+        description="帮助教师组织第 6 章的边界判断、PR 组织与 review 协作。当前为骨架稿。",
+        chapter_output="chapter-06.html",
+        chapter_label="第 6 章 参与开源项目",
+        kind="教学指南",
+    ),
+    TeachingPage(
+        label="第 7 章 学习指南",
+        source=ROOT / "chapter-07-study-guide.md",
+        output="chapter-07-study-guide.html",
+        description="帮助学生把第 7 章读成 AI 进入开源流程后的责任链与验证链。当前为骨架稿。",
+        chapter_output="chapter-07.html",
+        chapter_label="第 7 章 AI 辅助的开源开发实践",
+        kind="学习指南",
+    ),
+    TeachingPage(
+        label="第 7 章 教学指南",
+        source=ROOT / "chapter-07-instructor-guide.md",
+        output="chapter-07-instructor-guide.html",
+        description="帮助教师组织第 7 章的 AI 使用边界、人工责任链与 agentic workflow。当前为骨架稿。",
+        chapter_output="chapter-07.html",
+        chapter_label="第 7 章 AI 辅助的开源开发实践",
+        kind="教学指南",
+    ),
+    TeachingPage(
+        label="第 8 章 学习指南",
+        source=ROOT / "chapter-08-study-guide.md",
+        output="chapter-08-study-guide.html",
+        description="帮助学生把第 8 章读成维护者视角下的项目公共界面、发布与维护基线。当前为骨架稿。",
+        chapter_output="chapter-08.html",
+        chapter_label="第 8 章 组织与发布你的开源项目",
+        kind="学习指南",
+    ),
+    TeachingPage(
+        label="第 8 章 教学指南",
+        source=ROOT / "chapter-08-instructor-guide.md",
+        output="chapter-08-instructor-guide.html",
+        description="帮助教师组织第 8 章的维护者视角、版本发布与最小安全基线。当前为骨架稿。",
+        chapter_output="chapter-08.html",
+        chapter_label="第 8 章 组织与发布你的开源项目",
+        kind="教学指南",
+    ),
 ]
 
 LAB_PAGES = [
@@ -1349,7 +1421,7 @@ def build_home() -> None:
         [
             ("课程说明", "course.html", "课程定位、对象、结构与整体学习路径。"),
             ("书稿", "manuscript.html", "第 1-8 章书稿、附录与书后工具材料。"),
-            ("教学支持", "teaching-support.html", "前四章学习指南与教学指南的在线阅读入口。"),
+            ("教学支持", "teaching-support.html", "第 1-8 章学习指南与教学指南的在线阅读入口。"),
             ("实验与项目", "labs-project.html", "团队项目主线、实验阶段与里程碑。"),
             ("案例与参考", "cases-references.html", "Linux、OpenClaw 与核心外部参考。"),
         ]
@@ -1379,7 +1451,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、4 个附录、2 项书后工具材料（全书术语表与全书参考文献）、对应前四章教学支持、章节级实验材料、附录支撑与案例教学包。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、4 个附录、2 项书后工具材料（全书术语表与全书参考文献）、第 1-8 章教学支持、章节级实验材料、附录支撑与案例教学包；其中第 5-8 章教学支持当前为骨架稿。
     </section>
 
     <section class="meta">
@@ -1520,7 +1592,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-8 章、4 个附录与 2 项书后工具材料；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持当前接入前四章。
+      当前在线书稿范围：第 1-8 章、4 个附录与 2 项书后工具材料；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持已接入第 1-8 章，其中第 5-8 章当前为骨架稿。
     </section>
     """
     sidebar = f"""
@@ -1548,7 +1620,7 @@ def build_teaching_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>教学支持目录</h1>
-      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线前四章的学习指南与教学指南，可与对应书稿配套使用。</p>
+      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线第 1-8 章的学习指南与教学指南；其中第 1-4 章较完整，第 5-8 章当前为骨架稿，可与对应书稿配套使用。</p>
     </header>
 
     <section>
@@ -1576,7 +1648,7 @@ def build_teaching_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线教学支持范围：第 1-4 章。第 5-8 章的教学支持将在对应章节稳定后继续接入。
+      当前在线教学支持范围：第 1-8 章；其中第 5-8 章当前为骨架稿，后续将随书稿扩写继续细化。
     </section>
     """
     sidebar = f"""

@@ -46,6 +46,10 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `chapter-02-study-guide.md` and `chapter-02-instructor-guide.md`: initial teaching-support drafts derived from chapter 2
 - `chapter-03-study-guide.md` and `chapter-03-instructor-guide.md`: initial teaching-support drafts derived from chapter 3
 - `chapter-04-study-guide.md` and `chapter-04-instructor-guide.md`: initial teaching-support drafts derived from chapter 4
+- `chapter-05-study-guide.md` and `chapter-05-instructor-guide.md`: chapter-5 teaching-support skeletons aligned with the manuscript skeleton
+- `chapter-06-study-guide.md` and `chapter-06-instructor-guide.md`: chapter-6 teaching-support skeletons aligned with the manuscript skeleton
+- `chapter-07-study-guide.md` and `chapter-07-instructor-guide.md`: chapter-7 teaching-support skeletons aligned with the manuscript skeleton
+- `chapter-08-study-guide.md` and `chapter-08-instructor-guide.md`: chapter-8 teaching-support skeletons aligned with the manuscript skeleton
 
 ## Current Chapter-Level Lab / Project Materials State
 
