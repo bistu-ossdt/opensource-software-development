@@ -33,6 +33,7 @@
 - GNU Project. “What is Copyleft?” https://www.gnu.org/philosophy/copyleft.en.html
 - Open Source Initiative. “The Open Source Definition.” https://opensource.org/osd
 - Open Source Initiative. “The Open Source AI Definition.” https://opensource.org/ai/open-source-ai-definition
+- Open Source Initiative. “OSAID FAQs.” https://opensource.org/ai/faq
 - Open Source Initiative. “Open Weights.” https://opensource.org/ai/open-weights
 - Open Source Initiative. “History of the Open Source Initiative.” https://opensource.org/about/history-of-the-open-source-initiative
 - SPDX. “Specifications.” https://spdx.dev/use/specifications/
