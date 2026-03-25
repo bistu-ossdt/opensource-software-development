@@ -118,6 +118,8 @@
 | --- | --- | --- | --- |
 | AI 辅助开发 | `AI-Assisted Development` | 指在软件开发过程中使用 AI 进行解释、生成、补全、分析或协作支持。 | 第 7 章 |
 | AI 辅助开源开发 | `AI-Assisted Open Source Development` | 指把 AI 使用明确放入开源的许可证、治理和工程流程之内。 | 第 7 章 |
+| 开源人工智能 | `Open Source AI` | 指按 OSI 定义讨论的 `AI system` 开放形态，其判断不能缩减为“权重是否可下载”。 | 第 2、5-8 章 |
+| 开放权重 | `Open Weights` | 指参数或权重以开放条件提供的状态，但不自动等于 `Open Source AI`。 | 第 2、5-8 章 |
 | 智能体工作流 | `Agentic Workflow` | 指围绕多步任务分解、上下文传递和工具调用组织的 AI 工作流。 | 第 7 章 |
 | 提示词 | `Prompt` | 用于向 AI 明确任务、边界、上下文和输出要求的输入文本。 | 第 7 章 |
 | 上下文工程 | `Context Engineering` | 指围绕任务目标组织上下文、资料、约束和示例，以提升 AI 输出质量的做法。 | 第 7 章 |
