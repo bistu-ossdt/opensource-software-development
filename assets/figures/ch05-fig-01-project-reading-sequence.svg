@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">陌生开源项目的第一遍阅读路径</title>
+  <desc id="desc">展示读者在第一次进入陌生开源项目时，如何从 README、许可证、贡献入口、Issues 和 Pull Requests、Release 与 CI 状态，形成第一轮项目判断。</desc>
+  <!-- figure-id: ch05-fig-01-project-reading-sequence | status: final | source-trail: chapter 5 sections 1-2 narrative; project-reading order; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .lane { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .gate { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 18; ry: 18; }
+    .title2 { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .note { fill: #4f5d58; font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .footer { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1352" height="712" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">PROJECT READING</text>
+  <text class="title" x="80" y="136">第一遍进入陌生项目时的低成本阅读路径</text>
+  <text class="subtitle" x="80" y="168">先看入口层对象，再看状态层信号，最后才决定是否继续深入实现与贡献路径。</text>
+
+  <text class="lane" x="88" y="248">公共入口</text>
+  <text class="lane" x="800" y="248">协作与状态</text>
+
+  <rect class="box" x="60" y="286" width="160" height="120" />
+  <text class="title2" x="140" y="334">README</text>
+  <text class="note" x="140" y="366">它在做什么</text>
+  <text class="note" x="140" y="390">面向谁</text>
+
+  <rect class="box" x="260" y="286" width="160" height="120" />
+  <text class="title2" x="340" y="334">LICENSE</text>
+  <text class="note" x="340" y="366">制度边界</text>
+  <text class="note" x="340" y="390">复用条件</text>
+
+  <rect class="box" x="460" y="286" width="180" height="120" />
+  <text class="title2" x="550" y="334">贡献入口</text>
+  <text class="note" x="550" y="366">CONTRIBUTING</text>
+  <text class="note" x="550" y="390">CoC / SECURITY</text>
+
+  <rect class="gate" x="690" y="286" width="180" height="120" />
+  <text class="title2" x="780" y="334">Issues / PRs</text>
+  <text class="note" x="780" y="366">当前问题流</text>
+  <text class="note" x="780" y="390">响应与评审</text>
+
+  <rect class="gate" x="910" y="286" width="180" height="120" />
+  <text class="title2" x="1000" y="334">Release / Tags</text>
+  <text class="note" x="1000" y="366">版本节奏</text>
+  <text class="note" x="1000" y="390">对外承诺</text>
+
+  <rect class="gate" x="1130" y="286" width="180" height="120" />
+  <text class="title2" x="1220" y="334">CI / Checks</text>
+  <text class="note" x="1220" y="366">工程状态</text>
+  <text class="note" x="1220" y="390">主线门禁</text>
+
+  <rect class="box" x="500" y="510" width="400" height="126" />
+  <text class="title2" x="700" y="556">第一轮项目判断</text>
+  <text class="note" x="700" y="590">这个项目是否值得继续深入</text>
+  <text class="note" x="700" y="614">适合学习、参与、复用，还是先观察</text>
+
+  <path class="arrow" d="M220 346 H260" />
+  <path class="arrow" d="M420 346 H460" />
+  <path class="arrow" d="M640 346 H690" />
+  <path class="arrow" d="M870 346 H910" />
+  <path class="arrow" d="M1090 346 H1130" />
+  <path class="arrow" d="M1220 406 V452 Q1220 478 1190 478 H730 Q700 478 700 500 V510" />
+
+  <polygon points="260,346 244,337 244,355" fill="#7fa99a" />
+  <polygon points="460,346 444,337 444,355" fill="#7fa99a" />
+  <polygon points="690,346 674,337 674,355" fill="#7fa99a" />
+  <polygon points="910,346 894,337 894,355" fill="#7fa99a" />
+  <polygon points="1130,346 1114,337 1114,355" fill="#7fa99a" />
+  <polygon points="700,510 691,492 709,492" fill="#7fa99a" />
+
+  <text class="footer" x="80" y="694">这不是死顺序，而是第一次进入陌生项目时最容易建立公共上下文的一条路径。</text>
+</svg>

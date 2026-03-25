@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">项目级判断框架图</title>
+  <desc id="desc">展示读者如何把项目定位、许可证、治理、工程和维护状态等分散证据组合成项目级判断，并进一步形成行动选择。</desc>
+  <!-- figure-id: ch05-fig-02-project-judgment-map | status: final | source-trail: chapter 5 sections 3-5 narrative; project judgment framing; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .center { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 26; ry: 26; }
+    .title2 { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .note { fill: #4f5d58; font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .footer { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1352" height="732" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">JUDGMENT FRAME</text>
+  <text class="title" x="80" y="136">把零件重新组合成项目级判断</text>
+  <text class="subtitle" x="80" y="168">项目阅读的关键不是“找到文件”，而是让分散对象共同回答：这个项目究竟值不值得继续投入。</text>
+
+  <rect class="box" x="108" y="240" width="240" height="110" />
+  <text class="title2" x="228" y="286">项目定位</text>
+  <text class="note" x="228" y="318">它解决什么问题</text>
+  <text class="note" x="228" y="342">面向谁</text>
+
+  <rect class="box" x="524" y="220" width="352" height="150" />
+  <text class="title2" x="700" y="280">项目级判断</text>
+  <text class="note" x="700" y="316">把定位、边界、治理、工程和维护状态</text>
+  <text class="note" x="700" y="340">重新组织成一张可解释的认知图</text>
+
+  <rect class="box" x="1052" y="240" width="240" height="110" />
+  <text class="title2" x="1172" y="286">制度边界</text>
+  <text class="note" x="1172" y="318">许可证如何约束</text>
+  <text class="note" x="1172" y="342">使用与再发布</text>
+
+  <rect class="box" x="138" y="450" width="240" height="110" />
+  <text class="title2" x="258" y="496">治理与入口</text>
+  <text class="note" x="258" y="528">谁维护</text>
+  <text class="note" x="258" y="552">外部人如何进入</text>
+
+  <rect class="box" x="522" y="450" width="356" height="110" />
+  <text class="title2" x="700" y="496">工程与版本状态</text>
+  <text class="note" x="700" y="528">修改怎样进入主线</text>
+  <text class="note" x="700" y="552">CI、Release 与变更记录是否一致</text>
+
+  <rect class="box" x="1022" y="450" width="300" height="110" />
+  <text class="title2" x="1172" y="496">健康度与风险</text>
+  <text class="note" x="1172" y="528">是否仍在维护</text>
+  <text class="note" x="1172" y="552">是否适合参与或谨慎复用</text>
+
+  <rect class="center" x="470" y="624" width="460" height="88" />
+  <text class="title2" x="700" y="674">行动选择</text>
+  <text class="note" x="700" y="700">继续学习、尝试贡献、许可证允许范围内复用、先观察再决定、暂时放弃</text>
+
+  <path class="arrow" d="M348 295 H524" />
+  <path class="arrow" d="M1052 295 H876" />
+  <path class="arrow" d="M378 505 H522" />
+  <path class="arrow" d="M1022 505 H878" />
+  <path class="arrow" d="M700 370 V450" />
+  <path class="arrow" d="M700 560 V624" />
+
+  <polygon points="524,295 508,286 508,304" fill="#7fa99a" />
+  <polygon points="876,295 892,286 892,304" fill="#7fa99a" />
+  <polygon points="522,505 506,496 506,514" fill="#7fa99a" />
+  <polygon points="878,505 894,496 894,514" fill="#7fa99a" />
+  <polygon points="700,450 691,434 709,434" fill="#7fa99a" />
+  <polygon points="700,624 691,608 709,608" fill="#7fa99a" />
+
+  <text class="footer" x="80" y="732">零件只有在共同回答“这是什么项目、它如何运转、我下一步该做什么”时，才真正构成项目阅读。</text>
+</svg>

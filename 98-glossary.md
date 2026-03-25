@@ -103,6 +103,8 @@
 | 中文术语 | 英文原词 | 简要定义 | 相关章节 |
 | --- | --- | --- | --- |
 | 项目阅读 | `Project Reading` | 指对一个真实开源项目的代码、文档、仓库对象和社区结构进行系统理解的过程。 | 第 5 章 |
+| 项目健康度 | `Project Health` | 指项目在维护响应、版本节奏、治理清晰度和工程状态上的整体持续运行状态。 | 第 3、5 章 |
+| 项目公共界面 | `Public Project Interface` | 指外部人第一次理解和进入项目时能直接看到的一组公共入口对象，如 README、LICENSE、CONTRIBUTING、Release 和文档站点。 | 第 5、8 章 |
 | 可参与性 | `Contributability` / `Project Accessibility for Contributors` | 指一个项目对新贡献者是否容易进入、理解和开始贡献的整体状态。 | 第 5-6 章 |
 | 贡献入口 | `Contribution Entry Point` | 指项目中为外部参与者提供的明确进入位置，如文档指引、标签、任务类型或治理文件。 | 第 5-6 章 |
 | 新手友好议题 | `Good First Issue` | 项目专门标记给新贡献者尝试的低风险、可解释任务。 | 第 5-6 章 |

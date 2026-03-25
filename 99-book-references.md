@@ -107,6 +107,14 @@
 - REUSE. https://reuse.software/
 - CHAOSS. https://chaoss.community/
 
+## I. 项目阅读、进入与判断
+
+- GitHub Docs. “Exploring Projects on GitHub.” https://docs.github.com/en/get-started/exploring-projects-on-github
+- GitHub Docs. “About Community Profiles for Public Repositories.” https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories
+- GitHub Docs. “Contributing to Open Source.” https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-open-source
+- Open Source Guides. “How to Contribute to Open Source.” https://opensource.guide/how-to-contribute/
+- OpenSSF Scorecard. https://scorecard.dev/
+
 ## 后续扩展方向
 
 本文件后续应继续按以下方向补充：
