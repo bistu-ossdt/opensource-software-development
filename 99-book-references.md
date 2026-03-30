@@ -48,9 +48,12 @@
 - Open Source Guides. “Best Practices for Maintainers.” https://opensource.guide/best-practices/
 - Open Source Guides. “Building Welcoming Communities.” https://opensource.guide/building-community/
 - Open Source Guides. “Your Code of Conduct.” https://opensource.guide/code-of-conduct/
+- Open Source Guides. “Leadership and Governance.” https://opensource.guide/leadership-and-governance/
+- Open Source Guides. “Open Source Metrics.” https://opensource.guide/metrics/
 - Linux Foundation. “Open Source Guides.” https://www.linuxfoundation.org/resources/open-source-guides
 - CHAOSS. “CHAOSS Community.” https://chaoss.community/
 - Apache Software Foundation. “The Apache Way.” https://www.apache.org/theapacheway/
+- Apache Software Foundation. “How the ASF works.” https://www.apache.org/foundation/how-it-works/
 - Python Software Foundation. “Python Governance.” https://www.python.org/dev/peps/pep-0013/
 
 ## D. 开源工程流程与协作机制
@@ -60,6 +63,7 @@
 - GitHub Docs. “Git workflows.” https://docs.github.com/get-started/getting-started-with-git/git-workflows
 - GitHub Docs. “About Pull Requests.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
 - GitHub Docs. “About Pull Request Reviews.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
+- GitHub Docs. “About community profiles for public repositories.” https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories
 - GitHub Docs. “Configuring Issue Templates for Your Repository.” https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
 - GitHub Docs. “Creating a Pull Request Template for Your Repository.” https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
 - GitHub Docs. “About Code Owners.” https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
