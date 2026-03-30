@@ -36,6 +36,8 @@
 - Open Source Initiative. “OSAID FAQs.” https://opensource.org/ai/faq
 - Open Source Initiative. “Open Weights.” https://opensource.org/ai/open-weights
 - Open Source Initiative. “History of the Open Source Initiative.” https://opensource.org/about/history-of-the-open-source-initiative
+- Open Source Guides. “The Legal Side of Open Source.” https://opensource.guide/legal/
+- Apache Software Foundation. “Apache Software Foundation Trademark Policy.” https://www.apache.org/foundation/marks/
 - SPDX. “Specifications.” https://spdx.dev/use/specifications/
 - REUSE. “REUSE Specifications.” https://reuse.software/specifications/
 - OpenChain. “OpenChain.” https://openchainproject.org/
