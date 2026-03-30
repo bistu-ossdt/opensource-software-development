@@ -58,6 +58,8 @@
 - GitHub Docs. “Git workflows.” https://docs.github.com/get-started/getting-started-with-git/git-workflows
 - GitHub Docs. “About Pull Requests.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
 - GitHub Docs. “About Pull Request Reviews.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
+- GitHub Docs. “Configuring Issue Templates for Your Repository.” https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+- GitHub Docs. “Creating a Pull Request Template for Your Repository.” https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
 - GitHub Docs. “About Code Owners.” https://docs.github.com/en/enterprise-cloud@latest/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 - GitHub Docs. “Available Rules for Rulesets.” https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets
 - GitHub Docs. “GitHub Actions Documentation.” https://docs.github.com/en/actions/automating-your-workflow-with-github-actions
