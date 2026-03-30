@@ -67,7 +67,9 @@
 
 - GitHub Docs. “About Dependency Review.” https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review
 - GitHub Docs. “About Secret Scanning.” https://docs.github.com/code-security/secret-scanning/about-secret-scanning
+- GitHub Docs. “About Push Protection.” https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection
 - GitHub Docs. “Keeping Secrets Secure with Secret Scanning.” https://docs.github.com/code-security/secret-scanning
+- GitHub Docs. “Using Artifact Attestations.” https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations
 - OpenSSF. “Open Source Project Security Baseline.” https://baseline.openssf.org/
 - OpenSSF. “OSPS Baseline.” https://openssf.org/projects/osps-baseline/
 - OpenChain. “OpenChain ISO/IEC 5230 / ISO/IEC 18974.” https://openchainproject.org/
