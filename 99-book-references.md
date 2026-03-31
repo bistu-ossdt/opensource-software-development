@@ -60,6 +60,7 @@
 
 - Git. “Branching and Merging.” https://git-scm.com/about/branching-and-merging.html
 - Git. “Basic Branching and Merging.” https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging.html
+- GitHub Docs. “GitHub flow.” https://docs.github.com/en/get-started/using-github/github-flow
 - GitHub Docs. “Git workflows.” https://docs.github.com/get-started/getting-started-with-git/git-workflows
 - GitHub Docs. “About Pull Requests.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
 - GitHub Docs. “About Pull Request Reviews.” https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews
