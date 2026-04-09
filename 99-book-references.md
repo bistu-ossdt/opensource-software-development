@@ -91,10 +91,16 @@
 ## F. AI 辅助的开源开发
 
 - OpenAI. “Introducing Codex.” https://openai.com/index/introducing-codex/
+- OpenAI. “Introducing upgrades to Codex.” https://openai.com/index/introducing-upgrades-to-codex/
 - OpenAI. “Harness Engineering: Leveraging Codex in an Agent-First World.” https://openai.com/index/harness-engineering/
 - OpenAI. “Codex.” https://openai.com/codex
+- Anthropic. “Claude Code overview.” https://docs.anthropic.com/en/docs/claude-code/overview
 - Anthropic. “Beyond Permission Prompts: Making Claude Code More Secure and Autonomous.” https://www.anthropic.com/engineering/claude-code-sandboxing
-- Cursor Docs. “Rules.” https://docs.cursor.com/en/context
+- GitHub Docs. “Configuring coding guidelines for GitHub Copilot code review.” https://docs.github.com/en/copilot/how-tos/agents/copilot-code-review/configuring-coding-guidelines
+- GitHub Docs. “About GitHub Copilot code review.” https://docs.github.com/en/copilot/concepts/agents/code-review
+- GitHub Blog. “Octoverse 2024: AI leads Python to the top language on GitHub for the first time.” https://github.blog/news-insights/octoverse/octoverse-2024/
+- processing/processing4. “AI_USAGE_POLICY.md.” https://github.com/processing/processing4/blob/main/AI_USAGE_POLICY.md
+- Cursor Docs. “Rules.” https://docs.cursor.com/en/context/rules
 - Cursor Docs. “Background Agents.” https://docs.cursor.com/en/background-agents
 - Cursor Docs. “GitHub.” https://docs.cursor.com/en/github
 
