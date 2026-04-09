@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 640" role="img" aria-labelledby="title desc">
+  <title id="title">从公开仓库到可公开参与项目的公共入口层</title>
+  <desc id="desc">展示外部人第一次进入项目时通常依次接触的公共对象：README、LICENSE、贡献入口、Release 与 CHANGELOG、SECURITY 与维护说明。这些对象共同把“代码可见”转化为“项目可理解、可参与、可持续维护”。</desc>
+  <!-- figure-id: ch08-fig-01-public-participation-path | status: final | source-trail: chapter 8 sections 1-2 narrative; public interface objects ordered by external entry flow; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .box-green { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 18; ry: 18; }
+    .pill { fill: #f3efe3; stroke: #d9cfbe; stroke-width: 2; rx: 24; ry: 24; }
+    .title2 { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .note { fill: #4f5d58; font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .pilltext { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .footer { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1452" height="592" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">PUBLIC PROJECT INTERFACE</text>
+  <text class="title" x="80" y="136">从公开仓库到可公开参与项目</text>
+  <text class="subtitle" x="80" y="168">代码公开只是起点；维护者要把定位、边界、入口、版本与安全路径连续组织出来，外部人才有稳定进入的可能。</text>
+
+  <rect class="pill" x="70" y="206" width="220" height="54" />
+  <text class="pilltext" x="180" y="240">代码可见</text>
+  <rect class="pill" x="1210" y="206" width="220" height="54" />
+  <text class="pilltext" x="1320" y="240">可理解 / 可参与 / 可维护</text>
+
+  <rect class="box" x="70" y="300" width="220" height="136" />
+  <text class="title2" x="180" y="348">README / 项目主页</text>
+  <text class="note" x="180" y="380">项目是什么</text>
+  <text class="note" x="180" y="404">当前状态如何</text>
+  <text class="note" x="180" y="428">最短上手路径</text>
+
+  <rect class="box" x="340" y="300" width="220" height="136" />
+  <text class="title2" x="450" y="348">LICENSE</text>
+  <text class="note" x="450" y="380">能否使用、修改</text>
+  <text class="note" x="450" y="404">能否再发布</text>
+  <text class="note" x="450" y="428">制度边界在哪里</text>
+
+  <rect class="box" x="610" y="300" width="220" height="136" />
+  <text class="title2" x="720" y="348">贡献入口</text>
+  <text class="note" x="720" y="380">贡献说明与支持路径</text>
+  <text class="note" x="720" y="404">问题从哪儿报告</text>
+  <text class="note" x="720" y="428">第一次参与怎么开始</text>
+
+  <rect class="box" x="880" y="300" width="220" height="136" />
+  <text class="title2" x="990" y="348">Release / CHANGELOG</text>
+  <text class="note" x="990" y="380">哪些内容已经稳定</text>
+  <text class="note" x="990" y="404">这次改了什么</text>
+  <text class="note" x="990" y="428">升级风险在哪里</text>
+
+  <rect class="box-green" x="1150" y="300" width="280" height="136" />
+  <text class="title2" x="1290" y="348">SECURITY / 维护说明</text>
+  <text class="note" x="1290" y="380">漏洞报告找谁</text>
+  <text class="note" x="1290" y="404">哪些版本仍受支持</text>
+  <text class="note" x="1290" y="428">项目是否仍在持续维护</text>
+
+  <path class="arrow" d="M290 368 H340" />
+  <path class="arrow" d="M560 368 H610" />
+  <path class="arrow" d="M830 368 H880" />
+  <path class="arrow" d="M1100 368 H1150" />
+
+  <polygon points="340,368 324,359 324,377" fill="#7fa99a" />
+  <polygon points="610,368 594,359 594,377" fill="#7fa99a" />
+  <polygon points="880,368 864,359 864,377" fill="#7fa99a" />
+  <polygon points="1150,368 1134,359 1134,377" fill="#7fa99a" />
+
+  <rect class="box" x="250" y="494" width="1000" height="72" />
+  <text class="footer" x="750" y="539">核心逻辑：把隐含知识写成连续的公共对象，外部人才不会只看到代码，却看不见项目</text>
+</svg>
