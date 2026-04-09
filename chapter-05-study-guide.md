@@ -5,7 +5,7 @@
 - 对应章节：[05-leveraging-open-source-software-resources.md](05-leveraging-open-source-software-resources.md)
 - 章节主题：阅读与理解开源项目
 - 使用目标：帮助学生把“看仓库”转化为项目级判断，而不是停留在零散对象浏览
-- 当前状态：初稿；已与扩写书稿同步一轮，可直接配合正文使用
+- 当前状态：较完整初稿；已与正文、实验材料、附录支撑和案例教学包同步，可直接配合整章使用
 
 ## 如何使用本章
 
