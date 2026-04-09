@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">从问题到合并的最小贡献流程</title>
+  <desc id="desc">展示贡献者从确认 Issue、认领与对齐、建立分支、提交 Commit、发起 Pull Request、经过评审与检查，到最终合并进入主线的最小流程，以及评审后继续修订的回路。</desc>
+  <!-- figure-id: ch06-fig-01-contribution-flow | status: final | source-trail: chapter 6 sections 3-4 narrative; issue to merge contribution path; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .lane { fill: #1a5a4e; font: 700 20px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .gate { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 18; ry: 18; }
+    .title2 { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .note { fill: #4f5d58; font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .footer { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+    .arrow-thin { stroke: #7fa99a; stroke-width: 4; fill: none; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1352" height="712" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">CONTRIBUTION FLOW</text>
+  <text class="title" x="80" y="136">第一次贡献如何从问题走到合并</text>
+  <text class="subtitle" x="80" y="168">重点不在“尽快提交代码”，而在让每一步都留下范围、验证和协作证据。</text>
+
+  <text class="lane" x="88" y="248">贡献者动作</text>
+  <text class="lane" x="1010" y="248">项目反馈</text>
+
+  <rect class="box" x="60" y="286" width="150" height="120" />
+  <text class="title2" x="135" y="334">Issue</text>
+  <text class="note" x="135" y="366">问题是否成立</text>
+  <text class="note" x="135" y="390">是否仍值得做</text>
+
+  <rect class="box" x="240" y="286" width="150" height="120" />
+  <text class="title2" x="315" y="334">认领 / 对齐</text>
+  <text class="note" x="315" y="366">说明准备怎么改</text>
+  <text class="note" x="315" y="390">确认当前边界</text>
+
+  <rect class="box" x="420" y="286" width="150" height="120" />
+  <text class="title2" x="495" y="334">Branch</text>
+  <text class="note" x="495" y="366">隔离修改</text>
+  <text class="note" x="495" y="390">避免污染主线</text>
+
+  <rect class="box" x="600" y="286" width="150" height="120" />
+  <text class="title2" x="675" y="334">Commit</text>
+  <text class="note" x="675" y="366">留下最小历史</text>
+  <text class="note" x="675" y="390">说明改了什么</text>
+
+  <rect class="box" x="780" y="286" width="170" height="120" />
+  <text class="title2" x="865" y="334">Pull Request</text>
+  <text class="note" x="865" y="366">What / Why / Verification</text>
+  <text class="note" x="865" y="390">关联原始问题</text>
+
+  <rect class="gate" x="980" y="286" width="190" height="120" />
+  <text class="title2" x="1075" y="334">Review / Checks</text>
+  <text class="note" x="1075" y="366">回应意见</text>
+  <text class="note" x="1075" y="390">通过自动化门禁</text>
+
+  <rect class="box" x="1200" y="286" width="130" height="120" />
+  <text class="title2" x="1265" y="334">Merge</text>
+  <text class="note" x="1265" y="366">进入主线</text>
+  <text class="note" x="1265" y="390">收束问题记录</text>
+
+  <path class="arrow" d="M210 346 H240" />
+  <path class="arrow" d="M390 346 H420" />
+  <path class="arrow" d="M570 346 H600" />
+  <path class="arrow" d="M750 346 H780" />
+  <path class="arrow" d="M950 346 H980" />
+  <path class="arrow" d="M1170 346 H1200" />
+
+  <polygon points="240,346 224,337 224,355" fill="#7fa99a" />
+  <polygon points="420,346 404,337 404,355" fill="#7fa99a" />
+  <polygon points="600,346 584,337 584,355" fill="#7fa99a" />
+  <polygon points="780,346 764,337 764,355" fill="#7fa99a" />
+  <polygon points="980,346 964,337 964,355" fill="#7fa99a" />
+  <polygon points="1200,346 1184,337 1184,355" fill="#7fa99a" />
+
+  <path class="arrow-thin" d="M1075 406 V518 Q1075 548 1045 548 H705 Q675 548 675 520 V406" />
+  <polygon points="675,406 666,424 684,424" fill="#7fa99a" />
+
+  <text class="note" x="875" y="580">有意见或检查失败时，继续在同一分支和同一条 Pull Request 中修订</text>
+
+  <rect class="box" x="420" y="618" width="560" height="70" />
+  <text class="title2" x="700" y="662">核心逻辑：把修改变成项目能够理解、审查、验证并最终接受的公共对象</text>
+</svg>

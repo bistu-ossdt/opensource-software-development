@@ -95,13 +95,13 @@ MANUSCRIPT_PAGES = [
         label="第 5 章 阅读与理解开源项目",
         source=ROOT / "05-leveraging-open-source-software-resources.md",
         output="chapter-05.html",
-        description="从仓库入口、治理信号与工程对象出发，建立面对陌生开源项目的整体阅读框架。当前为骨架稿。",
+        description="从仓库入口、治理信号与工程对象出发，建立面对陌生开源项目的整体阅读框架。当前为扩写稿。",
     ),
     ManuscriptPage(
         label="第 6 章 参与开源项目",
         source=ROOT / "06-participating-in-open-source-projects.md",
         output="chapter-06.html",
-        description="从第一次贡献、贡献说明到 review 回复，建立参与真实项目的最小路径。当前为骨架稿。",
+        description="从第一次贡献、贡献说明到 review 回复，建立参与真实项目的最小路径。当前为扩写稿。",
     ),
     ManuscriptPage(
         label="第 7 章 AI 辅助的开源开发实践",
@@ -263,7 +263,7 @@ TEACHING_PAGES = [
         label="第 6 章 学习指南",
         source=ROOT / "chapter-06-study-guide.md",
         output="chapter-06-study-guide.html",
-        description="帮助学生把第 6 章读成第一次贡献的进入路径与贡献组织链。当前为骨架稿。",
+        description="帮助学生把第 6 章读成第一次贡献的进入路径与贡献组织链。当前为初稿。",
         chapter_output="chapter-06.html",
         chapter_label="第 6 章 参与开源项目",
         kind="学习指南",
@@ -272,7 +272,7 @@ TEACHING_PAGES = [
         label="第 6 章 教学指南",
         source=ROOT / "chapter-06-instructor-guide.md",
         output="chapter-06-instructor-guide.html",
-        description="帮助教师组织第 6 章的边界判断、PR 组织与 review 协作。当前为骨架稿。",
+        description="帮助教师组织第 6 章的边界判断、PR 组织与 review 协作。当前为初稿。",
         chapter_output="chapter-06.html",
         chapter_label="第 6 章 参与开源项目",
         kind="教学指南",
@@ -352,6 +352,15 @@ LAB_PAGES = [
         chapter_label="第 4 章 开源开发的基本工程流程",
         kind="实验与项目材料",
     ),
+    TeachingPage(
+        label="第 6 章 实验与项目材料",
+        source=ROOT / "chapter-06-lab-project-materials.md",
+        output="chapter-06-lab-project-materials.html",
+        description="第 6 章的章节级实验 / 项目材料，围绕第一次贡献路径、外部项目进入与团队项目的外部入口设计展开。",
+        chapter_output="chapter-06.html",
+        chapter_label="第 6 章 参与开源项目",
+        kind="实验与项目材料",
+    ),
 ]
 
 APPENDIX_PAGES = [
@@ -391,6 +400,15 @@ APPENDIX_PAGES = [
         chapter_label="第 4 章 开源开发的基本工程流程",
         kind="附录支撑",
     ),
+    TeachingPage(
+        label="第 6 章 附录支撑",
+        source=ROOT / "chapter-06-appendix-support.md",
+        output="chapter-06-appendix-support.html",
+        description="第 6 章的附录支撑，提供第一次贡献适配性检查单、认领评论模板、最小 PR 结构和 review 回复模板。",
+        chapter_output="chapter-06.html",
+        chapter_label="第 6 章 参与开源项目",
+        kind="附录支撑",
+    ),
 ]
 
 CASE_PACK_PAGES = [
@@ -428,6 +446,15 @@ CASE_PACK_PAGES = [
         description="第 4 章的案例教学包，围绕 CPython、Linux 与最小工作流对象展开。",
         chapter_output="chapter-04.html",
         chapter_label="第 4 章 开源开发的基本工程流程",
+        kind="案例教学包",
+    ),
+    TeachingPage(
+        label="第 6 章 案例教学包",
+        source=ROOT / "chapter-06-case-teaching-pack.md",
+        output="chapter-06-case-teaching-pack.html",
+        description="第 6 章的案例教学包，围绕 tldr、CPython、Linux 与 OpenClaw 的第一次贡献路径展开。",
+        chapter_output="chapter-06.html",
+        chapter_label="第 6 章 参与开源项目",
         kind="案例教学包",
     ),
 ]
@@ -475,13 +502,13 @@ LAB_STAGES = [
     ),
     LabStage(
         label="实验 5 外部项目理解或首次贡献",
-        href=None,
+        href="chapter-06-lab-project-materials.html",
         chapters="第 5 章、第 6 章",
-        milestone="从课程内项目转向课程外项目理解与外部参与准备。",
-        baseline="识别贡献入口，评估项目可参与性，并完成一次模拟贡献分析或跨团队贡献。",
-        evidence="贡献分析报告；提交记录或 PR / Issue 链接。",
-        evaluation="是否理解“参与外部项目”与“开发自己项目”的差异，并具备基本外部沟通意识。",
-        availability="待第 5-6 章稳定后细化",
+        milestone="从课程内项目转向课程外项目理解、第一次贡献判断与真实进入准备。",
+        baseline="识别贡献入口，评估项目可参与性，并完成一次真实或模拟的第一次贡献包。",
+        evidence="贡献目标分析；认领评论、提交记录或 PR / Issue 链接；团队第一次贡献路径说明。",
+        evaluation="是否理解“参与外部项目”与“开发自己项目”的差异，并能把第一次贡献组织成公共判断对象。",
+        availability="已提供章节级实验材料",
     ),
     LabStage(
         label="实验 6 团队项目 MVP 迭代",
@@ -1442,7 +1469,7 @@ def build_home() -> None:
     </section>
 
     <section class="status-note">
-      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-4 章扩写稿、第 5-8 章书稿骨架、4 个附录、2 项书后工具材料（术语表与参考文献）、第 1-8 章教学支持、章节级实验材料、附录支撑与案例教学包；其中第 5-8 章教学支持当前为骨架稿。
+      <strong>当前状态：</strong>课程网站已具备全站导航、书稿阅读区、教学支持入口与实验/案例入口。当前上线内容包括第 1-6 章扩写稿、第 7-8 章书稿骨架、4 个附录、2 项书后工具材料（术语表与参考文献）、第 1-8 章教学支持、章节级实验材料、附录支撑与案例教学包；其中第 6 章教学支持已进入初稿阶段，第 7-8 章教学支持当前为骨架稿。
     </section>
 
     <section class="meta">
@@ -1510,9 +1537,9 @@ def build_course_page() -> None:
     <section>
       <h2 class="section-title">当前公开进度</h2>
       <ul class="feature-list">
-        <li>书稿：第 1-4 章为扩写稿；第 5-8 章为骨架稿；已上线 4 个附录和 2 项书后工具材料。</li>
-        <li>教学支持：第 1-8 章学习指南与教学指南已上线；其中第 5-8 章当前为骨架稿。</li>
-        <li>章节级支撑材料：第 1-4 章已配套实验与项目材料、附录支撑与案例教学包。</li>
+        <li>书稿：第 1-6 章为扩写稿；第 7-8 章为骨架稿；已上线 4 个附录和 2 项书后工具材料。</li>
+        <li>教学支持：第 1-8 章学习指南与教学指南已上线；其中第 6 章已进入初稿阶段，第 7-8 章当前为骨架稿。</li>
+        <li>章节级支撑材料：第 1-4 章与第 6 章已配套实验与项目材料、附录支撑与案例教学包。</li>
         <li>课程网站：已形成“课程说明 / 书稿 / 教学支持 / 实验与项目 / 案例与参考”五个分区。</li>
       </ul>
     </section>
@@ -1525,21 +1552,21 @@ def build_course_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">当前已上线的实验与项目材料（第 1-4 章）</h2>
+      <h2 class="section-title">当前已上线的实验与项目材料（第 1-4 章与第 6 章）</h2>
       <div class="card-grid two">
         {support_page_cards(LAB_PAGES)}
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">当前已上线的附录支撑（第 1-4 章）</h2>
+      <h2 class="section-title">当前已上线的附录支撑（第 1-4 章与第 6 章）</h2>
       <div class="card-grid two">
         {support_page_cards(APPENDIX_PAGES)}
       </div>
     </section>
 
     <section>
-      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章）</h2>
+      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章与第 6 章）</h2>
       <div class="card-grid two">
         {support_page_cards(CASE_PACK_PAGES)}
       </div>
@@ -1606,7 +1633,7 @@ def build_manuscript_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线书稿范围：第 1-8 章、4 个附录与 2 项书后工具材料；其中第 1-4 章为扩写稿，第 5-8 章为当前骨架稿。教学支持已接入第 1-8 章，其中第 5-8 章当前为骨架稿。
+      当前在线书稿范围：第 1-8 章、4 个附录与 2 项书后工具材料；其中第 1-6 章为扩写稿，第 7-8 章为当前骨架稿。教学支持已接入第 1-8 章，其中第 6 章已进入初稿阶段，第 7-8 章当前为骨架稿。
     </section>
     """
     sidebar = f"""
@@ -1634,7 +1661,7 @@ def build_teaching_index() -> None:
     inner = f"""
     <header class="page-header">
       <h1>教学支持目录</h1>
-      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线第 1-8 章的学习指南与教学指南；其中第 1-4 章较完整，第 5-8 章当前为骨架稿，可与对应书稿配套使用。</p>
+      <p>教学支持分区承接基于书稿的学习与教学支架。当前已上线第 1-8 章的学习指南与教学指南；其中第 1-4 章较完整，第 6 章已进入初稿阶段，第 7-8 章当前为骨架稿，可与对应书稿配套使用。</p>
     </header>
 
     <section>
@@ -1662,7 +1689,7 @@ def build_teaching_index() -> None:
     </section>
 
     <section class="status-note">
-      当前在线教学支持范围：第 1-8 章；其中第 5-8 章当前为骨架稿，后续将随书稿扩写继续细化。
+      当前在线教学支持范围：第 1-8 章；其中第 6 章已进入初稿阶段，第 7-8 章当前为骨架稿，后续将随书稿扩写继续细化。
     </section>
     """
     sidebar = f"""
@@ -1699,13 +1726,13 @@ def build_labs_page() -> None:
         <li>阅读和分析真实开源项目。</li>
         <li>为团队项目建立许可证、治理和协作基线。</li>
         <li>通过 Issue、Branch、PR、Review、CI 推进真实迭代。</li>
-        <li>在后续阶段进入外部项目理解、首次贡献与项目发布。</li>
+        <li>在后续阶段进入外部项目理解、第一次贡献与项目发布。</li>
       </ul>
     </section>
 
     <section>
       <h2 class="section-title">整体实验路线图</h2>
-      <p>实验体系按 8 个阶段组织，每个阶段都同时说明对应章节、最低基础项、交付证据与评价重点。前四个阶段已接入章节级任务单，后四个阶段先保留课程级路线图，待相关章节稳定后再细化。</p>
+      <p>实验体系按 8 个阶段组织，每个阶段都同时说明对应章节、最低基础项、交付证据与评价重点。当前前四个阶段以及“实验 5 外部项目理解或首次贡献”已接入章节级任务单，后续阶段继续保留课程级路线图，待相关章节稳定后再细化。</p>
       <div class="card-grid two">
         {lab_stage_cards(LAB_STAGES)}
       </div>
@@ -1719,7 +1746,7 @@ def build_labs_page() -> None:
     </section>
 
     <section class="status-note">
-      当前站点已完成课程级实验路线图，并接入前四章的章节级实验 / 项目材料；后续将补充跨章节实验总说明、统一 rubric、阶段交付模板与样例。
+      当前站点已完成课程级实验路线图，并接入第 1-4 章与第 6 章的章节级实验 / 项目材料；后续将补充跨章节实验总说明、统一 rubric、阶段交付模板与样例。
     </section>
     """
     write_page(
@@ -1782,7 +1809,7 @@ def build_cases_page() -> None:
     </section>
 
     <section>
-      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章）</h2>
+      <h2 class="section-title">当前已上线的案例教学包（第 1-4 章与第 6 章）</h2>
       <div class="card-grid two">
         {support_page_cards(CASE_PACK_PAGES)}
       </div>
@@ -1811,7 +1838,7 @@ def build_cases_page() -> None:
     </section>
 
     <section class="status-note">
-      当前页已能承担课程级案例与参考入口功能：前四章案例教学包已上线，专题附录与书后工具材料已接入；第 5-8 章案例教学包将在对应书稿与教学支持稳定后继续补充。
+      当前页已能承担课程级案例与参考入口功能：第 1-4 章与第 6 章案例教学包已上线，专题附录与书后工具材料已接入；第 5、7、8 章案例教学包将在对应书稿与教学支持稳定后继续补充。
     </section>
     """
     write_page(

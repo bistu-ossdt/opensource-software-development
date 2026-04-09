@@ -23,8 +23,8 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `02-development-of-open-source-software.md`: rewritten manuscript draft for `Free Software, Open Source, and Licensing`
 - `03-development-models-and-characteristics.md`: rewritten manuscript draft for `Open Source Communities and Governance`
 - `04-participating-in-and-organizing-open-source-projects.md`: rewritten manuscript draft for `Core Engineering Workflow of Open Source Development`
-- `05-leveraging-open-source-software-resources.md`: current chapter-5 skeleton draft for `Reading and Understanding Open Source Projects`
-- `06-participating-in-open-source-projects.md`: current chapter-6 skeleton draft for `Participating in Open Source Projects`
+- `05-leveraging-open-source-software-resources.md`: expanded manuscript draft for `Reading and Understanding Open Source Projects`
+- `06-participating-in-open-source-projects.md`: expanded manuscript draft for `Participating in Open Source Projects`
 - `07-ai-assisted-open-source-development-practice.md`: current chapter-7 skeleton draft for `AI-Assisted Open Source Development Practice`
 - `08-organizing-and-releasing-your-open-source-project.md`: current chapter-8 skeleton draft for `Organizing and Releasing Your Open Source Project`
 
@@ -47,21 +47,24 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `chapter-03-study-guide.md` and `chapter-03-instructor-guide.md`: initial teaching-support drafts derived from chapter 3
 - `chapter-04-study-guide.md` and `chapter-04-instructor-guide.md`: initial teaching-support drafts derived from chapter 4
 - `chapter-05-study-guide.md` and `chapter-05-instructor-guide.md`: chapter-5 teaching-support skeletons aligned with the manuscript skeleton
-- `chapter-06-study-guide.md` and `chapter-06-instructor-guide.md`: chapter-6 teaching-support skeletons aligned with the manuscript skeleton
+- `chapter-06-study-guide.md` and `chapter-06-instructor-guide.md`: chapter-6 teaching-support initial drafts aligned with the stabilized manuscript
 - `chapter-07-study-guide.md` and `chapter-07-instructor-guide.md`: chapter-7 teaching-support skeletons aligned with the manuscript skeleton
 - `chapter-08-study-guide.md` and `chapter-08-instructor-guide.md`: chapter-8 teaching-support skeletons aligned with the manuscript skeleton
 
 ## Current Chapter-Level Lab / Project Materials State
 
 - `chapter-01-lab-project-materials.md` through `chapter-04-lab-project-materials.md`: initial chapter-level lab / project materials aligned with the team project mainline
+- `chapter-06-lab-project-materials.md`: initial chapter-level lab / project materials for first-contribution path design and external-project entry
 
 ## Current Appendix Support State
 
 - `chapter-01-appendix-support.md` through `chapter-04-appendix-support.md`: initial appendix-support drafts for templates, checklists, and comparison tables
+- `chapter-06-appendix-support.md`: initial appendix-support draft for first-contribution checklists, templates, and review-response scaffolds
 
 ## Current Case Teaching Pack State
 
 - `chapter-01-case-teaching-pack.md` through `chapter-04-case-teaching-pack.md`: initial chapter-level case teaching packs for the first four chapters
+- `chapter-06-case-teaching-pack.md`: initial chapter-level case teaching pack for first-contribution path and external-entry cases
 
 ## Site
 
@@ -82,11 +85,11 @@ The public site is currently organized into five reader-facing sections:
 
 ## Current Public Progress Snapshot
 
-- manuscript: chapters 1-4 expanded; chapters 5-8 skeletons
+- manuscript: chapters 1-6 expanded; chapters 7-8 skeletons
 - appendices: history timeline, people guide, people-event-project map, and open source AI
 - back matter: whole-book glossary and whole-book references
-- teaching layer: chapter 1-8 study guides and instructor guides, with chapter 5-8 still at skeleton level
-- chapter-level support: lab/project materials, appendix support, and case teaching packs for chapters 1-4
+- teaching layer: chapter 1-8 study guides and instructor guides, with chapter 6 now at initial-draft level and chapter 7-8 still at skeleton level
+- chapter-level support: lab/project materials, appendix support, and case teaching packs for chapters 1-4 and chapter 6
 - site: GitHub Pages navigation now connects manuscript, teaching, labs, and case/reference entry points around the same public material set
 
 ## Local Reference Inputs
