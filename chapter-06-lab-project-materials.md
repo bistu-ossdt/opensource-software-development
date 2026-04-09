@@ -5,6 +5,8 @@
 - 对应书稿：[06-participating-in-open-source-projects.md](06-participating-in-open-source-projects.md)
 - 配套学习指南：[chapter-06-study-guide.md](chapter-06-study-guide.md)
 - 配套教学指南：[chapter-06-instructor-guide.md](chapter-06-instructor-guide.md)
+- 对应附录支撑：[chapter-06-appendix-support.md](chapter-06-appendix-support.md)
+- 对应案例教学包：[chapter-06-case-teaching-pack.md](chapter-06-case-teaching-pack.md)
 - 对应实验阶段：实验 5 外部项目理解或首次贡献
 - 团队项目阶段：外部贡献入口设计与第一次参与演练
 
@@ -13,6 +15,13 @@
 - 把“想参与外部项目”落实为一次可解释、可判断、可执行的第一次贡献路径。
 - 让团队理解“开发自己的项目”和“进入别人的项目”在边界判断、沟通方式和证据组织上的差异。
 - 让团队开始为自己的项目设计真正面向外部贡献者的第一次进入入口。
+
+## 使用建议
+
+- 最好沿用第 5 章已经完成阅读判断的同一个项目，避免把“读项目”和“进项目”拆成两套互不关联的练习。
+- 第一次贡献应优先选择文档、测试、小修复或问题分诊类对象，不要一开始就进入大功能、架构调整或高风险修改。
+- 如果真实贡献链一时走不完，可围绕真实公开对象提交完整模拟贡献包，但必须明确哪些部分是真实记录，哪些部分是补充样稿。
+- 团队项目部分应始终站在“外部贡献者第一次进入”的视角设计，而不是继续沿用组内默认知识。
 
 ## 必做基础项
 

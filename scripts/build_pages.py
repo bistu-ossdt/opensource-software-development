@@ -371,6 +371,24 @@ LAB_PAGES = [
         kind="实验与项目材料",
     ),
     TeachingPage(
+        label="实验 5 总任务单",
+        source=ROOT / "experiment-05-external-project-reading-and-first-contribution.md",
+        output="experiment-05-external-project-reading-and-first-contribution.html",
+        description="实验 5 的跨章节总任务单，统筹第 5-6 章的外部项目阅读、行动判断与第一次贡献。",
+        chapter_output="experiment-05",
+        chapter_label="实验 5 外部项目理解与首次贡献",
+        kind="实验总任务单",
+    ),
+    TeachingPage(
+        label="实验 6 团队项目 MVP 迭代",
+        source=ROOT / "experiment-06-team-project-mvp-iteration.md",
+        output="experiment-06-team-project-mvp-iteration.html",
+        description="实验 6 的总任务单，统筹团队项目 MVP 边界、迭代链、演示收束与版本候选准备。",
+        chapter_output="experiment-06",
+        chapter_label="实验 6 团队项目 MVP 迭代",
+        kind="实验总任务单",
+    ),
+    TeachingPage(
         label="第 7 章 实验与项目材料",
         source=ROOT / "chapter-07-lab-project-materials.md",
         output="chapter-07-lab-project-materials.html",
@@ -583,23 +601,23 @@ LAB_STAGES = [
     ),
     LabStage(
         label="实验 5 外部项目理解或首次贡献",
-        href="chapter-05-lab-project-materials.html",
+        href="experiment-05-external-project-reading-and-first-contribution.html",
         chapters="第 5 章、第 6 章",
         milestone="从课程内项目转向课程外项目阅读、行动判断与第一次贡献准备。",
         baseline="先完成陌生项目阅读与行动选择，再在下一章把候选对象组织成真实或模拟的第一次贡献包。",
         evidence="项目阅读记录；项目阅读摘要；候选进入对象；认领评论、提交记录或 PR / Issue 链接；团队第一次贡献路径说明。",
         evaluation="是否理解“先读懂项目，再组织贡献”这条衔接链，并能区分外部项目阅读与外部项目进入的不同任务。",
-        availability="已提供章节级实验材料",
+        availability="已提供实验总任务单与章节级材料",
     ),
     LabStage(
         label="实验 6 团队项目 MVP 迭代",
-        href=None,
+        href="experiment-06-team-project-mvp-iteration.html",
         chapters="第 4 章、第 6 章、第 8 章",
         milestone="围绕 MVP 完成第一次真正可演示的项目迭代。",
         baseline="让功能、文档、测试、Issue、PR、Review 与版本记录一起推进。",
         evidence="阶段版本；MVP 演示；迭代记录。",
         evaluation="是否形成持续演进的项目，而不是临时拼接的功能集合。",
-        availability="待第 6-8 章稳定后细化",
+        availability="已提供实验总任务单",
     ),
     LabStage(
         label="实验 7 AI 辅助开发与人工治理",
@@ -1813,7 +1831,7 @@ def build_labs_page() -> None:
 
     <section>
       <h2 class="section-title">整体实验路线图</h2>
-      <p>实验体系按 8 个阶段组织，每个阶段都同时说明对应章节、最低基础项、交付证据与评价重点。当前第 1-8 章的章节级任务单均已接入站点，其中第 8 阶段围绕公开发布、维护计划与项目复盘展开。</p>
+      <p>实验体系按 8 个阶段组织，每个阶段都同时说明对应章节、最低基础项、交付证据与评价重点。当前站点已接入第 1-8 章的章节级任务单，并补入实验 5 与实验 6 的跨章节总任务单。</p>
       <div class="card-grid two">
         {lab_stage_cards(LAB_STAGES)}
       </div>
@@ -1827,7 +1845,7 @@ def build_labs_page() -> None:
     </section>
 
     <section class="status-note">
-      当前站点已完成课程级实验路线图，并接入第 1-8 章的章节级实验 / 项目材料；其中第 6 章已补齐章节级评分尺与完整示例包，第 7 章已补入 AI 辅助开发与人工治理任务单，第 8 章已补入公开发布与维护基线任务单。后续将补充跨章节实验总说明、统一 rubric、阶段交付模板与样例。
+      当前站点已完成课程级实验路线图，并接入第 1-8 章的章节级实验 / 项目材料；其中实验 5 与实验 6 已补入跨章节总任务单，第 6 章已补齐章节级评分尺与完整示例包，第 7 章已补入 AI 辅助开发与人工治理任务单，第 8 章已补入公开发布与维护基线任务单。后续将继续统一阶段交付模板与跨实验评分口径。
     </section>
     """
     write_page(
@@ -2227,6 +2245,7 @@ def build_lab_page(page: TeachingPage) -> None:
     page_title, body, toc = render_markdown(page.source)
     companion = manuscript_page_for_output(page.chapter_output)
     related = support_pages_for_chapter(page.chapter_output)
+    is_cross_chapter_experiment = page.kind == "实验总任务单"
     header = f"""
     <header class="page-header">
       <h1>{html.escape(page_title)}</h1>
@@ -2246,10 +2265,16 @@ def build_lab_page(page: TeachingPage) -> None:
           <strong>同章配套：</strong> {' · '.join(note_links)}
         </section>
         """
+    meta_lines = [f'<p>源文件：<code>{html.escape(page.source.name)}</code></p>']
+    if companion:
+        meta_lines.append(
+            f'<p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>'
+        )
+    else:
+        meta_lines.append('<p>所属分区：<a href="labs-project.html">实验与项目</a></p>')
     meta = f"""
     <section class="meta">
-      <p>源文件：<code>{html.escape(page.source.name)}</code></p>
-      <p>对应书稿章节：<a href="{page.chapter_output}">{html.escape(page.chapter_label)}</a></p>
+      {''.join(meta_lines)}
     </section>
     """
     sidebar_parts = [
@@ -2262,15 +2287,15 @@ def build_lab_page(page: TeachingPage) -> None:
         </div>
         """
     ]
-    if companion or related:
-        related_items = []
-        if companion:
-            related_items.append(f'<li><a href="{companion.output}">对应书稿</a></li>')
-        for sibling in related:
-            if sibling.output != page.output:
-                related_items.append(
-                    f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
-                )
+    related_items = []
+    if companion:
+        related_items.append(f'<li><a href="{companion.output}">对应书稿</a></li>')
+    for sibling in related:
+        if sibling.output != page.output:
+            related_items.append(
+                f'<li><a href="{sibling.output}">{html.escape(sibling.kind)}</a></li>'
+            )
+    if related_items:
         sidebar_parts.append(
             f"""
             <div class="sidebar-block">
@@ -2295,8 +2320,12 @@ def build_lab_page(page: TeachingPage) -> None:
         page_shell(
             title=page.label,
             current_section="labs",
-            hero_title="实验与项目材料",
-            hero_text="章节级实验材料页用于把书稿与教学支持真正转化为团队项目任务、交付物、检查点和可评价证据。",
+            hero_title=page.kind,
+            hero_text=(
+                "跨章节实验页用于把多章内容收束成一条完整任务链，明确阶段衔接、总交付物与整体验收口径。"
+                if is_cross_chapter_experiment
+                else "章节级实验材料页用于把书稿与教学支持真正转化为团队项目任务、交付物、检查点和可评价证据。"
+            ),
             inner=header + companion_note + body + meta,
             sidebar_html="".join(sidebar_parts),
         ),
