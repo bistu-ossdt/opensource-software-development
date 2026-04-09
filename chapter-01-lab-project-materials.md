@@ -5,6 +5,8 @@
 - 对应书稿：[01-overview.md](01-overview.md)
 - 配套学习指南：[chapter-01-study-guide.md](chapter-01-study-guide.md)
 - 配套教学指南：[chapter-01-instructor-guide.md](chapter-01-instructor-guide.md)
+- 对应附录支撑：[chapter-01-appendix-support.md](chapter-01-appendix-support.md)
+- 对应案例教学包：[chapter-01-case-teaching-pack.md](chapter-01-case-teaching-pack.md)
 - 对应实验阶段：实验 1 开源观察与项目阅读
 - 团队项目阶段：启动定位
 

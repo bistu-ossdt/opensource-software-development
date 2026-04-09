@@ -5,6 +5,8 @@
 - 对应书稿：[05-leveraging-open-source-software-resources.md](05-leveraging-open-source-software-resources.md)
 - 配套学习指南：[chapter-05-study-guide.md](chapter-05-study-guide.md)
 - 配套教学指南：[chapter-05-instructor-guide.md](chapter-05-instructor-guide.md)
+- 对应附录支撑：[chapter-05-appendix-support.md](chapter-05-appendix-support.md)
+- 对应案例教学包：[chapter-05-case-teaching-pack.md](chapter-05-case-teaching-pack.md)
 - 对应实验阶段：实验 5 外部项目理解或首次贡献
 - 团队项目阶段：外部项目阅读与进入判断
 

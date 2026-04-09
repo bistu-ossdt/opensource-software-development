@@ -5,6 +5,8 @@
 - 对应书稿：[03-development-models-and-characteristics.md](03-development-models-and-characteristics.md)
 - 配套学习指南：[chapter-03-study-guide.md](chapter-03-study-guide.md)
 - 配套教学指南：[chapter-03-instructor-guide.md](chapter-03-instructor-guide.md)
+- 对应附录支撑：[chapter-03-appendix-support.md](chapter-03-appendix-support.md)
+- 对应案例教学包：[chapter-03-case-teaching-pack.md](chapter-03-case-teaching-pack.md)
 - 对应实验阶段：实验 3 治理基线与协作机制建立
 - 团队项目阶段：角色与治理基线建立
 

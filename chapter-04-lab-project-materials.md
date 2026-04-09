@@ -5,6 +5,8 @@
 - 对应书稿：[04-participating-in-and-organizing-open-source-projects.md](04-participating-in-and-organizing-open-source-projects.md)
 - 配套学习指南：[chapter-04-study-guide.md](chapter-04-study-guide.md)
 - 配套教学指南：[chapter-04-instructor-guide.md](chapter-04-instructor-guide.md)
+- 对应附录支撑：[chapter-04-appendix-support.md](chapter-04-appendix-support.md)
+- 对应案例教学包：[chapter-04-case-teaching-pack.md](chapter-04-case-teaching-pack.md)
 - 对应实验阶段：实验 4 GitHub 协作流与最小 CI
 - 团队项目阶段：变更控制与最小门禁建立
 

@@ -5,6 +5,8 @@
 - 对应书稿：[02-development-of-open-source-software.md](02-development-of-open-source-software.md)
 - 配套学习指南：[chapter-02-study-guide.md](chapter-02-study-guide.md)
 - 配套教学指南：[chapter-02-instructor-guide.md](chapter-02-instructor-guide.md)
+- 对应附录支撑：[chapter-02-appendix-support.md](chapter-02-appendix-support.md)
+- 对应案例教学包：[chapter-02-case-teaching-pack.md](chapter-02-case-teaching-pack.md)
 - 对应实验阶段：实验 2 团队项目立项与许可证选择
 - 团队项目阶段：制度边界建立
 
