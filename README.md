@@ -46,25 +46,28 @@ Internal planning, research, migration, and drafting-control documents are maint
 - `chapter-02-study-guide.md` and `chapter-02-instructor-guide.md`: initial teaching-support drafts derived from chapter 2
 - `chapter-03-study-guide.md` and `chapter-03-instructor-guide.md`: initial teaching-support drafts derived from chapter 3
 - `chapter-04-study-guide.md` and `chapter-04-instructor-guide.md`: initial teaching-support drafts derived from chapter 4
-- `chapter-05-study-guide.md` and `chapter-05-instructor-guide.md`: chapter-5 teaching-support skeletons aligned with the manuscript skeleton
-- `chapter-06-study-guide.md` and `chapter-06-instructor-guide.md`: chapter-6 teaching-support initial drafts aligned with the stabilized manuscript
+- `chapter-05-study-guide.md` and `chapter-05-instructor-guide.md`: chapter-5 teaching-support initial drafts aligned with the expanded manuscript
+- `chapter-06-study-guide.md` and `chapter-06-instructor-guide.md`: chapter-6 mature teaching package aligned with the stabilized manuscript, including grading and calibration support
 - `chapter-07-study-guide.md` and `chapter-07-instructor-guide.md`: chapter-7 teaching-support skeletons aligned with the manuscript skeleton
 - `chapter-08-study-guide.md` and `chapter-08-instructor-guide.md`: chapter-8 teaching-support skeletons aligned with the manuscript skeleton
 
 ## Current Chapter-Level Lab / Project Materials State
 
 - `chapter-01-lab-project-materials.md` through `chapter-04-lab-project-materials.md`: initial chapter-level lab / project materials aligned with the team project mainline
-- `chapter-06-lab-project-materials.md`: initial chapter-level lab / project materials for first-contribution path design and external-project entry
+- `chapter-05-lab-project-materials.md`: initial chapter-level lab / project materials for external-project reading, project judgment, and action-choice handoff into chapter 6
+- `chapter-06-lab-project-materials.md`: mature chapter-level lab / project materials for first-contribution path design, external-project entry, and experiment-level grading
 
 ## Current Appendix Support State
 
 - `chapter-01-appendix-support.md` through `chapter-04-appendix-support.md`: initial appendix-support drafts for templates, checklists, and comparison tables
-- `chapter-06-appendix-support.md`: initial appendix-support draft for first-contribution checklists, templates, and review-response scaffolds
+- `chapter-05-appendix-support.md`: initial appendix-support draft for project-reading checklists, summary templates, and action-choice scaffolds
+- `chapter-06-appendix-support.md`: mature appendix-support package for first-contribution checklists, templates, and complete sample packs
 
 ## Current Case Teaching Pack State
 
 - `chapter-01-case-teaching-pack.md` through `chapter-04-case-teaching-pack.md`: initial chapter-level case teaching packs for the first four chapters
-- `chapter-06-case-teaching-pack.md`: initial chapter-level case teaching pack for first-contribution path and external-entry cases
+- `chapter-05-case-teaching-pack.md`: initial chapter-level case teaching pack for project-reading paths and case comparison
+- `chapter-06-case-teaching-pack.md`: chapter-level case teaching pack aligned with the mature first-contribution teaching package
 
 ## Site
 
@@ -88,8 +91,8 @@ The public site is currently organized into five reader-facing sections:
 - manuscript: chapters 1-6 expanded; chapters 7-8 skeletons
 - appendices: history timeline, people guide, people-event-project map, and open source AI
 - back matter: whole-book glossary and whole-book references
-- teaching layer: chapter 1-8 study guides and instructor guides, with chapter 6 now at initial-draft level and chapter 7-8 still at skeleton level
-- chapter-level support: lab/project materials, appendix support, and case teaching packs for chapters 1-4 and chapter 6
+- teaching layer: chapter 1-8 study guides and instructor guides, with chapter 5 at initial-draft level, chapter 6 now at mature-package level, and chapter 7-8 still at skeleton level
+- chapter-level support: lab/project materials, appendix support, and case teaching packs for chapters 1-6
 - site: GitHub Pages navigation now connects manuscript, teaching, labs, and case/reference entry points around the same public material set
 
 ## Local Reference Inputs

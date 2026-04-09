@@ -23,8 +23,8 @@ The course also takes two strong positions. First, **community governance is a f
 The public course workspace has now moved beyond planning and into an initial reader-facing release state:
 
 - **manuscript layer**: chapters 1-6 are expanded drafts; chapters 7-8 are skeleton drafts; 4 appendices, a whole-book glossary, and a whole-book references file are public
-- **teaching layer**: study guides and instructor guides for chapters 1-8 are public; chapter 6 is now at initial-draft level, while chapters 7-8 remain skeleton-level teaching materials
-- **chapter-level support layer**: lab/project materials, appendix support, and case teaching packs for chapters 1-4 and chapter 6 are public
+- **teaching layer**: study guides and instructor guides for chapters 1-8 are public; chapter 5 is at initial-draft level, chapter 6 has been upgraded to a mature teaching package, while chapters 7-8 remain skeleton-level teaching materials
+- **chapter-level support layer**: lab/project materials, appendix support, and case teaching packs for chapters 1-6 are public
 - **course-site layer**: the GitHub Pages site now exposes five reader-facing sections: course, manuscript, teaching support, labs/projects, and cases/references
 
 ## Case And Reference Architecture
@@ -32,7 +32,7 @@ The public course workspace has now moved beyond planning and into an initial re
 Cases and references are not treated as one flat list. At the current stage, they are organized in four distinct layers:
 
 1. **manuscript layer**: chapters 1-4 prioritize durable classic cases such as GNU, Linux, Mozilla, Apache, Python, and Git; later chapters reserve more room for modern GitHub-native and AI-native cases such as OpenClaw
-2. **teaching-layer case packs**: chapter 1-4 and chapter 6 case teaching packs are already public; chapter 5, 7, and 8 case packs will be added as those manuscript chapters stabilize
+2. **teaching-layer case packs**: chapter 1-6 case teaching packs are already public; chapter 7 and 8 case packs will be added as those manuscript chapters stabilize
 3. **appendices and back-matter tools**: the history timeline, people guide, people-event-project map, open source AI appendix, glossary, and references provide long-range navigation rather than chapter-only examples
 4. **site-level reference entry layer**: the `Cases and References` section of the site aggregates public case-pack links, appendix links, and selected authoritative external resources
 
