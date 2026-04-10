@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI 产出进入开源流程的责任分层</title>
+  <desc id="desc">展示 AI 产出进入开源项目时的最小责任链：人先界定任务边界，AI 起草候选内容，人核查差异并运行自动化检查，再由人组织 Pull Request、回应评审并决定是否接收。责任起点与验收终点都在人。</desc>
+  <!-- figure-id: ch07-fig-01-ai-responsibility-flow | status: final | source-trail: chapter 7 section 4 narrative; AI output enters issue-pr-review path under human responsibility; fully redrawn -->
+  <style>
+    .frame { fill: #fffdf7; stroke: #d9cfbe; stroke-width: 2; }
+    .eyebrow { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; letter-spacing: 2px; }
+    .title { fill: #1f2825; font: 700 36px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .subtitle { fill: #5d6b66; font: 500 19px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+    .pill { fill: #f3efe3; stroke: #d9cfbe; stroke-width: 2; rx: 24; ry: 24; }
+    .pilltext { fill: #1a5a4e; font: 700 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .box { fill: #f6f1e4; stroke: #d9cfbe; stroke-width: 2; rx: 18; ry: 18; }
+    .box-green { fill: #e3ece8; stroke: #bfd1ca; stroke-width: 2; rx: 18; ry: 18; }
+    .title2 { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .note { fill: #4f5d58; font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .footer { fill: #1f2825; font: 700 22px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .subfooter { fill: #5d6b66; font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; }
+    .arrow { stroke: #7fa99a; stroke-width: 5; fill: none; }
+    .marker { fill: #7fa99a; }
+  </style>
+
+  <rect class="frame" x="24" y="24" width="1452" height="652" rx="28" />
+
+  <text class="eyebrow" x="80" y="92">AI RESPONSIBILITY FLOW</text>
+  <text class="title" x="80" y="136">AI 产出进入开源流程的责任分层</text>
+  <text class="subtitle" x="80" y="170">AI 可以提高候选内容的生成速度，但任务边界、差异核查、评审回应与接收判断仍然不能离开人。</text>
+
+  <rect class="pill" x="80" y="212" width="220" height="54" />
+  <text class="pilltext" x="190" y="246">责任起点仍是人</text>
+  <rect class="pill" x="1190" y="212" width="220" height="54" />
+  <text class="pilltext" x="1300" y="246">验收终点仍是人</text>
+
+  <rect class="box-green" x="70" y="310" width="200" height="150" />
+  <text class="title2" x="170" y="360">人界定任务</text>
+  <text class="note" x="170" y="392">选定对象与文件</text>
+  <text class="note" x="170" y="418">写清完成条件</text>
+  <text class="note" x="170" y="444">标出禁区与批准点</text>
+
+  <rect class="box" x="305" y="310" width="190" height="150" />
+  <text class="title2" x="400" y="360">AI 起草候选</text>
+  <text class="note" x="400" y="392">解释上下文</text>
+  <text class="note" x="400" y="418">生成补丁 / 测试 / 说明</text>
+  <text class="note" x="400" y="444">仍只是候选内容</text>
+
+  <rect class="box-green" x="530" y="310" width="210" height="150" />
+  <text class="title2" x="635" y="360">人核查差异</text>
+  <text class="note" x="635" y="392">收紧范围</text>
+  <text class="note" x="635" y="418">检查来源与许可证</text>
+  <text class="note" x="635" y="444">删去不该进入的部分</text>
+
+  <rect class="box" x="775" y="310" width="190" height="150" />
+  <text class="title2" x="870" y="360">自动化检查</text>
+  <text class="note" x="870" y="392">测试 / lint / docs build</text>
+  <text class="note" x="870" y="418">验证结果是否成立</text>
+  <text class="note" x="870" y="444">不能替代人工判断</text>
+
+  <rect class="box-green" x="1000" y="310" width="200" height="150" />
+  <text class="title2" x="1100" y="360">人组织 PR</text>
+  <text class="note" x="1100" y="392">What / Why / Verification</text>
+  <text class="note" x="1100" y="418">说明 AI 介入位置</text>
+  <text class="note" x="1100" y="444">保留公共记录</text>
+
+  <rect class="box-green" x="1235" y="310" width="195" height="150" />
+  <text class="title2" x="1332" y="360">Review / Merge</text>
+  <text class="note" x="1332" y="392">回应评审</text>
+  <text class="note" x="1332" y="418">决定是否接收</text>
+  <text class="note" x="1332" y="444">维护主线责任</text>
+
+  <path class="arrow" d="M270 385 H305" />
+  <path class="arrow" d="M495 385 H530" />
+  <path class="arrow" d="M740 385 H775" />
+  <path class="arrow" d="M965 385 H1000" />
+  <path class="arrow" d="M1200 385 H1235" />
+
+  <polygon class="marker" points="305,385 289,376 289,394" />
+  <polygon class="marker" points="530,385 514,376 514,394" />
+  <polygon class="marker" points="775,385 759,376 759,394" />
+  <polygon class="marker" points="1000,385 984,376 984,394" />
+  <polygon class="marker" points="1235,385 1219,376 1219,394" />
+
+  <rect class="box" x="210" y="532" width="1080" height="92" />
+  <text class="footer" x="750" y="575">核心逻辑：AI 改变的是候选内容生成速度，不改变贡献路径、评审门禁与最终责任归属</text>
+  <text class="subfooter" x="750" y="606">只要结果还没有经过人的边界判断、验证执行与公共协商，它就仍然只是候选内容，而不是项目已经接受的修改</text>
+</svg>

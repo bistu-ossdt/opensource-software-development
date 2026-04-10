@@ -146,6 +146,14 @@ If `DATA_DIR` is missing, the quickstart will fail before the first example is l
 4. 来源和制度边界是否清楚：许可证、依赖、第三方片段和数据来源是否需要额外说明。
 5. 最终说明是否由人负责：Pull Request 描述、review 回复和合并前判断是否能够由提交者自己解释清楚。
 
+把这五项再压缩一层，就会得到一条更稳定的责任分层：AI 可以起草候选内容，但任务边界由人设定，差异由人核查，自动化检查只是辅助门禁，最终进入 Pull Request、回应 review 和决定是否接收的责任仍然在人。图 7-1 把这条责任链压缩成一个最小流程。
+
+<!-- figure-id: ch07-fig-01-ai-responsibility-flow | core | status: final | source-trail: chapter 7 section 4 narrative; AI output enters issue-pr-review path under human responsibility; fully redrawn -->
+<figure class="book-figure">
+  <img src="assets/figures/ch07-fig-01-ai-responsibility-flow.svg" alt="AI 产出进入开源流程的责任分层图，展示任务边界由人设定、AI 起草候选内容、人核查差异、自动化检查、再由人组织 Pull Request 与回应评审，责任起点与验收终点都在人。" />
+  <figcaption>图 7-1 AI 产出进入开源流程的责任分层</figcaption>
+</figure>
+
 真正把修改组织成 Pull Request 时，这五条不必机械地逐项抄写出来，但至少应能在第 6 章已经出现过的 `What / Why / Verification / Not included` 这样的最小结构里被看见：改了什么、为什么改、如何验证、哪些边界被有意保留，以及哪里仍需评审者重点核查。
 
 如果参与对象是 AI 项目，还要再多问一层：代码、参数和数据信息到底公开了哪些部分，哪些部分仍然缺失或带有限制。只要这层没有说明白，就不宜轻率地把对象写成“开源人工智能”，也不宜把某项贡献误写成对完整系统的参与。
